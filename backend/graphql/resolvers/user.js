@@ -1,5 +1,5 @@
 const User = require('../../models/user');
-const Rating = require('../../models/rating');
+const Review = require('../../models/review');
 const Product = require('../../models/product');
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
         return e.message;
       }
     },
-    // getUserRatings: async (_, args) => {
+    // getUserreviews: async (_, args) => {
     //   try {
     //     let response =
     //   } catch (e) {
@@ -31,29 +31,21 @@ module.exports = {
     },
     addUser: async (_, args) => {
       try {
-        console.log('AAAAADDDDDUSEEERRRSSS');
         let response = await User.create(args);
         return response;
       } catch (e) {
         return e.message;
       }
     },
-    addRating: async (_, args) => {
+    addReview: async (_, args) => {
       try {
-        const response = await Rating.create(args);
+        const response = await Review.create(args);
         const creator = await User.findOne({ _id: args.createdBy }).exec();
-        creator.ratings.push(response);
+        creator.reviews.push(response);
         await creator.save();
 
         const product = await Product.findOne({ _id: args.product }).exec();
-        console.log('--------------------------------------');
-        console.log(args);
-        console.log('-------------');
-        console.log(product);
-        console.log('-------------');
-        console.log(response);
-        console.log('--------------------------------------');
-        product.ratings.push(response);
+        product.reviews.push(response);
         await product.save();
 
         return response;
@@ -62,19 +54,18 @@ module.exports = {
       }
     },
   },
-  Ratings: {
-    ratings: async (parent) => {
-      console.log('User - Rating - RELAATION');
+  Reviews: {
+    reviews: async (parent) => {
+      console.log('User - review - RELAATION');
       try {
-        const ratings = parent.ratings;
-        const rating = await ratings.map((val) =>
-          Rating.findOne({ _id: val }).exec()
+        const reviews = parent.reviews;
+        const review = await reviews.map((val) =>
+          Review.findOne({ _id: val }).exec()
         );
-        return rating;
+        return review;
       } catch (e) {
         return e.message;
       }
-      // const response = await Rating.find
     },
   },
 };

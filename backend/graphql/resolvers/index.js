@@ -1,27 +1,26 @@
 const userResolver = require('./user');
 const productResolver = require('./product');
-const ratingsResolver = require('./rating');
-const relations = require('./relationships');
+const reviewResolver = require('./review');
 
 const resolvers = {
   Query: {
     ...userResolver.Query,
     ...productResolver.Query,
-    ...ratingsResolver.Query,
+    ...reviewResolver.Query,
   },
   Mutation: {
     ...userResolver.Mutation,
     ...productResolver.Mutation,
   },
-  Rating: {
-    ...ratingsResolver.User,
-    ...ratingsResolver.Product,
+  Review: {
+    ...reviewResolver.User,
+    ...reviewResolver.Product,
   },
   User: {
-    ...userResolver.Ratings,
+    ...userResolver.Reviews,
   },
   Product: {
-    ...productResolver.Ratings,
+    ...productResolver.Reviews,
   },
 };
 

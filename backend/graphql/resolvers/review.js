@@ -1,14 +1,14 @@
-const Rating = require('../../models/rating');
+const Review = require('../../models/review');
 const User = require('../../models/user');
 const Product = require('../../models/product');
 
 module.exports = {
   Query: {
-    getRatings: async () => await Rating.find({}).exec(),
+    getReviews: async () => await Review.find({}).exec(),
   },
   User: {
     createdBy: async (parent) => {
-      console.log('Rating - User - RELAATION');
+      console.log('Review - User - RELAATION');
       const response = await User.findOne({ _id: parent.createdBy }).exec();
       return response;
     },

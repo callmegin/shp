@@ -14,16 +14,10 @@ const productSchema = new Schema({
     type: String,
     required: true,
   },
-  ratings: [
+  reviews: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Rating',
-    },
-  ],
-  comments: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Comment',
+      ref: 'Review',
     },
   ],
 });

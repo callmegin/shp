@@ -5,7 +5,7 @@ module.exports = gql`
     id: ID!
     userName: String!
     email: String!
-    ratings: [Rating]
+    reviews: [Review]
     # comments: [Comment]
   }
   type Product {
@@ -13,32 +13,23 @@ module.exports = gql`
     name: String!
     price: Float!
     category: String!
-    ratings: [Rating]
+    reviews: [Review]
     # comments: [Comment]
   }
   type Review {
     id: ID!
-    rating: Rating
-    comment: Comment
+    rating: Float
+    comment: String
     createdBy: User!
     product: Product!
   }
-  type Rating {
-    id: ID!
-    rating: Float!
-    # createdBy: User!
-    # product: Product!
-  }
-  type Comment {
-    id: ID!
-    comment: String!
-  }
+
   type Query {
     user(id: ID!): User #don't know if ill need this one
     getUsers: [User]
     getProducts: [Product]
     getProduct(id: ID!): Product
-    getRatings: [Rating]
+    getReviews: [Review]
   }
   type Mutation {
     addUser(userName: String!, email: String!): User

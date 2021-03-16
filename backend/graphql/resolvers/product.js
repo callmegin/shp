@@ -1,5 +1,5 @@
 const Product = require('../../models/product');
-const Rating = require('../../models/rating');
+const Review = require('../../models/review');
 
 module.exports = {
   Query: {
@@ -9,26 +9,21 @@ module.exports = {
   Mutation: {
     addProduct: async (_, args) => {
       try {
-        console.log('AAAAAAAADDDDDDPPROOOOOOODUCT');
-        console.log(args);
         let response = await Product.create(args);
-        console.log(response);
         return response;
       } catch (e) {
         return e.message;
       }
     },
   },
-  Ratings: {
-    ratings: async (parent) => {
-      console.log('Product - Rating - RELAATION');
-      // const response = await Rating.find
+  Reviews: {
+    reviews: async (parent) => {
       try {
-        const ratings = parent.ratings;
-        const rating = await ratings.map((val) =>
-          Rating.findOne({ _id: val }).exec()
+        const reviews = parent.reviews;
+        const review = await reviews.map((val) =>
+          Review.findOne({ _id: val }).exec()
         );
-        return rating;
+        return review;
       } catch (e) {
         return e.message;
       }

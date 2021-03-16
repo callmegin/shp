@@ -11,10 +11,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  ratings: [
+  reviews: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Rating',
+      ref: 'Review',
     },
   ],
 });
