@@ -16,19 +16,23 @@ module.exports = gql`
     ratings: [Rating]
     # comments: [Comment]
   }
+  type Review {
+    id: ID!
+    rating: Rating
+    comment: Comment
+    createdBy: User!
+    product: Product!
+  }
   type Rating {
     id: ID!
     rating: Float!
-    createdBy: User!
-    product: Product!
+    # createdBy: User!
+    # product: Product!
   }
   type Comment {
     id: ID!
     comment: String!
-    rating: Rating!
-    createdBy: User!
   }
-
   type Query {
     user(id: ID!): User #don't know if ill need this one
     getUsers: [User]
@@ -40,6 +44,12 @@ module.exports = gql`
     addUser(userName: String!, email: String!): User
     login(email: String!, password: String!): String
     addProduct(name: String!, price: Float!, category: String!): Product
-    addRating(rating: Float!, product: ID!, createdBy: ID!): Rating
+    # addRating(rating: Float!, product: ID!, createdBy: ID!): Rating
+    addReview(
+      rating: Float
+      comment: String
+      createdBy: ID!
+      product: ID!
+    ): Review
   }
 `;
