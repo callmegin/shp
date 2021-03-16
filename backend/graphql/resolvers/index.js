@@ -2,6 +2,8 @@ const userResolver = require('./user');
 const productResolver = require('./product');
 const reviewResolver = require('./review');
 
+//TODO: reikia chekinti ar toks useris ar produktas yra pries kuriant reviewsa
+
 const resolvers = {
   Query: {
     ...userResolver.Query,

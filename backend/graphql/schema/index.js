@@ -23,11 +23,14 @@ module.exports = gql`
     createdBy: User!
     product: Product!
   }
-
+  type Categories {
+    id: ID!
+    category: String!
+  }
   type Query {
     user(id: ID!): User #don't know if ill need this one
     getUsers: [User]
-    getProducts: [Product]
+    getProducts(category: String): [Product]
     getProduct(id: ID!): Product
     getReviews: [Review]
   }
