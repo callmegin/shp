@@ -6,7 +6,6 @@ module.exports = gql`
     userName: String!
     email: String!
     reviews: [Review]
-    # comments: [Comment]
   }
   type Product {
     id: ID!
@@ -14,7 +13,6 @@ module.exports = gql`
     price: Float!
     category: String!
     reviews: [Review]
-    # comments: [Comment]
   }
   type Review {
     id: ID!
@@ -38,7 +36,6 @@ module.exports = gql`
     addUser(userName: String!, email: String!): User
     login(email: String!, password: String!): String
     addProduct(name: String!, price: Float!, category: String!): Product
-    # addRating(rating: Float!, product: ID!, createdBy: ID!): Rating
     addReview(
       rating: Float
       comment: String
