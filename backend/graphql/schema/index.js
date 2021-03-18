@@ -12,6 +12,7 @@ module.exports = gql`
     name: String!
     price: Float!
     category: String!
+    type: String!
     reviews: [Review]
   }
   type Review {
@@ -28,7 +29,7 @@ module.exports = gql`
   type Query {
     user(id: ID!): User #don't know if ill need this one
     getUsers: [User]
-    getProducts(category: String): [Product]
+    getProducts(category: String, type: String): [Product]
     getProduct(id: ID!): Product
     getReviews: [Review]
   }

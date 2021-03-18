@@ -4,8 +4,11 @@ const Category = require('../../models/category');
 
 module.exports = {
   Query: {
-    getProducts: async (_, { category }) => {
+    getProducts: async (_, { category, type }) => {
       try {
+        if (type) {
+          return await Product.find({ category: category, type: type }).exec();
+        }
         if (category) {
           return await Product.find({ category: category }).exec();
         }
