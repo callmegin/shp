@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "babel-node seed-data/index.js --seed ",
+    "mkjson": "node seed-data/generateJson.js",
+    "readjson": "node seed-data/generateJson.js --read"
   },
   "keywords": [],
   "author": "",

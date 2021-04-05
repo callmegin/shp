@@ -1,6 +1,6 @@
-const Product = require('../../models/product');
-const Review = require('../../models/review');
-const Category = require('../../models/category');
+const { Product } = require('../../models/product');
+const { Review } = require('../../models/review');
+const { Category } = require('../../models/category');
 
 module.exports = {
   Query: {
@@ -23,12 +23,9 @@ module.exports = {
     addProduct: async (_, args) => {
       try {
         const response = await Product.create(args);
-        console.log(args);
         if (!(await Category.findOne({ category: args.category }).exec())) {
           await Category.create({ category: args.category });
         }
-
-        console.log(response);
         return response;
       } catch (e) {
         return e.message;

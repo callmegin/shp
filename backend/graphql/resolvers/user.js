@@ -1,6 +1,6 @@
-const User = require('../../models/user');
-const Review = require('../../models/review');
-const Product = require('../../models/product');
+const { User } = require('../../models/user');
+const { Review } = require('../../models/review');
+const { Product } = require('../../models/product');
 
 module.exports = {
   Query: {
@@ -10,7 +10,6 @@ module.exports = {
     getUsers: async () => {
       try {
         let response = await User.find({}).exec();
-        console.log(response);
         return response;
       } catch (e) {
         console.log(e);

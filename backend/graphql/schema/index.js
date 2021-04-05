@@ -13,6 +13,7 @@ module.exports = gql`
     price: Float!
     category: String!
     type: String!
+    image: ProductImage!
     reviews: [Review]
   }
   type Review {
@@ -26,6 +27,25 @@ module.exports = gql`
     id: ID!
     category: String!
   }
+
+  type ProductImage {
+    id: ID!
+    # asset_id: String!
+    # public_id: String!
+    # version_id: String!
+    # width: Int!
+    # height: Int!
+    # created_at: String!
+    # url: String!
+    # secure_url: String!
+    # original_filename: String!
+    product: Product!
+  }
+  type MainImage {
+    id: ID!
+    category: String!
+  }
+
   type Query {
     user(id: ID!): User #don't know if ill need this one
     getUsers: [User]
