@@ -17,6 +17,14 @@ if (process.argv.includes('--read')) {
   return;
 }
 
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_KEY,
+  api_secret: process.env.CLOUDINARY_SECRET,
+});
+
+const location = process.env.SEED_DATA_LOCATION;
+
 let jsonData = {
   sampleData: [],
 };
@@ -30,7 +38,6 @@ let product = {
   original_image: '',
   image: {},
 };
-const location = process.env.SEED_DATA_LOCATION;
 
 const getFolders = () => {
   return Promise.all(fs.readdirSync(location).map(getFiles));
@@ -56,7 +63,6 @@ const uploadData = (folder, file) => {
       },
       (err, image) => {
         if (err) reject(err);
-        //DO SOMETHING
         else {
           product = {
             ...product,
@@ -65,7 +71,6 @@ const uploadData = (folder, file) => {
             image: image,
           };
           jsonData.sampleData.push(product);
-          console.log(product);
           resolve(image);
         }
       }
@@ -74,11 +79,6 @@ const uploadData = (folder, file) => {
 };
 
 getFolders().then((result) => {
-  console.log(
-    '***************** >>>>>>>>>>>>>>>>>>>>>>>>>>>>>  RRRRRRESSUULLT <<<<<<<<<<<<<<<<<<<<< ************************************'
-  );
-  console.log(jsonData);
-  console.log(result);
   fs.writeFile(sampleData, JSON.stringify(jsonData, null, 1), (err) => {
     if (err) {
       throw err;
