@@ -31,28 +31,4 @@ const addToDb = async (data) => {
   });
 };
 
-const mongo = async (mongo) => {
-  try {
-    const db = mongo.connection;
-    db.on('error', console.error.bind(console, 'connection error:'));
-    db.once('open', function () {
-      // we're connected!
-
-      console.log('Connected?');
-    });
-
-    // await Mongoose.model('ProductImage').create(params);
-    // await Product.find({}).exec();
-    // console.log(products);
-    // return new Promise((resolve, reject) => {
-    //   const ffs = mongo.model('Product').find({}).exec();
-    //   console.log('REZOLVINA');
-    //   console.log(ffs);
-    //   resolve(ffs);
-    // });
-  } catch (err) {
-    console.log(err);
-  }
-};
-
 exports.uploadImage = uploadImage;
