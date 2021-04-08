@@ -26,19 +26,25 @@ module.exports = gql`
   type Categories {
     id: ID!
     category: String!
+    types: [Types]
+  }
+  type Types {
+    id: ID!
+    category: Categories!
+    products: [Product!]
   }
 
   type ProductImage {
     id: ID!
-    # asset_id: String!
-    # public_id: String!
-    # version_id: String!
-    # width: Int!
-    # height: Int!
-    # created_at: String!
-    # url: String!
-    # secure_url: String!
-    # original_filename: String!
+    asset_id: String!
+    public_id: String!
+    version_id: String!
+    width: Int!
+    height: Int!
+    created_at: String!
+    url: String!
+    secure_url: String!
+    original_filename: String!
     product: Product!
   }
   type MainImage {

@@ -1,6 +1,4 @@
-const { Review } = require('../../models/review');
-const { User } = require('../../models/user');
-const { Product } = require('../../models/product');
+const { Review, User, Product } = require('../../models');
 
 module.exports = {
   Query: {

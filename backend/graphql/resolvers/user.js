@@ -1,6 +1,4 @@
-const { User } = require('../../models/user');
-const { Review } = require('../../models/review');
-const { Product } = require('../../models/product');
+const { User, Review, Product } = require('../../models');
 
 module.exports = {
   Query: {
@@ -40,11 +38,11 @@ module.exports = {
       try {
         const response = await Review.create(args);
         const creator = await User.findOne({ _id: args.createdBy }).exec();
-        creator.reviews.push(response);
+        creator.reviews.push(response._id);
         await creator.save();
 
         const product = await Product.findOne({ _id: args.product }).exec();
-        product.reviews.push(response);
+        product.reviews.push(response._id);
         await product.save();
 
         return response;

@@ -23,6 +23,7 @@ const resolvers = {
   },
   Product: {
     ...productResolver.Reviews,
+    ...productResolver.ProductImage,
   },
 };
 

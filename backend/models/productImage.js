@@ -7,11 +7,11 @@ const productImageSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'Product',
     },
+    url: {
+      type: String,
+    },
   },
   { strict: false }
 );
 
-module.exports = {
-  ProductImage: mongoose.model('ProductImage', productImageSchema),
-  productImageSchema: productImageSchema,
-};
+module.exports = mongoose.model('ProductImage', productImageSchema);

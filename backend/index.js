@@ -21,18 +21,14 @@ const server = new ApolloServer({
 const app = express();
 server.applyMiddleware({
   app,
-  whatever: () =>
-    new Promise((resolve, reject) => {
-      if (mongoose.connection.readyState > 0) {
-        console.log('WHATEVER SHMATEVER!!!!!!!!!');
-        resolve();
-      } else {
-        reject();
-      }
-    }),
 });
 
 // The `listen` method launches a web server.
-app.listen({ port: 4000 }, () => {
-  console.log(`🚀  Server ready at http://localhost:4000${server.graphqlPath}`);
+mongoose.connection.once('open', function () {
+  console.log('Mongoose Connected 🍻');
+  app.listen({ port: 4000 }, () => {
+    console.log(
+      `🚀  Server ready at http://localhost:4000${server.graphqlPath}`
+    );
+  });
 });

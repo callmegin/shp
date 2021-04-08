@@ -1,6 +1,4 @@
-const { Product } = require('../../models/product');
-const { Review } = require('../../models/review');
-const { Category } = require('../../models/category');
+const { Product, Review, Category, ProductImage } = require('../../models');
 
 module.exports = {
   Query: {
@@ -23,6 +21,7 @@ module.exports = {
     addProduct: async (_, args) => {
       try {
         const response = await Product.create(args);
+        //check if category exists and add it if not found
         if (!(await Category.findOne({ category: args.category }).exec())) {
           await Category.create({ category: args.category });
         }
@@ -35,12 +34,22 @@ module.exports = {
   Reviews: {
     reviews: async (parent) => {
       try {
-        const reviews = parent.reviews;
-        const review = await reviews.map((val) =>
-          Review.findOne({ _id: val }).exec()
+        const review = await parent.reviews.map((id) =>
+          Review.findOne({ _id: id }).exec()
         );
         return review;
       } catch (e) {
+        return e.message;
+      }
+    },
+  },
+  ProductImage: {
+    image: async (parent) => {
+      try {
+        const image = await ProductImage.findOne({ _id: parent.image }).exec();
+        return image;
+      } catch (e) {
+        console.log(e.message);
         return e.message;
       }
     },

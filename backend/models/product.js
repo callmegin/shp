@@ -12,6 +12,7 @@ const productSchema = new Schema({
   },
   type: {
     type: String,
+    required: true,
   },
   category: {
     type: String,
@@ -23,9 +24,10 @@ const productSchema = new Schema({
       ref: 'Review',
     },
   ],
+  image: {
+    type: Schema.Types.ObjectId,
+    ref: 'ProductImage',
+  },
 });
 
-module.exports = {
-  Product: mongoose.model('Product', productSchema),
-  productSchema: productSchema,
-};
+module.exports = mongoose.model('Product', productSchema);

@@ -3,8 +3,6 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv/config');
 
-const { uploadImage } = require('./index');
-
 const sampleData = './seed-data/sampleData.json';
 
 if (process.argv.includes('--read')) {

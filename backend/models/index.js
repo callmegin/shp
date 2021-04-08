@@ -1,15 +1,17 @@
-const { categorySchema } = require('./category.js');
-const { productSchema } = require('./product.js');
-const { productImageSchema } = require('./productImage.js');
-const { reviewSchema } = require('./review.js');
-const { userSchema } = require('./user.js');
+const Category = require('./category.js');
+const Type = require('./type.js');
+const Product = require('./product.js');
+const ProductImage = require('./productImage.js');
+const Review = require('./review.js');
+const User = require('./user.js');
 
-const modelSchemas = {
-  categorySchema,
-  productSchema,
-  productImageSchema,
-  reviewSchema,
-  userSchema,
+const models = {
+  Category,
+  Type,
+  Product,
+  ProductImage,
+  Review,
+  User,
 };
 
-module.exports = modelSchemas;
+module.exports = models;
