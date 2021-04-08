@@ -51,7 +51,7 @@ module.exports = {
       }
     },
   },
-  Reviews: {
+  Relationships: {
     reviews: async (parent) => {
       console.log('User - review - RELAATION');
       try {

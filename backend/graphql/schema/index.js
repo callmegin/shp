@@ -30,6 +30,7 @@ module.exports = gql`
   }
   type Types {
     id: ID!
+    type: String!
     category: Categories!
     products: [Product!]
   }
@@ -58,6 +59,8 @@ module.exports = gql`
     getProducts(category: String, type: String): [Product]
     getProduct(id: ID!): Product
     getReviews: [Review]
+    getCategories: [Categories]
+    getCategory(id: ID, name: String): Categories
   }
   type Mutation {
     addUser(userName: String!, email: String!): User

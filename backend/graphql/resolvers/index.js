@@ -1,7 +1,8 @@
 const userResolver = require('./user');
 const productResolver = require('./product');
 const reviewResolver = require('./review');
-
+const categoriesResolver = require('./categories.js');
+const typesResolver = require('./types');
 //TODO: reikia chekinti ar toks useris ar produktas yra pries kuriant reviewsa
 
 const resolvers = {
@@ -9,21 +10,24 @@ const resolvers = {
     ...userResolver.Query,
     ...productResolver.Query,
     ...reviewResolver.Query,
+    ...categoriesResolver.Query,
+    ...typesResolver.Query,
   },
   Mutation: {
     ...userResolver.Mutation,
     ...productResolver.Mutation,
   },
   Review: {
-    ...reviewResolver.User,
-    ...reviewResolver.Product,
+    ...reviewResolver.Relationships,
   },
   User: {
-    ...userResolver.Reviews,
+    ...userResolver.Relationships,
   },
   Product: {
-    ...productResolver.Reviews,
-    ...productResolver.ProductImage,
+    ...productResolver.Relationships,
+  },
+  Categories: {
+    ...categoriesResolver.Relationships,
   },
 };
 

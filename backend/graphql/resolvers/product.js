@@ -31,7 +31,7 @@ module.exports = {
       }
     },
   },
-  Reviews: {
+  Relationships: {
     reviews: async (parent) => {
       try {
         const review = await parent.reviews.map((id) =>
@@ -42,8 +42,6 @@ module.exports = {
         return e.message;
       }
     },
-  },
-  ProductImage: {
     image: async (parent) => {
       try {
         const image = await ProductImage.findOne({ _id: parent.image }).exec();
