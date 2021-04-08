@@ -20,7 +20,7 @@ module.exports = {
     },
   },
   Mutation: {
-    addCategory: async (_, args) => {},
+    //     addCategory: async (_, args) => {},
   },
   Relationships: {
     types: async (parent) => {
