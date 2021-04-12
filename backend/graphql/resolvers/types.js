@@ -23,11 +23,9 @@ module.exports = {
   //       addCategory: async (_, args) => {},
   // },
   Relationships: {
-    types: async (parent) => {
+    category: async (parent) => {
       try {
-        return await parent.categories.map((id) =>
-          Category.findOne({ _id: id })
-        );
+        return await Category.findOne({ _id: parent.category }).exec();
       } catch (e) {
         return e.message;
       }

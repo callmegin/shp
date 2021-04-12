@@ -3,6 +3,7 @@ const productResolver = require('./product');
 const reviewResolver = require('./review');
 const categoriesResolver = require('./categories.js');
 const typesResolver = require('./types');
+const type = require('../../models/type');
 //TODO: reikia chekinti ar toks useris ar produktas yra pries kuriant reviewsa
 
 const resolvers = {
@@ -28,6 +29,9 @@ const resolvers = {
   },
   Categories: {
     ...categoriesResolver.Relationships,
+  },
+  Types: {
+    ...typesResolver.Relationships,
   },
 };
 
