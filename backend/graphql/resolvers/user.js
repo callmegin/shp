@@ -36,16 +36,16 @@ module.exports = {
     },
     addReview: async (_, args) => {
       try {
-        const response = await Review.create(args);
+        const review = await Review.create(args);
         const creator = await User.findOne({ _id: args.createdBy }).exec();
-        creator.reviews.push(response._id);
+        creator.reviews.push(review._id);
         await creator.save();
 
         const product = await Product.findOne({ _id: args.product }).exec();
-        product.reviews.push(response._id);
+        product.reviews.push(review._id);
         await product.save();
 
-        return response;
+        return review;
       } catch (e) {
         return e.message;
       }

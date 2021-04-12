@@ -13,12 +13,10 @@ const typeSchema = new Schema({
       ref: 'Product',
     },
   ],
-  category: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Category',
-    },
-  ],
+  category: {
+    type: Schema.Types.ObjectId,
+    ref: 'Category',
+  },
 });
 
 module.exports = mongoose.model('Type', typeSchema);
