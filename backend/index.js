@@ -10,12 +10,6 @@ const resolvers = require('./graphql/resolvers');
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: ({ req }) => {
-    const user = req.user || null;
-    // console.log('============');
-    // console.log(user);
-    // return { user };
-  },
 });
 
 const app = express();

@@ -13,8 +13,9 @@ module.exports = {
       try {
         if (id && category)
           throw new e('Either ID or Category should be provided, not both');
-        if (!id) return await Category.findOne({ _id: id }).exec();
-        if (!type) return await Category.findOne({ category: category }).exec();
+        if (id) return await Category.findOne({ _id: id }).exec();
+        if (category)
+          return await Category.findOne({ category: category }).exec();
       } catch (e) {
         return e.message;
       }
