@@ -13,7 +13,8 @@ module.exports = {
       try {
         if (id && type)
           throw new e('Either ID or Type should be provided, not both');
-        return await Type.findOne({ type: type }).exec();
+        if (!id) return await Type.findOne({ _id: id }).exec();
+        if (!type) return await Type.findOne({ type: type }).exec();
       } catch (e) {
         return e.message;
       }
