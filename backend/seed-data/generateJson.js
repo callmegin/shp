@@ -57,7 +57,9 @@ const uploadData = (folder, file) => {
     cloudinary.uploader.upload(
       fullPath,
       {
-        folder: `shp/${folder}/`,
+        folder: fullPath.slice(0, -4).endsWith('main')
+          ? `shp/homepage`
+          : `shp/${folder}/`,
       },
       (err, image) => {
         if (err) reject(err);
@@ -76,6 +78,7 @@ const uploadData = (folder, file) => {
   });
 };
 
+//save response data to JSON
 getFolders().then((result) => {
   fs.writeFile(sampleData, JSON.stringify(jsonData, null, 1), (err) => {
     if (err) {
