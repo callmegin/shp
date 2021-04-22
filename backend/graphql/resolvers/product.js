@@ -15,7 +15,23 @@ module.exports = {
         return e.message;
       }
     },
-    getProduct: async (_, { id }) => await Product.findOne({ _id: id }).exec(),
+    getProduct: async (_, { id }) => {
+      try {
+        return await Product.findOne({ _id: id }).exec();
+      } catch (e) {
+        return e.message;
+      }
+    },
+    getImagesByName: async (_, { fileName }) => {
+      try {
+        console.log(fileName);
+        return await ProductImage.find({
+          original_filename: { $regex: fileName },
+        }).exec();
+      } catch (e) {
+        return e.message;
+      }
+    },
   },
   Mutation: {
     addProduct: async (_, args) => {

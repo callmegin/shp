@@ -63,6 +63,7 @@ module.exports = gql`
     getCategory(id: ID, category: String): Categories
     getTypes: [Types]
     getType(id: ID, type: String): Types
+    getImagesByName(fileName: String): [ProductImage]
   }
   type Mutation {
     addUser(userName: String!, email: String!): User
