@@ -60,6 +60,7 @@ const uploadData = (folder, file) => {
         folder: fullPath.slice(0, -4).endsWith('main')
           ? `shp/homepage`
           : `shp/${folder}/`,
+        eager: [{ width: 200, height: 200 }],
       },
       (err, image) => {
         if (err) reject(err);

@@ -40,11 +40,15 @@ module.exports = gql`
     asset_id: String!
     public_id: String!
     version_id: String!
+    category: String!
+    type: String!
     width: Int!
     height: Int!
     created_at: String!
     url: String!
     secure_url: String!
+    thumb_url: String!
+    thumb_secure_url: String!
     original_filename: String!
     product: Product!
   }

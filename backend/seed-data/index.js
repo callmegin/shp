@@ -28,7 +28,15 @@ const generateCategories = async () => {
         dbCategory = await Category.create({ category: category });
       if (!dbType) dbType = await Type.create({ type: type });
 
-      dbImage = await ProductImage.create(product.image);
+      image = {
+        ...image,
+        category: category,
+        type: type,
+        thumb_url: image.eager[0].url,
+        thumb_secure_url: image.eager[0].secure_url,
+      };
+
+      dbImage = await ProductImage.create(image);
 
       product = {
         ...product,
@@ -44,13 +52,14 @@ const generateCategories = async () => {
       await dbCategory.save();
 
       if (!dbType.category) {
-        await dbType.update({ category: dbCategory._id });
+        await dbType.updateOne({ category: dbCategory._id });
       }
       dbType.products.push(dbProduct._id);
       await dbType.save();
 
+      await dbImage.updateOne({ product: dbProduct._id });
+
       //output for some visual representation
-      console.log(dbType);
     }
 
     mongoose.connection.close(() => console.log('connection closed'));
