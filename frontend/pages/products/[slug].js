@@ -1,7 +1,6 @@
 import Products from 'components/containers/Products/Products';
 
-const ProductsPage = ({ query }) => {
-  console.log(query);
+const ProductsPage = () => {
   return <Products />;
 };
 

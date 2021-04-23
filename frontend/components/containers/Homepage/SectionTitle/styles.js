@@ -10,6 +10,7 @@ export const SectionTitle = styled.h2`
   font-size: 3.5rem;
 `}
   font-size: 2.6rem;
+  text-transform: capitalize;
   color: var(--grey);
 `;
 export const SectionTitleBlank = styled.h2`

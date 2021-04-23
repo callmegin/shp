@@ -5,6 +5,7 @@ import { FlexDiv, screenSize, enterElement } from 'shared/styles';
 export const RootContainer = styled.div`
   ${screenSize.medium`
   padding: 0;
+  margin: 1rem;
 `}
   padding: 1rem;
   width: 100%;
