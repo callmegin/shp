@@ -3,14 +3,17 @@ const { User, Review, Product } = require('../../models');
 module.exports = {
   Query: {
     user: async (parent, { id }) => {
-      return await User.findOne({ _id: id }).exec();
+      try {
+        return await User.findOne({ _id: id }).exec();
+      } catch (e) {
+        return e.message;
+      }
     },
     getUsers: async () => {
       try {
         let response = await User.find({}).exec();
         return response;
       } catch (e) {
-        console.log(e);
         return e.message;
       }
     },
@@ -53,7 +56,6 @@ module.exports = {
   },
   Relationships: {
     reviews: async (parent) => {
-      console.log('User - review - RELAATION');
       try {
         const reviews = parent.reviews;
         const review = await reviews.map((val) =>

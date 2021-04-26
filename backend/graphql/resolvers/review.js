@@ -2,7 +2,13 @@ const { Review, User, Product } = require('../../models');
 
 module.exports = {
   Query: {
-    getReviews: async () => await Review.find({}).exec(),
+    getReviews: async () => {
+      try {
+        await Review.find({}).exec();
+      } catch (e) {
+        return e.message;
+      }
+    },
   },
   Relationships: {
     createdBy: async (parent) => {
