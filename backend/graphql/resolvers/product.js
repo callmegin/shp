@@ -24,7 +24,6 @@ module.exports = {
     },
     getImagesByName: async (_, { fileName }) => {
       try {
-        console.log(fileName);
         return await ProductImage.find({
           original_filename: { $regex: fileName },
         }).exec();
@@ -63,7 +62,6 @@ module.exports = {
         const image = await ProductImage.findOne({ _id: parent.image }).exec();
         return image;
       } catch (e) {
-        console.log(e.message);
         return e.message;
       }
     },
