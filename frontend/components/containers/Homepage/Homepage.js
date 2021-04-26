@@ -1,6 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Section from './Section/Section';
 
@@ -39,6 +39,11 @@ const Homepage = () => {
     router.push(`/products/${category}`);
   };
 
+  useEffect(() => {
+    // Prefetching [slug] page
+    router.prefetch(`/products/watches`);
+  }, []);
+
   return (
     <Styled.RootContainer>
       {data && (
@@ -57,6 +62,7 @@ const Homepage = () => {
               imageUrl={shoes.secure_url}
               delay={200}
               categoryTitle={shoes.category}
+              clicked={() => handleClick(shoes.category)}
             />
 
             <Section
@@ -70,6 +76,7 @@ const Homepage = () => {
               imageUrl={blazers.secure_url}
               delay={300}
               categoryTitle={blazers.category}
+              clicked={() => handleClick(blazers.category)}
             />
           </Styled.GridRoot>
           <Styled.SomeContent />

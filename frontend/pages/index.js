@@ -1,12 +1,12 @@
-export { default } from 'components/containers/Homepage/Homepage';
-
 import {
   GET_CATEGORY_IMAGES,
   queryVariables,
 } from 'components/containers/Homepage/Homepage';
 import { initializeApollo, addApolloState } from 'lib/apolloClient';
 
-export async function getServerSideProps() {
+export { default } from 'components/containers/Homepage/Homepage';
+
+export const getStaticProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
@@ -17,4 +17,4 @@ export async function getServerSideProps() {
   return addApolloState(apolloClient, {
     props: {},
   });
-}
+};

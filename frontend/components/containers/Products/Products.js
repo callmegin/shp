@@ -1,11 +1,27 @@
-import { useRouter } from 'next/router';
+import { gql, useQuery } from '@apollo/client';
 
-const Products = ({ category }) => {
-  const router = useRouter();
+export const GET_PRODUCTS_BY_CATEGORY = gql`
+  query getProducts($category: String) {
+    getProducts(category: $category) {
+      id
+      price
+      name
+      category
+      image {
+        url
+        thumb_secure_url
+      }
+    }
+  }
+`;
 
-  //below gives me the slug (i.e. "slug: watches")
-  console.log(router.query);
-
+const Products = ({ category, slug, pageLoading }) => {
+  const { data } = useQuery(GET_PRODUCTS_BY_CATEGORY, {
+    variables: {
+      category: slug,
+    },
+  });
+  console.log(data);
   return (
     <>
       <p>{category}</p>
