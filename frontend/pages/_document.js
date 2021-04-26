@@ -38,20 +38,30 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@300;400;500;700;800&display=swap"
-            rel="stylesheet"
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
           />
+
+          <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Turret+Road&display=swap"
+          />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Turret+Road&display=swap"
+          />
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@300;400;500;700;800&display=swap"
+            />
+          </noscript>
         </Head>
         <body>
           <Main />
           <NextScript />
-          <style jsx global>
-            {`
-              #__next {
-                height: 100%;
-              }
-            `}
-          </style>
         </body>
       </Html>
     );

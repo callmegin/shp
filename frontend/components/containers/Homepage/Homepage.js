@@ -1,4 +1,4 @@
-import { gql, useQuery, NetworkStatus } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
@@ -22,6 +22,7 @@ export const queryVariables = {
 const Homepage = () => {
   const router = useRouter();
   const [data, setData] = useState();
+  const { watches, shoes, blazers } = data || {};
   useQuery(GET_CATEGORY_IMAGES, {
     variables: queryVariables,
     onCompleted({ getImagesByName }) {
@@ -33,10 +34,11 @@ const Homepage = () => {
       });
     },
   });
+
   const handleClick = (category) => {
     router.push(`/products/${category}`);
   };
-  const { watches, shoes, blazers } = data || {};
+
   return (
     <Styled.RootContainer>
       {data && (

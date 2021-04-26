@@ -39,9 +39,13 @@ export const H2 = styled.h2`
   text-align: center;
 `;
 export const Vertical = styled.p`
+  ${screenSize.small`
+  font-size: 0.9rem;
+`}
   position: absolute;
   right: 0;
   font-size: 0.2rem;
+  font-weight: 400;
   writing-mode: vertical-rl;
   text-orientation: mixed;
 `;

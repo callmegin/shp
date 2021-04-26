@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Router from 'next/router';
 import { ApolloProvider } from '@apollo/client';
 import { useApollo } from 'lib/apolloClient';
-import ParentPage from 'components/containers/parentPage/ParentPage';
+import ParentPage from 'components/containers/ParentPage/ParentPage';
 
 function MyApp({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps);
