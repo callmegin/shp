@@ -7,6 +7,10 @@ const categorySchema = new Schema({
     required: true,
     unique: true,
   },
+  image: {
+    type: Schema.Types.ObjectId,
+    ref: 'CategoryImage',
+  },
   products: [
     {
       type: Schema.Types.ObjectId,

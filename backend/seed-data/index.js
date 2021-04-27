@@ -2,30 +2,44 @@ const mongoose = require('mongoose');
 require('dotenv/config');
 require('../dbconfig');
 const fs = require('fs');
-const { Category, Type, Product, ProductImage } = require('../models');
+const {
+  Category,
+  Type,
+  Product,
+  ProductImage,
+  CategoryImage,
+} = require('../models');
 
 const sampleData = './seed-data/sampleData.json';
 
 //get data from json
 const data = JSON.parse(fs.readFileSync(sampleData, 'utf8'));
 
-let categories = [];
-let types = [];
-
 const generateCategories = async () => {
   try {
     for (const product of data.sampleData) {
+      console.log(product);
       let { category, type, image, category_id } = product;
       let dbCategory, dbType, dbProduct, dbImage;
-      !categories.find((item) => item.category === category) &&
-        categories.push({ category });
-      !types.find((item) => item.type === type) && types.push({ type });
 
       dbCategory = await Category.findOne({ category: category }).exec();
-      dbType = await Type.findOne({ type: type }).exec();
-
       if (!dbCategory)
         dbCategory = await Category.create({ category: category });
+
+      if (product.original_image.includes('main')) {
+        image = {
+          ...image,
+          category_name: category,
+        };
+        dbImage = await CategoryImage.create(image);
+
+        await dbCategory.updateOne({ image: dbImage._id });
+        await dbImage.updateOne({ category: dbCategory._id });
+
+        continue;
+      }
+
+      dbType = await Type.findOne({ type: type }).exec();
       if (!dbType) dbType = await Type.create({ type: type });
 
       image = {

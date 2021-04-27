@@ -1,4 +1,5 @@
 const { Category, Type } = require('../../models');
+const categoryImage = require('../../models/categoryImage');
 
 module.exports = {
   Query: {
@@ -28,6 +29,13 @@ module.exports = {
     types: async (parent) => {
       try {
         return await parent.types.map((id) => Type.findOne({ _id: id }));
+      } catch (e) {
+        return e.message;
+      }
+    },
+    image: async (parent) => {
+      try {
+        return await categoryImage.findOne({ _id: parent.image });
       } catch (e) {
         return e.message;
       }

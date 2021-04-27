@@ -27,6 +27,7 @@ module.exports = gql`
     id: ID!
     category: String!
     types: [Types]
+    image: CategoryImage!
   }
   type Types {
     id: ID!
@@ -52,9 +53,20 @@ module.exports = gql`
     original_filename: String!
     product: Product!
   }
-  type MainImage {
+
+  type CategoryImage {
     id: ID!
-    category: String!
+    asset_id: String!
+    public_id: String!
+    version_id: String!
+    category_name: String!
+    width: Int!
+    height: Int!
+    created_at: String!
+    url: String!
+    secure_url: String!
+    original_filename: String!
+    category: Categories!
   }
 
   type Query {
