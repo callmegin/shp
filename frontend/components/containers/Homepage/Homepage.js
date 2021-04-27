@@ -21,6 +21,8 @@ export const queryVariables = {
 
 const Homepage = () => {
   const router = useRouter();
+  // const [selected, setSelected] = useState();
+
   const [data, setData] = useState();
   const { watches, shoes, blazers } = data || {};
   useQuery(GET_CATEGORY_IMAGES, {
@@ -35,14 +37,20 @@ const Homepage = () => {
     },
   });
 
+  const path = `/products/`;
+
   const handleClick = (category) => {
+    // router.push(`/products/${category}`);
     router.push(`/products/${category}`);
   };
 
   useEffect(() => {
     // Prefetching [slug] page
-    router.prefetch(`/products/watches`);
-  }, []);
+    data &&
+      Object.keys(data).map((item) => {
+        router.prefetch(`/products/${item}`);
+      });
+  }, [data]);
 
   return (
     <Styled.RootContainer>

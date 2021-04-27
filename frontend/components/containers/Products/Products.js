@@ -8,23 +8,26 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
       name
       category
       image {
-        url
+        secure_url
         thumb_secure_url
       }
     }
   }
 `;
 
-const Products = ({ category, slug, pageLoading }) => {
-  const { data } = useQuery(GET_PRODUCTS_BY_CATEGORY, {
-    variables: {
-      category: slug,
-    },
-  });
-  console.log(data);
+const Products = ({ slug }) => {
+  // const {
+  //   loading,
+  //   data: { getProducts },
+  // } = useQuery(GET_PRODUCTS_BY_CATEGORY, {
+  //   variables: {
+  //     category: slug,
+  //   },
+  // });
+
   return (
     <>
-      <p>{category}</p>
+      <p>{slug}</p>
       <h2>This is products page</h2>
     </>
   );

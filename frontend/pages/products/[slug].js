@@ -7,18 +7,18 @@ const ProductsPage = ({ params }) => {
   return <Products slug={params.slug} />;
 };
 
-export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { slug: `watches` } },
-      { params: { slug: `shoes` } },
-      { params: { slug: `blazers` } },
-    ],
-    fallback: false,
-  };
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       { params: { slug: `watches` } },
+//       { params: { slug: `shoes` } },
+//       { params: { slug: `blazers` } },
+//     ],
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
