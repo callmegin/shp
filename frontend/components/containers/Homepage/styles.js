@@ -2,15 +2,7 @@ import styled, { css } from 'styled-components';
 import { FlexDiv, screenSize, enterElement } from 'shared/styles';
 
 //TODO: me no like below
-export const RootContainer = styled.div`
-  ${screenSize.medium`
-  padding: 0;
-  margin: 1rem;
-`}
-  padding: 1rem;
-  width: 100%;
-  max-width: 1000px;
-`;
+export const RootContainer = styled.div``;
 
 export const FlexContainer = styled(FlexDiv)`
   height: 100%;

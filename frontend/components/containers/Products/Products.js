@@ -16,15 +16,15 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
 `;
 
 const Products = ({ slug }) => {
-  // const {
-  //   loading,
-  //   data: { getProducts },
-  // } = useQuery(GET_PRODUCTS_BY_CATEGORY, {
-  //   variables: {
-  //     category: slug,
-  //   },
-  // });
-
+  const {
+    loading,
+    data: { getProducts },
+  } = useQuery(GET_PRODUCTS_BY_CATEGORY, {
+    variables: {
+      category: slug,
+    },
+  });
+  console.log(getProducts);
   return (
     <>
       <p>{slug}</p>

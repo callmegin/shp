@@ -14,7 +14,9 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    font-family: 'Turret Road', cursive;
+    font-family: 'Turret Road', cursive !important;
+    font-weight: normal;
+    font-style: normal; 
     padding: 0;
     margin: 0;
     height: 100%;

@@ -7,7 +7,7 @@ const ParentPage = ({ children }) => {
     <Styled.Parent alignCenter>
       <GlobalStyles />
       <Header />
-      {children}
+      <Styled.ParentContainer> {children}</Styled.ParentContainer>
     </Styled.Parent>
   );
 };
