@@ -6,18 +6,22 @@ import Section from './Section/Section';
 
 import * as Styled from './styles';
 
-export const GET_CATEGORY_IMAGES = gql`
-  query getImagesByName($fileName: String!) {
-    getImagesByName(fileName: $fileName) {
+export const GET_CATEGORIES = gql`
+  query getCategories {
+    getCategories {
       id
-      secure_url
       category
+      types {
+        id
+        type
+      }
+      image {
+        id
+        secure_url
+      }
     }
   }
 `;
-export const queryVariables = {
-  fileName: 'main',
-};
 
 const Homepage = () => {
   const router = useRouter();
@@ -25,10 +29,10 @@ const Homepage = () => {
 
   const [data, setData] = useState();
   const { watches, shoes, blazers } = data || {};
-  useQuery(GET_CATEGORY_IMAGES, {
-    variables: queryVariables,
-    onCompleted({ getImagesByName }) {
-      getImagesByName.map((key) => {
+  useQuery(GET_CATEGORIES, {
+    onCompleted({ getCategories }) {
+      console.log(getCategories);
+      getCategories.map((key) => {
         setData((prevData) => ({
           ...prevData,
           [key.category]: key,
@@ -36,7 +40,7 @@ const Homepage = () => {
       });
     },
   });
-
+  console.log(watches);
   const path = `/products/`;
 
   const handleClick = (category) => {
@@ -60,14 +64,14 @@ const Homepage = () => {
             <Section
               gridColumn={'span 2 / span 2 '}
               gridRow={'span 2 / span 2'}
-              imageUrl={watches.secure_url}
+              imageUrl={watches.image.secure_url}
               categoryTitle={watches.category}
               clicked={() => handleClick(watches.category)}
             ></Section>
 
             <Section
               gridColumn={'span 1 / span 1'}
-              imageUrl={shoes.secure_url}
+              imageUrl={shoes.image.secure_url}
               delay={200}
               categoryTitle={shoes.category}
               clicked={() => handleClick(shoes.category)}
@@ -81,7 +85,7 @@ const Homepage = () => {
 
             <Section
               gridColumn={'span 2 / span 2'}
-              imageUrl={blazers.secure_url}
+              imageUrl={blazers.image.secure_url}
               delay={300}
               categoryTitle={blazers.category}
               clicked={() => handleClick(blazers.category)}
