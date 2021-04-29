@@ -42,7 +42,6 @@ export default class MyDocument extends Document {
             href="https://fonts.gstatic.com"
             crossOrigin="true"
           />
-
           <link
             rel="preload"
             as="style"

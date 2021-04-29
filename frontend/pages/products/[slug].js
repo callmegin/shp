@@ -3,8 +3,8 @@ import { initializeApollo, addApolloState } from 'lib/apolloClient';
 
 import Products from 'components/containers/Products/Products';
 
-const ProductsPage = ({ params }) => {
-  return <Products slug={params.slug} />;
+const ProductsPage = ({ params, cloud }) => {
+  return <Products slug={params.slug} cloud={cloud} />;
 };
 
 // export async function getStaticPaths() {
@@ -20,13 +20,13 @@ const ProductsPage = ({ params }) => {
 
 export async function getServerSideProps({ params }) {
   const apolloClient = initializeApollo();
-
+  const cloud = process.env.CLOUDINARY_CLOUD_NAME;
   await apolloClient.query({
     query: GET_PRODUCTS_BY_CATEGORY,
     variables: { category: params.slug },
   });
   return addApolloState(apolloClient, {
-    props: { params },
+    props: { params, cloud },
   });
 }
 

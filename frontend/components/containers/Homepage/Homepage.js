@@ -31,7 +31,6 @@ const Homepage = () => {
   const { watches, shoes, blazers } = data || {};
   useQuery(GET_CATEGORIES, {
     onCompleted({ getCategories }) {
-      console.log(getCategories);
       getCategories.map((key) => {
         setData((prevData) => ({
           ...prevData,
@@ -40,11 +39,10 @@ const Homepage = () => {
       });
     },
   });
-  console.log(watches);
+
   const path = `/products/`;
 
   const handleClick = (category) => {
-    // router.push(`/products/${category}`);
     router.push(`/products/${category}`);
   };
 

@@ -8,7 +8,6 @@ export const getStaticProps = async () => {
 
   await apolloClient.query({
     query: GET_CATEGORIES,
-    variables: {},
   });
 
   return addApolloState(apolloClient, {
