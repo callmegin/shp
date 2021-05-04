@@ -29,6 +29,7 @@ module.exports = {
               .sort({ _id: 1 })
               .limit(limit + 1)
               .exec());
+
         if (!requiredProducts)
           throw new Error(
             "Either there's no data, or hasNextPage was not taken into account previously."
