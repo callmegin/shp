@@ -16,7 +16,6 @@ module.exports = {
       }
     },
     getProductsCursor: async (_, { limit, cursor }) => {
-      console.log('GET PRODUCTS CURSOR');
       try {
         let requiredProducts;
 
@@ -67,7 +66,6 @@ module.exports = {
           },
         };
       } catch (e) {
-        console.log(e);
         return e.message;
       }
     },
