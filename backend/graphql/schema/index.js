@@ -68,6 +68,19 @@ module.exports = gql`
     original_filename: String!
     category: Categories!
   }
+  #Pagination
+  type Edge {
+    cursor: ID
+    node: Product!
+  }
+  type ProductConnection {
+    edges: [Edge]
+    pageInfo: PageInfo
+  }
+  type PageInfo {
+    endCursor: ID!
+    hasNextPage: Boolean!
+  }
 
   type Query {
     user(id: ID!): User #don't know if ill need this one
@@ -80,6 +93,8 @@ module.exports = gql`
     getTypes: [Types]
     getType(id: ID, type: String): Types
     getImagesByName(fileName: String): [ProductImage]
+    #Pagination
+    getProductsCursor(limit: Int!, cursor: ID): ProductConnection
   }
   type Mutation {
     addUser(userName: String!, email: String!): User

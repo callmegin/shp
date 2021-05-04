@@ -15,6 +15,61 @@ module.exports = {
         return e.message;
       }
     },
+    getProductsCursor: async (_, { limit, cursor }) => {
+      console.log('GET PRODUCTS CURSOR');
+      try {
+        let requiredProducts;
+
+        !cursor
+          ? (requiredProducts = await Product.find()
+              .skip(0)
+              .limit(limit + 1)
+              .exec())
+          : (requiredProducts = await Product.find({ _id: { $gt: cursor } })
+              .sort({ _id: 1 })
+              .limit(limit + 1)
+              .exec());
+        if (!requiredProducts)
+          throw new Error(
+            "Either there's no data, or hasNextPage was not taken into account previously."
+          );
+        // const documentsCount = await Product.estimatedDocumentCount();
+        // console.log(documentsCount);
+        const hasNextPage = requiredProducts.length > limit;
+
+        const edges = [];
+
+        if (hasNextPage) {
+          requiredProducts = requiredProducts.slice(0, -1);
+          requiredProducts.map((product) => {
+            edges.push({
+              cursor: product.id,
+              node: product,
+            });
+          });
+        } else {
+          requiredProducts.map((product) => {
+            edges.push({
+              cursor: product.id,
+              node: product,
+            });
+          });
+        }
+
+        const endCursor = requiredProducts[requiredProducts.length - 1]._id;
+
+        return {
+          edges,
+          pageInfo: {
+            endCursor,
+            hasNextPage,
+          },
+        };
+      } catch (e) {
+        console.log(e);
+        return e.message;
+      }
+    },
     getProduct: async (_, { id }) => {
       try {
         return await Product.findOne({ _id: id }).exec();
