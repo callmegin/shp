@@ -7,3 +7,5 @@ mongoose.connect(dbURL, {
   useUnifiedTopology: true,
   useCreateIndex: true,
 });
+
+mongoose.set('debug', true);

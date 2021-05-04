@@ -94,7 +94,11 @@ module.exports = gql`
     getType(id: ID, type: String): Types
     getImagesByName(fileName: String): [ProductImage]
     #Pagination
-    getProductsCursor(limit: Int!, cursor: ID): ProductConnection
+    getProductsCursor(
+      limit: Int!
+      cursor: ID
+      category: String
+    ): ProductConnection
   }
   type Mutation {
     addUser(userName: String!, email: String!): User

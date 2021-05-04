@@ -15,16 +15,19 @@ module.exports = {
         return e.message;
       }
     },
-    getProductsCursor: async (_, { limit, cursor }) => {
+    getProductsCursor: async (_, { limit, cursor, category }) => {
       try {
         let requiredProducts;
 
         !cursor
-          ? (requiredProducts = await Product.find()
+          ? (requiredProducts = await Product.find({ category: category })
               .skip(0)
               .limit(limit + 1)
               .exec())
-          : (requiredProducts = await Product.find({ _id: { $gt: cursor } })
+          : (requiredProducts = await Product.find({
+              category: category,
+              _id: { $gt: cursor },
+            })
               .sort({ _id: 1 })
               .limit(limit + 1)
               .exec());
@@ -41,20 +44,13 @@ module.exports = {
 
         if (hasNextPage) {
           requiredProducts = requiredProducts.slice(0, -1);
-          requiredProducts.map((product) => {
-            edges.push({
-              cursor: product.id,
-              node: product,
-            });
-          });
-        } else {
-          requiredProducts.map((product) => {
-            edges.push({
-              cursor: product.id,
-              node: product,
-            });
-          });
         }
+        requiredProducts.map((product) => {
+          edges.push({
+            cursor: product.id,
+            node: product,
+          });
+        });
 
         const endCursor = requiredProducts[requiredProducts.length - 1]._id;
 
