@@ -13,7 +13,7 @@ module.exports = {
     getCategory: async (_, { id, category }) => {
       try {
         if (id && category)
-          throw new e('Either ID or Category should be provided, not both');
+          throw new Error('Either ID or Category should be provided, not both');
         if (id) return await Category.findOne({ _id: id }).exec();
         if (category)
           return await Category.findOne({ category: category }).exec();

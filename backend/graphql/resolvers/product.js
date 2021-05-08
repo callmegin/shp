@@ -17,9 +17,12 @@ module.exports = {
     },
     getProductsCursor: async (_, { limit, cursor, category }) => {
       try {
+        console.log('limit: ' + limit);
+        console.log('cursor: ' + cursor);
+        console.log('category: ' + category);
         let requiredProducts;
 
-        !cursor
+        !cursor || cursor === 0
           ? (requiredProducts = await Product.find({ category: category })
               .skip(0)
               .limit(limit + 1)
@@ -62,6 +65,7 @@ module.exports = {
           },
         };
       } catch (e) {
+        console.log(e);
         return e.message;
       }
     },
