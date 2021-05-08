@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Router from 'next/router';
 import { ApolloProvider } from '@apollo/client';
 import { useApollo } from 'lib/apolloClient';
+import { RouterScrollProvider } from '@moxy/next-router-scroll';
 import ParentPage from 'components/containers/ParentPage/ParentPage';
 
 function MyApp({ Component, pageProps }) {
@@ -34,9 +35,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ApolloProvider client={apolloClient}>
-      <ParentPage>
-        <Component {...pageProps} pageLoading={loading} />
-      </ParentPage>
+      <RouterScrollProvider>
+        <ParentPage>
+          <Component {...pageProps} pageLoading={loading} />
+        </ParentPage>
+      </RouterScrollProvider>
     </ApolloProvider>
   );
 }

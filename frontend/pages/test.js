@@ -1,23 +1,13 @@
-import Test, { GET_ALL_PRODUCTS } from '../components/Test';
-import { initializeApollo, addApolloState } from '../lib/apolloClient';
+import Testfrom from '../components/Test';
+
 const test = ({ pageLoading }) => {
   console.log(pageLoading);
   return (
     <div>
       <h1>Testing page</h1>
-      <Test />
+      <Testfrom />
     </div>
   );
 };
-
-export async function getServerSideProps() {
-  const apolloClient = initializeApollo();
-
-  await apolloClient.query({ query: GET_ALL_PRODUCTS });
-
-  return addApolloState(apolloClient, {
-    props: {},
-  });
-}
 
 export default test;

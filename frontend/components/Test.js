@@ -1,33 +1,35 @@
 import { gql, useQuery, NetworkStatus } from '@apollo/client';
 import Image from 'next/image';
 
-export const GET_ALL_PRODUCTS = gql`
-  query allProducts {
-    getProducts {
+export const GET_CATEGORIES = gql`
+  query getCategories {
+    getCategories {
       id
-      price
-      name
       category
+      types {
+        id
+        type
+      }
       image {
         id
-        url
+        secure_url
       }
     }
   }
 `;
-
 const test = () => {
-  const { loading, error, data } = useQuery(GET_ALL_PRODUCTS);
-  console.log(loading);
+  const { error, loading, data } = useQuery(GET_CATEGORIES);
+  console.log(error);
   console.log(data);
+
   return (
     <>
-      {data.getProducts.map((product) => (
-        <div key={product.key}>
-          {product.name}
-          <img src={product.image.url} />
-        </div>
-      ))}
+      <h1>Test page</h1>
+      {data ? (
+        <div>CONTENT GOES HERE</div>
+      ) : (
+        <div>noooo contentiiinoooo !!!!!!!</div>
+      )}
     </>
   );
 };

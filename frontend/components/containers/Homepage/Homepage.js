@@ -1,4 +1,4 @@
-import { gql, useQuery } from '@apollo/client';
+import { gql } from '@apollo/client';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
@@ -11,10 +11,6 @@ export const GET_CATEGORIES = gql`
     getCategories {
       id
       category
-      types {
-        id
-        type
-      }
       image {
         id
         secure_url
@@ -23,22 +19,23 @@ export const GET_CATEGORIES = gql`
   }
 `;
 
-const Homepage = () => {
+const Homepage = ({ response }) => {
   const router = useRouter();
   // const [selected, setSelected] = useState();
 
   const [data, setData] = useState();
   const { watches, shoes, blazers } = data || {};
-  useQuery(GET_CATEGORIES, {
-    onCompleted({ getCategories }) {
-      getCategories.map((key) => {
+
+  useEffect(() => {
+    response &&
+      response.data.getCategories.map((key) => {
+        console.log(key);
         setData((prevData) => ({
           ...prevData,
           [key.category]: key,
         }));
       });
-    },
-  });
+  }, [response]);
 
   const path = `/products/`;
 

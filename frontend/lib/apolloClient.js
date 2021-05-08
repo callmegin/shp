@@ -6,9 +6,14 @@ import {
   ApolloLink,
 } from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
-import { concatPagination } from '@apollo/client/utilities';
+import {
+  concatPagination,
+  relayStylePagination,
+} from '@apollo/client/utilities';
 import merge from 'deepmerge';
 import isEqual from 'lodash/isEqual';
+
+import infiniteScroll from './infiniteScroll';
 
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__';
 
@@ -18,20 +23,33 @@ function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: ApolloLink.from([
-      onError(({ graphQLErrors }) => {
-        graphQLErrors.map(({ message, locations, path }) =>
-          console.log(
-            '\x1b[31m%s\x1b[0m',
-            `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
-          )
-        );
+      onError(({ graphQLErrors, networkError }) => {
+        if (graphQLErrors) {
+          graphQLErrors.map(({ message, locations, path }) =>
+            console.log(
+              '\x1b[31m%s\x1b[0m',
+              `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+            )
+          );
+        }
+        if (networkError) {
+          console.log(`[Network error]: ${networkError}`);
+        }
       }),
       new HttpLink({
-        uri: process.env.SERVER_URL, // Server URL (must be absolute)
+        uri: process.env.NEXT_PUBLIC_SERVER_URL, // Server URL (must be absolute)
         credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       }),
     ]),
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+      typePolicies: {
+        Query: {
+          fields: {
+            getProductsCursor: infiniteScroll(),
+          },
+        },
+      },
+    }),
   });
 }
 

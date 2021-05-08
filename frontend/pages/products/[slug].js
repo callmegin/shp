@@ -3,31 +3,35 @@ import { initializeApollo, addApolloState } from 'lib/apolloClient';
 
 import Products from 'components/containers/Products/Products';
 
-const ProductsPage = ({ params, cloud }) => {
-  return <Products slug={params.slug} cloud={cloud} />;
+const ProductsPage = ({ params, cloud, response }) => {
+  return <Products slug={params.slug} />;
 };
 
-// export async function getStaticPaths() {
-//   return {
-//     paths: [
-//       { params: { slug: `watches` } },
-//       { params: { slug: `shoes` } },
-//       { params: { slug: `blazers` } },
-//     ],
-//     fallback: false,
-//   };
-// }
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { slug: `watches` } },
+      { params: { slug: `shoes` } },
+      { params: { slug: `blazers` } },
+    ],
+    fallback: false,
+  };
+}
 
-export async function getServerSideProps({ params }) {
-  const apolloClient = initializeApollo();
-  const cloud = process.env.CLOUDINARY_CLOUD_NAME;
-  await apolloClient.query({
-    query: GET_PRODUCTS_BY_CATEGORY,
-    variables: { category: params.slug },
-  });
-  return addApolloState(apolloClient, {
-    props: { params, cloud },
-  });
+export async function getStaticProps({ params }) {
+  // const apolloClient = initializeApollo();
+  // const cloud = process.env.CLOUDINARY_CLOUD_NAME;
+  // const response = await apolloClient.query({
+  //   query: GET_PRODUCTS_BY_CATEGORY,
+  //   variables: { category: params.slug },
+  // });
+  // console.log(params);
+  // return addApolloState(apolloClient, {
+  //   props: { params, cloud, response },
+  // });
+  return {
+    props: { params },
+  };
 }
 
 export default ProductsPage;

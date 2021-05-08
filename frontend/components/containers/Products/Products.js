@@ -1,22 +1,32 @@
-import { gql, useLazyQuery, useQuery } from '@apollo/client';
-import { Image, Placeholder } from 'cloudinary-react';
+import { gql, useQuery } from '@apollo/client';
 import _ from 'lodash';
 
 import { useRef, useEffect, useState } from 'react';
+import { useRouterScroll } from '@moxy/next-router-scroll';
+import Skeleton from 'components/ui/Skeleton/Skeleton';
 
 import * as Styled from './styles';
 
 export const GET_PRODUCTS_BY_CATEGORY = gql`
-  query getProducts($category: String) {
-    getProducts(category: $category) {
-      id
-      price
-      name
-      category
-      image {
-        public_id
-        secure_url
-        thumb_secure_url
+  query getProductsCursor($cursor: ID, $category: String) {
+    getProductsCursor(limit: 3, cursor: $cursor, category: $category) {
+      edges {
+        node {
+          id
+          name
+          price
+          category
+          type
+          image {
+            public_id
+            secure_url
+          }
+        }
+        cursor
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
       }
     }
   }
@@ -25,80 +35,63 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
 const isBrowser = typeof window !== 'undefined';
 
 const Products = ({ slug, cloud }) => {
-  const [imageLoading, setImageLoading] = useState(false);
-  const { loadProducts, loading, data } = useQuery(GET_PRODUCTS_BY_CATEGORY, {
-    variables: {
-      category: slug,
-    },
-  });
+  const [hasNextPage, setHasNextPage] = useState(true);
+  const [endCursor, setEndCursor] = useState();
+  const { error, loading, data, fetchMore } = useQuery(
+    GET_PRODUCTS_BY_CATEGORY,
+    {
+      notifyOnNetworkStatusChange: true,
+      variables: {
+        category: slug,
+      },
+      onCompleted({ getProductsCursor }) {
+        const innerData = getProductsCursor.pageInfo;
 
-  const [gridElem, setGridElem] = useState(null);
-  const [winHeight, setWinHeight] = useState();
+        setHasNextPage(innerData.hasNextPage);
+        setEndCursor(innerData.endCursor);
+      },
+    }
+  );
 
-  const getWindowHeight = () => {
-    console.log(`win height: ${window.innerHeight}`);
-    return window.innerHeight;
+  const loadMore = (e) => {
+    e.preventDefault();
+    fetchMore({
+      variables: {
+        cursor: endCursor,
+        category: slug,
+      },
+    });
   };
-
-  const getScrollPosition = () => {
-    console.log(window.scrollY);
-  };
-
-  const getGridElemHeight = () => {
-    console.log(gridElem.clientHeight);
-  };
-
-  const getRef = () => {
-    console.log('getref');
-  };
-
-  useEffect(() => {
-    data && console.log(gridElem);
-  }, [data]);
-
-  useEffect(() => {
-    setWinHeight(getWindowHeight);
-  }, []);
-
-  useEffect(() => {
-    isBrowser &&
-      window.addEventListener('resize', _.debounce(getWindowHeight, 100));
-    return () => window.removeEventListener('resize', getWindowHeight);
-  });
-
-  useEffect(() => {
-    isBrowser &&
-      window.addEventListener('scroll', _.debounce(getScrollPosition, 100));
-
-    return () => window.removeEventListener('scroll', getScrollPosition);
-  });
 
   return (
-    <>
-      <p>{slug}</p>
+    <div>
       <h2>This is products page</h2>
-      {/* <button onClick={() => loadProducts()}>solobolo</button> */}
+
       <Styled.ProductsGrid>
-        {data &&
-          data.getProducts.map((item) => {
+        {data && !loading ? (
+          data.getProductsCursor.edges.map((item) => {
             return (
-              <Styled.GridElement key={item.id} ref={getRef}>
-                <Image
-                  cloudName={cloud}
-                  publicId={item.image.public_id}
-                  loading="lazy"
-                >
-                  <Placeholder type="pixelate" />
-                </Image>
+              <Styled.GridElement key={item.node.id}>
+                <Styled.ImageWrapper imageUrl={item.node.image.secure_url} />
                 <div>
-                  <h3>{item.name}</h3>
-                  <p>{item.price}</p>
+                  <h3>{item.node.name}</h3>
+                  <p>{item.node.price}</p>
                 </div>
               </Styled.GridElement>
             );
-          })}
+          })
+        ) : (
+          <>
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </>
+        )}
       </Styled.ProductsGrid>
-    </>
+      <button onClick={loadMore} disabled={!hasNextPage}>
+        solobolo
+      </button>
+    </div>
   );
 };
 
