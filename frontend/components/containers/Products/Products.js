@@ -34,9 +34,20 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
 
 const isBrowser = typeof window !== 'undefined';
 
+const isBottom = (ref) => {
+  if (!ref.current) {
+    console.log('FALSE ???????');
+    return false;
+  }
+  return ref.current.getBoundingClientRect().bottom < window.innerHeight;
+};
+
 const Products = ({ slug, cloud }) => {
+  const [reachedBot, setReachedBot] = useState(false);
+
   const [hasNextPage, setHasNextPage] = useState(true);
   const [endCursor, setEndCursor] = useState();
+  const elementRef = useRef();
   const { error, loading, data, fetchMore } = useQuery(
     GET_PRODUCTS_BY_CATEGORY,
     {
@@ -46,12 +57,40 @@ const Products = ({ slug, cloud }) => {
       },
       onCompleted({ getProductsCursor }) {
         const innerData = getProductsCursor.pageInfo;
-
+        console.log(getProductsCursor);
+        console.log(innerData.hasNextPage);
         setHasNextPage(innerData.hasNextPage);
         setEndCursor(innerData.endCursor);
       },
     }
   );
+  // useEffect(() => {
+  //   if (data) {
+  //     const innerData = data.getProductsCursor.pageInfo;
+
+  //     console.log(innerData);
+  //     setHasNextPage(innerData.hasNextPage);
+  //     setEndCursor(innerData.endCursor);
+  //   }
+  // }, [data]);
+  // console.log(data);
+  useEffect(() => {
+    const onScroll = () => {
+      isBottom(elementRef) ? setReachedBot(true) : setReachedBot(false);
+    };
+    isBrowser && document.addEventListener('scroll', _.debounce(onScroll, 100));
+    return () => document.removeEventListener('scroll', onScroll);
+  }, []);
+  useEffect(() => {
+    if (endCursor && hasNextPage && reachedBot) {
+      fetchMore({
+        variables: {
+          cursor: endCursor,
+          category: slug,
+        },
+      });
+    }
+  }, [reachedBot]);
 
   const loadMore = (e) => {
     e.preventDefault();
@@ -62,11 +101,8 @@ const Products = ({ slug, cloud }) => {
       },
     });
   };
-
   return (
-    <div>
-      <h2>This is products page</h2>
-
+    <>
       <Styled.ProductsGrid>
         {data && !loading ? (
           data.getProductsCursor.edges.map((item) => {
@@ -91,7 +127,8 @@ const Products = ({ slug, cloud }) => {
       <button onClick={loadMore} disabled={!hasNextPage}>
         solobolo
       </button>
-    </div>
+      <div ref={elementRef}>{hasNextPage ? 'more...' : 'end'}</div>
+    </>
   );
 };
 
