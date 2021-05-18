@@ -77,7 +77,7 @@ const Products = ({ slug }) => {
                 </Styled.GridElement>
               );
             })}
-          {loading && <Skeleton number={3} />}
+          {loading && hasNextPage && <Skeleton number={3} />}
         </InfiniteScroll>
       </Styled.ProductsGrid>
     </>
