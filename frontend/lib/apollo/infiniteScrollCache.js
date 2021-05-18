@@ -1,6 +1,6 @@
 import { GET_PRODUCTS_BY_CATEGORY } from 'components/containers/Products/Products';
 
-const infiniteScroll = () => ({
+const infiniteScrollCache = () => ({
   keyArgs: false,
   read(existing, { args, cache }) {
     return existing ? existing[args.category] : existing;
@@ -27,4 +27,4 @@ const infiniteScroll = () => ({
   },
 });
 
-export default infiniteScroll;
+export default infiniteScrollCache;

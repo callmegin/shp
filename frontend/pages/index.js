@@ -1,5 +1,5 @@
 import { GET_CATEGORIES } from 'components/containers/Homepage/Homepage';
-import { initializeApollo, addApolloState } from 'lib/apolloClient';
+import { initializeApollo, addApolloState } from 'lib/apollo/apolloClient';
 
 import Homepage from 'components/containers/Homepage/Homepage';
 

@@ -13,7 +13,7 @@ import {
 import merge from 'deepmerge';
 import isEqual from 'lodash/isEqual';
 
-import infiniteScroll from './infiniteScroll';
+import infiniteScrollCache from './infiniteScrollCache';
 
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__';
 
@@ -45,7 +45,7 @@ function createApolloClient() {
       typePolicies: {
         Query: {
           fields: {
-            getProductsCursor: infiniteScroll(),
+            getProductsCursor: infiniteScrollCache(),
           },
         },
       },

@@ -1,5 +1,5 @@
 import { GET_PRODUCTS_BY_CATEGORY } from 'components/containers/Products/Products';
-import { initializeApollo, addApolloState } from 'lib/apolloClient';
+import { initializeApollo, addApolloState } from 'lib/apollo/apolloClient';
 
 import Products from 'components/containers/Products/Products';
 

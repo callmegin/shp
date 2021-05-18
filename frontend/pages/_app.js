@@ -2,7 +2,7 @@ import App from 'next/app';
 import { useState, useEffect } from 'react';
 import Router from 'next/router';
 import { ApolloProvider } from '@apollo/client';
-import { useApollo } from 'lib/apolloClient';
+import { useApollo } from 'lib/apollo/apolloClient';
 import { RouterScrollProvider } from '@moxy/next-router-scroll';
 import ParentPage from 'components/containers/ParentPage/ParentPage';
 
