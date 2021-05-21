@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={apolloClient}>
       <RouterScrollProvider>
-        <ParentPage>
+        <ParentPage pageLoading={loading}>
           <Component {...pageProps} pageLoading={loading} />
         </ParentPage>
       </RouterScrollProvider>

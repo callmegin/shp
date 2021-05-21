@@ -1,7 +1,8 @@
+import Link from 'next/link';
+import { useState } from 'react';
 import { gql, useQuery } from '@apollo/client';
 import _ from 'lodash';
 
-import { useState } from 'react';
 import Skeleton from 'components/ui/Skeleton/Skeleton';
 
 import * as Styled from './styles';
@@ -56,6 +57,7 @@ const Products = ({ slug }) => {
       },
     });
   };
+
   return (
     <>
       <Styled.ProductsGrid>
@@ -68,8 +70,15 @@ const Products = ({ slug }) => {
             data.getProductsCursor.edges.map((item) => {
               return (
                 <Styled.GridElement key={item.node.id}>
-                  <Styled.ImageWrapper imageUrl={item.node.image.secure_url} />
-
+                  <Link
+                    as={`/product/${item.node.id}`}
+                    href="/product/[slug]"
+                    passHref
+                  >
+                    <Styled.ImageWrapper
+                      imageUrl={item.node.image.secure_url}
+                    />
+                  </Link>
                   <div>
                     <h3>{item.node.name}</h3>
                     <p>{item.node.price}</p>

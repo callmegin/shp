@@ -24,11 +24,11 @@ export const rotateTextUp = keyframes`
 
 export const opacity = keyframes`
   from {
-    opacity 0;
+    opacity: 0;
     transform: scale(1.5);
   }
   to {
-    opacity 1;
+    opacity: 1;
     transform: scale(1.0);
   }
 `;
@@ -37,11 +37,14 @@ export const enterElement = keyframes`
   from {
     opacity: 0;
     filter: blur(0.2rem);
-    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
-    opacity: 1
+    opacity: 1;
     filter: blur();
-    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
+`;
+
+export const loadingPage = keyframes`
 `;
