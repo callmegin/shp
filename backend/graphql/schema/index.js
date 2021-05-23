@@ -10,6 +10,7 @@ module.exports = gql`
   type Product {
     id: ID!
     name: String!
+    description: String!
     price: Float!
     category: String!
     type: String!
