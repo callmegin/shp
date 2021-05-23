@@ -29,7 +29,6 @@ const Homepage = ({ response }) => {
   useEffect(() => {
     response &&
       response.data.getCategories.map((key) => {
-        console.log(key);
         setData((prevData) => ({
           ...prevData,
           [key.category]: key,
