@@ -60,12 +60,12 @@ const Products = ({ slug }) => {
 
   return (
     <>
-      <Styled.ProductsGrid>
-        <InfiniteScroll
-          hasNextPage={hasNextPage}
-          reachedBot={loadMore}
-          loading={loading}
-        >
+      <InfiniteScroll
+        hasNextPage={hasNextPage}
+        reachedBot={loadMore}
+        loading={loading}
+      >
+        <Styled.ProductsGrid>
           {data &&
             data.getProductsCursor.edges.map((item) => {
               return (
@@ -87,8 +87,8 @@ const Products = ({ slug }) => {
               );
             })}
           {loading && hasNextPage && <Skeleton number={3} />}
-        </InfiniteScroll>
-      </Styled.ProductsGrid>
+        </Styled.ProductsGrid>
+      </InfiniteScroll>
     </>
   );
 };

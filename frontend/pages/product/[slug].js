@@ -21,8 +21,6 @@ const ProductPage = ({ params, data }) => {
 const apolloClient = initializeApollo();
 
 export async function getStaticPaths({ query }) {
-  console.log('getStaticPaths: ');
-  console.log(query);
   const response = await apolloClient.query({
     query: GET_ALL_PRODUCTS,
   });
@@ -40,13 +38,9 @@ export async function getStaticPaths({ query }) {
 }
 
 export async function getStaticProps({ params, query }) {
-  console.log('getStaticProps:');
-
-  console.log(params);
-  console.log(query);
   //   const regex = /\=(.*)/;
   //   const slugId = params.slug.match(regex)[1];
-  console.log(params.slug);
+
   //   console.log(slugId);
 
   const { data } = await apolloClient.query({

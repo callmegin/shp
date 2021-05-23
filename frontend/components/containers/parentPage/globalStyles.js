@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    font-family: 'Turret Road', cursive !important;
+    font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-style: normal; 
     padding: 0;
@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.5rem;
     line-height: 2;
     background: var(--light);
+    color: var(--dark);
   }
   h1,h2,h3 {
     margin: 0;
@@ -42,7 +43,7 @@ const GlobalStyles = createGlobalStyle`
     cursor: default;
   }
   button {
-      font-family: 'Turret Road', cursive;
+    font-family: 'Montserrat', sans-serif;
   }
 `;
 

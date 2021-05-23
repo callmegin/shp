@@ -1,7 +1,12 @@
-import Skeleton from 'components/ui/Skeleton/Skeleton';
-import React, { useRef, useEffect } from 'react';
-
+import { useRef, useEffect } from 'react';
 import _ from 'lodash';
+
+import styled from 'styled-components';
+
+const RefDiv = styled.div`
+  text-align: center;
+  margin: 0.5rem;
+`;
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -32,7 +37,7 @@ const InfiniteScroll = ({ children, hasNextPage, reachedBot, loading }) => {
   return (
     <>
       {children}
-      <div ref={elementRef}>{hasNextPage ? '...' : ''}</div>
+      <RefDiv ref={elementRef}>{hasNextPage ? 'more' : ''}</RefDiv>
     </>
   );
 };
