@@ -7,7 +7,7 @@ export const gradienAnimation = keyframes`
     100%{background-position:51% 0%}
 `;
 
-export const GirdElement = styled.div`
+export const GridElement = styled.div`
   display: block;
   width: 100%;
   height: calc((1000px - 3rem) / 2);

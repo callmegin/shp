@@ -10,7 +10,7 @@ import InfiniteScroll from 'lib/utility/InfiniteScroll';
 
 export const GET_PRODUCTS_BY_CATEGORY = gql`
   query getProductsCursor($cursor: ID, $category: String) {
-    getProductsCursor(limit: 3, cursor: $cursor, category: $category) {
+    getProductsCursor(limit: 4, cursor: $cursor, category: $category) {
       edges {
         node {
           id
@@ -80,14 +80,15 @@ const Products = ({ slug }) => {
                     />
                   </Link>
                   <div>
-                    <h3>{item.node.name}</h3>
+                    <p>{item.node.name}</p>
                     <p>{item.node.price}</p>
                   </div>
                 </Styled.GridElement>
               );
             })}
-          {loading && hasNextPage && <Skeleton number={3} />}
+          {loading && hasNextPage && <Skeleton number={4} />}
         </Styled.ProductsGrid>
+        <Styled.RefDiv>{hasNextPage ? 'more' : ''}</Styled.RefDiv>
       </InfiniteScroll>
     </>
   );

@@ -1,13 +1,6 @@
 import { useRef, useEffect } from 'react';
 import _ from 'lodash';
 
-import styled from 'styled-components';
-
-const RefDiv = styled.div`
-  text-align: center;
-  margin: 0.5rem;
-`;
-
 const isBrowser = typeof window !== 'undefined';
 
 const isBottom = (ref) => {
@@ -25,7 +18,6 @@ const useOnScrollEvent = (callback) => {
 const InfiniteScroll = ({ children, hasNextPage, reachedBot, loading }) => {
   const elementRef = useRef();
 
-  let tst = '';
   const invokeReachedBot = () => {
     if (!loading && hasNextPage && isBottom(elementRef)) {
       reachedBot();
@@ -37,7 +29,7 @@ const InfiniteScroll = ({ children, hasNextPage, reachedBot, loading }) => {
   return (
     <>
       {children}
-      <RefDiv ref={elementRef}>{hasNextPage ? 'more' : ''}</RefDiv>
+      <div ref={elementRef}></div>
     </>
   );
 };

@@ -12,14 +12,10 @@ export const ProductsGrid = styled.div`
 `}
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-
   grid-template-rows: auto auto;
-
   grid-gap: 1rem;
   padding: 1rem;
   width: 100%;
-  /* height: 100vh; */
-  /* grid-auto-rows: 500px; */
 `;
 
 export const GridElement = styled.div`
@@ -34,6 +30,7 @@ export const GridElement = styled.div`
   & > img {
     width: 100%;
   }
+  margin-bottom: 2rem;
 `;
 
 export const ImageWrapper = styled.a`
@@ -49,4 +46,9 @@ export const ImageWrapper = styled.a`
   background-repeat: no-repeat;
   `}
   animation: ${enterElement} 700ms;
+`;
+
+export const RefDiv = styled.div`
+  text-align: center;
+  margin: 0.5rem;
 `;
