@@ -2,11 +2,11 @@ import { ST } from 'next/dist/next-server/lib/utils';
 import * as Styled from './styles';
 
 const Skeleton = ({ number }) => {
-  let skeleton = [];
+  let arr = [];
   for (let i = 0; i < number; i++) {
-    skeleton.push(<Styled.GridElement key={i} />);
+    arr.push(<Styled.GridElement key={i} />);
   }
 
-  return <>{skeleton}</>;
+  return <>{arr}</>;
 };
 export default Skeleton;
