@@ -132,7 +132,7 @@ const uploadData = (folder, file) => {
             image: image,
           };
           jsonData.sampleData.push(product);
-          console.log(`Resolved: ${productName} - ${folder});
+          console.log(`Resolved: ${productName} - ${folder}`);
           resolve(image);
         }
       }
