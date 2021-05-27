@@ -1,783 +1,2164 @@
 {
-  "sampleData": [
-    {
-      "name": "Nike(-y?)",
-      "description": "Looks like it's running shoes",
-      "status": "",
-      "category": "shoes",
-      "price": "71",
-      "type": "Running shoes",
-      "original_image": "imani-bahati-LxVxPA1LOVM-unsplash.jpg",
-      "image": {
-        "asset_id": "22b71abaac4d50155cfe3247441910e1",
-        "public_id": "shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_owumys",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "e9fbdeb6d55e23d21555e31d2bbd79b2dfba69fd",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 18067,
-        "type": "upload",
-        "etag": "b83b8784ae77f8bfe055bec0db14be75",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_owumys.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_owumys.jpg",
-        "access_mode": "public",
-        "original_filename": "imani-bahati-LxVxPA1LOVM-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 3047,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_owumys.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_owumys.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Trainers/Sneakers w/e :)",
-      "description": "Skaters love these",
-      "status": "",
-      "category": "shoes",
-      "price": "70",
-      "type": "Skaterz shoes",
-      "original_image": "hipkicks-HcqA34-uWo4-unsplash.jpg",
-      "image": {
-        "asset_id": "f30db146458f34cab43bc180dc6f400a",
-        "public_id": "shp/shoes/hipkicks-HcqA34-uWo4-unsplash_kkexjc",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "eca6d6a5d540ae607d8954b09d071bd1e253bbe3",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 14615,
-        "type": "upload",
-        "etag": "f7cc89f4be1a3e07d5b4f55decde9aa0",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/shoes/hipkicks-HcqA34-uWo4-unsplash_kkexjc.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/shoes/hipkicks-HcqA34-uWo4-unsplash_kkexjc.jpg",
-        "access_mode": "public",
-        "original_filename": "hipkicks-HcqA34-uWo4-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 3094,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/shoes/hipkicks-HcqA34-uWo4-unsplash_kkexjc.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/shoes/hipkicks-HcqA34-uWo4-unsplash_kkexjc.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Bling Bling Shoes",
-      "description": "Pinkg, yellow and a lot of holes",
-      "status": "",
-      "category": "shoes",
-      "price": "100",
-      "type": "Women shoes",
-      "original_image": "alexandra-gorn-CJ6SJO_yR5w-unsplash.jpg",
-      "image": {
-        "asset_id": "4c5136b401dc80490265bc6a769371bd",
-        "public_id": "shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_tkjieo",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "8b74921e1a42c4816d901cd7de3f10e715314220",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 49070,
-        "type": "upload",
-        "etag": "ed552c56295616e6a0674aad84f7eec2",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_tkjieo.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_tkjieo.jpg",
-        "access_mode": "public",
-        "original_filename": "alexandra-gorn-CJ6SJO_yR5w-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 6763,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_tkjieo.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_tkjieo.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Dark Watch",
-      "description": "It's fine, if you just want a watch",
-      "status": "",
-      "category": "watches",
-      "price": "170",
-      "type": "Some watch brands",
-      "original_image": "krismawan-kadek-HK8DgJrYUnw-unsplash.jpg",
-      "image": {
-        "asset_id": "77a98e88ad6dc0c214727f1210228ab0",
-        "public_id": "shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_ovfg6x",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "23976b88b8bc74d673e5dbe14d6484a38d0b1e02",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 53444,
-        "type": "upload",
-        "etag": "509531db8129c6e9077c56e7755cf104",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_ovfg6x.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_ovfg6x.jpg",
-        "access_mode": "public",
-        "original_filename": "krismawan-kadek-HK8DgJrYUnw-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 7002,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_ovfg6x.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_ovfg6x.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Super Black Watch",
-      "description": "So many dark watches...should've payed more attention to images",
-      "status": "",
-      "category": "watches",
-      "price": "90",
-      "type": "Some watch brands",
-      "original_image": "oliur-uZl3HF0oSik-unsplash.jpg",
-      "image": {
-        "asset_id": "79dfbceb097f3c78deccc697eb1d815f",
-        "public_id": "shp/watches/oliur-uZl3HF0oSik-unsplash_pgv02v",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "ad0def5793892daf6f20e746a4b13bb4eb81f10b",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 50429,
-        "type": "upload",
-        "etag": "eec9e76d1f4a8037fe2fef69e4d8952b",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/watches/oliur-uZl3HF0oSik-unsplash_pgv02v.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/watches/oliur-uZl3HF0oSik-unsplash_pgv02v.jpg",
-        "access_mode": "public",
-        "original_filename": "oliur-uZl3HF0oSik-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 6067,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/watches/oliur-uZl3HF0oSik-unsplash_pgv02v.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/watches/oliur-uZl3HF0oSik-unsplash_pgv02v.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Sporty Shoes",
-      "description": "Air Jordan type of thing, only without his silhouette on them",
-      "status": "",
-      "category": "shoes",
-      "price": "137",
-      "type": "Basketball",
-      "original_image": "matus-hatala-pFzxaKhdFME-unsplash.jpg",
-      "image": {
-        "asset_id": "17385c70ccb27d0052c07095e95de467",
-        "public_id": "shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_qjtijc",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "ea6c568ab9fd20e76edb097e500df19f59437e20",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 33533,
-        "type": "upload",
-        "etag": "32903557f842b046f33f6ba86ec2eaf7",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_qjtijc.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_qjtijc.jpg",
-        "access_mode": "public",
-        "original_filename": "matus-hatala-pFzxaKhdFME-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 5866,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_qjtijc.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_qjtijc.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Green Blazer",
-      "description": "Another blazer, but it's green",
-      "status": "",
-      "category": "blazers",
-      "price": "120",
-      "type": "Semi-official wear",
-      "original_image": "benjamin-rascoe-ntGUpxGogHA-unsplash.jpg",
-      "image": {
-        "asset_id": "c2b9b4ca1febcef693f20c27b6eba427",
-        "public_id": "shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_nipwhp",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "0f4b95ae43e65e94d754b5c2f26ba3dd917e8bba",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 39156,
-        "type": "upload",
-        "etag": "c359fa2c0c80bcada7a96cb1e5b1c8fb",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_nipwhp.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_nipwhp.jpg",
-        "access_mode": "public",
-        "original_filename": "benjamin-rascoe-ntGUpxGogHA-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 5311,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_nipwhp.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_nipwhp.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "",
-      "description": "",
-      "status": "",
-      "category": "watches",
-      "price": "",
-      "type": "",
-      "original_image": "watches-v-main.jpg",
-      "image": {
-        "asset_id": "ba3640c37d5d8fe833826e3ad806e1d1",
-        "public_id": "shp/homepage/watches-v-main_clb0zl",
-        "version": 1619529974,
-        "version_id": "c17cda7e615b1afaad9e45c1ee29e4eb",
-        "signature": "6fe399049ecdc61ec3e710a246c18e6e993440aa",
-        "width": 1000,
-        "height": 1500,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:14Z",
-        "tags": [],
-        "bytes": 175222,
-        "type": "upload",
-        "etag": "2ed86a7889aadb330d05a61253c7fdb3",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/homepage/watches-v-main_clb0zl.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/homepage/watches-v-main_clb0zl.jpg",
-        "access_mode": "public",
-        "original_filename": "watches-v-main",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 3951,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/homepage/watches-v-main_clb0zl.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/homepage/watches-v-main_clb0zl.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Black Watch",
-      "description": "Black designer brand mass produced watch where name matters most.",
-      "status": "",
-      "category": "watches",
-      "price": "99.99",
-      "type": "Designer Watch",
-      "original_image": "balaji-kannan-rvEA6D9WDdY-unsplash.jpg",
-      "image": {
-        "asset_id": "5cf19de09d6523db56e319599b3658e4",
-        "public_id": "shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_kvsqys",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "c7516564a298f05f448f4ddfa3195af901549480",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 21016,
-        "type": "upload",
-        "etag": "58acb622af3ce1b22599f0e2e63232da",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_kvsqys.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_kvsqys.jpg",
-        "access_mode": "public",
-        "original_filename": "balaji-kannan-rvEA6D9WDdY-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 3977,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_kvsqys.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_kvsqys.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Black Blazer",
-      "description": "Hide in the dark with this one",
-      "status": "",
-      "category": "blazers",
-      "price": "126",
-      "type": "Semi-official wear",
-      "original_image": "benjamin-rascoe-Z3N7m_r02TA-unsplash.jpg",
-      "image": {
-        "asset_id": "944e5a81dfe0f0f7df0453189b17624d",
-        "public_id": "shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_szw4ga",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "3f0b0b4d7c6af9b086057cfddb8b78813eefad27",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 29168,
-        "type": "upload",
-        "etag": "ebac330a4fa3cc366d1f915a55c73b50",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_szw4ga.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_szw4ga.jpg",
-        "access_mode": "public",
-        "original_filename": "benjamin-rascoe-Z3N7m_r02TA-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 5409,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_szw4ga.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_szw4ga.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Brown Watch",
-      "description": "Just like 'Dark Watch'. But this one is brown, and with some leather",
-      "status": "",
-      "category": "watches",
-      "price": "190",
-      "type": "Some watch brands",
-      "original_image": "krismawan-kadek-h1nQyjxyo88-unsplash.jpg",
-      "image": {
-        "asset_id": "0893bbdb1a4cc837fd4cce389b75260e",
-        "public_id": "shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_sfrezu",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "7fc3b242b25427584d082d4ec351e52d6ae3e317",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 59086,
-        "type": "upload",
-        "etag": "3dfcb1dcf04c07af3df9bdfb463821f7",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_sfrezu.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_sfrezu.jpg",
-        "access_mode": "public",
-        "original_filename": "krismawan-kadek-h1nQyjxyo88-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 7617,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_sfrezu.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_sfrezu.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Matte Watch",
-      "description": "Right so...a pattern of black watches",
-      "status": "",
-      "category": "watches",
-      "price": "97",
-      "type": "Some watch brands",
-      "original_image": "renzo-watches-g0XrCLvSnco-unsplash.jpg",
-      "image": {
-        "asset_id": "e1014fa45069a1881c6122af2287fa5d",
-        "public_id": "shp/watches/renzo-watches-g0XrCLvSnco-unsplash_wdui0r",
-        "version": 1619529974,
-        "version_id": "c17cda7e615b1afaad9e45c1ee29e4eb",
-        "signature": "92166dd5ddda7d6325f187943234ce0c708fd33c",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:14Z",
-        "tags": [],
-        "bytes": 135277,
-        "type": "upload",
-        "etag": "c05ec50bebf18cdcf0915eb89c3b2c1a",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/watches/renzo-watches-g0XrCLvSnco-unsplash_wdui0r.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/watches/renzo-watches-g0XrCLvSnco-unsplash_wdui0r.jpg",
-        "access_mode": "public",
-        "original_filename": "renzo-watches-g0XrCLvSnco-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 11369,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/watches/renzo-watches-g0XrCLvSnco-unsplash_wdui0r.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/watches/renzo-watches-g0XrCLvSnco-unsplash_wdui0r.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "",
-      "description": "",
-      "status": "",
-      "category": "blazers",
-      "price": "",
-      "type": "",
-      "original_image": "blazers-h-main.jpg",
-      "image": {
-        "asset_id": "951e61a81b2ac44c103043f9980c9225",
-        "public_id": "shp/homepage/blazers-h-main_wr8tyn",
-        "version": 1619529974,
-        "version_id": "c17cda7e615b1afaad9e45c1ee29e4eb",
-        "signature": "cc8e79485ff7e96e5e8a710cda033cd399f67c48",
-        "width": 1000,
-        "height": 563,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:14Z",
-        "tags": [],
-        "bytes": 107048,
-        "type": "upload",
-        "etag": "159ec28d6b1903304162e9da9fc4381c",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/homepage/blazers-h-main_wr8tyn.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/homepage/blazers-h-main_wr8tyn.jpg",
-        "access_mode": "public",
-        "original_filename": "blazers-h-main",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 6865,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/homepage/blazers-h-main_wr8tyn.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/homepage/blazers-h-main_wr8tyn.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Sneakerz",
-      "description": "Buy these cuz everyone buys shoes like these",
-      "status": "",
-      "category": "shoes",
-      "price": "100",
-      "type": "Women shoes",
-      "original_image": "sj-SVtgjU0XMxQ-unsplash.jpg",
-      "image": {
-        "asset_id": "a787e7059152fdc4988ee28c4dacb466",
-        "public_id": "shp/shoes/sj-SVtgjU0XMxQ-unsplash_abtrwy",
-        "version": 1619529974,
-        "version_id": "c17cda7e615b1afaad9e45c1ee29e4eb",
-        "signature": "827d8e2dc1328ef48873f06789ad4b79e70d605c",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:14Z",
-        "tags": [],
-        "bytes": 93138,
-        "type": "upload",
-        "etag": "0ef23b33658eeb24c556f4bad53c7ac5",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/shoes/sj-SVtgjU0XMxQ-unsplash_abtrwy.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/shoes/sj-SVtgjU0XMxQ-unsplash_abtrwy.jpg",
-        "access_mode": "public",
-        "original_filename": "sj-SVtgjU0XMxQ-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 9882,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/shoes/sj-SVtgjU0XMxQ-unsplash_abtrwy.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/shoes/sj-SVtgjU0XMxQ-unsplash_abtrwy.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CONVERSE",
-      "description": "CONVERSE!",
-      "status": "",
-      "category": "shoes",
-      "price": "500",
-      "type": "Converse",
-      "original_image": "brice-brown-JZ5u7j-knPg-unsplash.jpg",
-      "image": {
-        "asset_id": "e36d7b1dd10bba80c8e6975d41e4ecb7",
-        "public_id": "shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_fbyjce",
-        "version": 1619529974,
-        "version_id": "c17cda7e615b1afaad9e45c1ee29e4eb",
-        "signature": "1f4f85c5c98f85fdbee74c9c6688d42ee0f8801a",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:14Z",
-        "tags": [],
-        "bytes": 121010,
-        "type": "upload",
-        "etag": "f5e0d4513cfb257dd1612fbb99cf077f",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_fbyjce.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_fbyjce.jpg",
-        "access_mode": "public",
-        "original_filename": "brice-brown-JZ5u7j-knPg-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 13972,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_fbyjce.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_fbyjce.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Blue Blazer",
-      "description": "Name says it all",
-      "status": "",
-      "category": "blazers",
-      "price": "120",
-      "type": "Semi-official wear",
-      "original_image": "benjamin-rascoe-jXzyR6tgd18-unsplash.jpg",
-      "image": {
-        "asset_id": "023a5f7b7ae02a0706c55d1bdb0bf4ab",
-        "public_id": "shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_c6mmui",
-        "version": 1619529974,
-        "version_id": "c17cda7e615b1afaad9e45c1ee29e4eb",
-        "signature": "4643b815e846cc0bd42bf7ddc55183bcf20429b6",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:14Z",
-        "tags": [],
-        "bytes": 37943,
-        "type": "upload",
-        "etag": "fa45a85686fcf04c0691d98e1c09f292",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_c6mmui.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_c6mmui.jpg",
-        "access_mode": "public",
-        "original_filename": "benjamin-rascoe-jXzyR6tgd18-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 4677,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_c6mmui.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_c6mmui.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Blue Blazer 2",
-      "description": "It's like the other blue blazer, but more official",
-      "status": "",
-      "category": "blazers",
-      "price": "130",
-      "type": "Official wear",
-      "original_image": "benjamin-rascoe-g_1Dkk0ufP8-unsplash.jpg",
-      "image": {
-        "asset_id": "699098caaed1fabbc88e04f8bf881588",
-        "public_id": "shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_mo2oog",
-        "version": 1619529973,
-        "version_id": "6f9a571a1060f5c378330e230bae6b80",
-        "signature": "dcb953b3f4c98b43ac9d3072cd9479cc019be1c1",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:13Z",
-        "tags": [],
-        "bytes": 44949,
-        "type": "upload",
-        "etag": "b68f20c2c589e58bfa24ec4a52f045a9",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_mo2oog.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529973/shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_mo2oog.jpg",
-        "access_mode": "public",
-        "original_filename": "benjamin-rascoe-g_1Dkk0ufP8-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 6244,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_mo2oog.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529973/shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_mo2oog.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Some Watch",
-      "description": "Looks like a rolex, but it isn't",
-      "status": "",
-      "category": "watches",
-      "price": "69",
-      "type": "Chinese Rolex",
-      "original_image": "kimiya-oveisi-meG7dxH2XpI-unsplash.jpg",
-      "image": {
-        "asset_id": "9dc9e3b9691129c7efad39b253dfd537",
-        "public_id": "shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zmjpjl",
-        "version": 1619529974,
-        "version_id": "c17cda7e615b1afaad9e45c1ee29e4eb",
-        "signature": "c25f5157a230f8db35e2c488fd378b05be9f5791",
-        "width": 640,
-        "height": 640,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:14Z",
-        "tags": [],
-        "bytes": 46667,
-        "type": "upload",
-        "etag": "f8e70a547c5a95d9ab1ae91893f781a7",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zmjpjl.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zmjpjl.jpg",
-        "access_mode": "public",
-        "original_filename": "kimiya-oveisi-meG7dxH2XpI-unsplash",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 5617,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zmjpjl.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zmjpjl.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "name": "",
-      "description": "",
-      "status": "",
-      "category": "shoes",
-      "price": "",
-      "type": "",
-      "original_image": "shoes-h-main.jpg",
-      "image": {
-        "asset_id": "d18d160a0486a3ea70fe598d3cc17a18",
-        "public_id": "shp/homepage/shoes-h-main_ygzqii",
-        "version": 1619529974,
-        "version_id": "c17cda7e615b1afaad9e45c1ee29e4eb",
-        "signature": "59ff019f6496ac67898604d9f440cbeb6438b124",
-        "width": 1000,
-        "height": 667,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2021-04-27T13:26:14Z",
-        "tags": [],
-        "bytes": 136208,
-        "type": "upload",
-        "etag": "062575f80b7b813741d6cb9c0d14a1dc",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/homepage/shoes-h-main_ygzqii.jpg",
-        "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1619529974/shp/homepage/shoes-h-main_ygzqii.jpg",
-        "access_mode": "public",
-        "original_filename": "shoes-h-main",
-        "eager": [
-          {
-            "transformation": "h_200,w_200",
-            "width": 200,
-            "height": 200,
-            "bytes": 6324,
-            "format": "jpg",
-            "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/homepage/shoes-h-main_ygzqii.jpg",
-            "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1619529974/shp/homepage/shoes-h-main_ygzqii.jpg"
-          }
-        ]
-      }
-    }
-  ]
+ "sampleData": [
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-ntGUpxGogHA-unsplash.jpg",
+   "image": {
+    "asset_id": "23b01f5217584f57fa384ed55d703059",
+    "public_id": "shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_zrihaz",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "f9cb943ba1c33c37b75a37023e551901fe59e0e6",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 39156,
+    "type": "upload",
+    "etag": "c359fa2c0c80bcada7a96cb1e5b1c8fb",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_zrihaz.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_zrihaz.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-ntGUpxGogHA-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5311,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_zrihaz.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-ntGUpxGogHA-unsplash_zrihaz.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "yasmin-dangor-tuDtWCfsEy8-unsplash.jpg",
+   "image": {
+    "asset_id": "7d5b4098be37c92acf3573bff77f4dcb",
+    "public_id": "shp/shoes/yasmin-dangor-tuDtWCfsEy8-unsplash_rboywc",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "25dffac8567a3ee0939460df66680b63fa72a7cf",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 40415,
+    "type": "upload",
+    "etag": "73c26750f188e24d45d2c02b0fcfada5",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/yasmin-dangor-tuDtWCfsEy8-unsplash_rboywc.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/yasmin-dangor-tuDtWCfsEy8-unsplash_rboywc.jpg",
+    "access_mode": "public",
+    "original_filename": "yasmin-dangor-tuDtWCfsEy8-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 7275,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/yasmin-dangor-tuDtWCfsEy8-unsplash_rboywc.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/yasmin-dangor-tuDtWCfsEy8-unsplash_rboywc.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "swapnil-um_BCDd8rgA-unsplash.jpg",
+   "image": {
+    "asset_id": "3f008df8d661d9628c5d36ede0fd24cc",
+    "public_id": "shp/shoes/swapnil-um_BCDd8rgA-unsplash_o9pdny",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "09745fb3fa119ba653a154fdd289eb253c7d6a82",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 40316,
+    "type": "upload",
+    "etag": "c03b583e586f845d20aa4bdd05200f9a",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/swapnil-um_BCDd8rgA-unsplash_o9pdny.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/swapnil-um_BCDd8rgA-unsplash_o9pdny.jpg",
+    "access_mode": "public",
+    "original_filename": "swapnil-um_BCDd8rgA-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5642,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/swapnil-um_BCDd8rgA-unsplash_o9pdny.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/swapnil-um_BCDd8rgA-unsplash_o9pdny.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "ali-nafezarefi-jvV8WLwunTk-unsplash.jpg",
+   "image": {
+    "asset_id": "0e70eec65000ef3a46cce89782642883",
+    "public_id": "shp/shoes/ali-nafezarefi-jvV8WLwunTk-unsplash_rxdtbh",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "c8a6ab93aaafedc33a5edde352039ea0761a39ae",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 18286,
+    "type": "upload",
+    "etag": "edf4ef3634343f724a4cc08f34e6e04d",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/ali-nafezarefi-jvV8WLwunTk-unsplash_rxdtbh.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/ali-nafezarefi-jvV8WLwunTk-unsplash_rxdtbh.jpg",
+    "access_mode": "public",
+    "original_filename": "ali-nafezarefi-jvV8WLwunTk-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 3168,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/ali-nafezarefi-jvV8WLwunTk-unsplash_rxdtbh.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/ali-nafezarefi-jvV8WLwunTk-unsplash_rxdtbh.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "hipkicks-HcqA34-uWo4-unsplash.jpg",
+   "image": {
+    "asset_id": "a4f223b1b9c49e3b3ea27cfe13995e82",
+    "public_id": "shp/shoes/hipkicks-HcqA34-uWo4-unsplash_xwsrg0",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "2b389758c4c8a2e1d7d92b255c56eabc8053c14f",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 14615,
+    "type": "upload",
+    "etag": "f7cc89f4be1a3e07d5b4f55decde9aa0",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/hipkicks-HcqA34-uWo4-unsplash_xwsrg0.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/hipkicks-HcqA34-uWo4-unsplash_xwsrg0.jpg",
+    "access_mode": "public",
+    "original_filename": "hipkicks-HcqA34-uWo4-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 3094,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/hipkicks-HcqA34-uWo4-unsplash_xwsrg0.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/hipkicks-HcqA34-uWo4-unsplash_xwsrg0.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "icee-dc-PvObYzFkTAE-unsplash.jpg",
+   "image": {
+    "asset_id": "8fd42ace1118b1435b9f74f9eac24ff9",
+    "public_id": "shp/shoes/icee-dc-PvObYzFkTAE-unsplash_r0iine",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "33cadaf7dcfaca9a03cabe075e6a17a7b9a90d86",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 47137,
+    "type": "upload",
+    "etag": "ce4285e5fbd996a33e82d115b0f10f3c",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/icee-dc-PvObYzFkTAE-unsplash_r0iine.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/icee-dc-PvObYzFkTAE-unsplash_r0iine.jpg",
+    "access_mode": "public",
+    "original_filename": "icee-dc-PvObYzFkTAE-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 7532,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/icee-dc-PvObYzFkTAE-unsplash_r0iine.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/icee-dc-PvObYzFkTAE-unsplash_r0iine.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-g_1Dkk0ufP8-unsplash.jpg",
+   "image": {
+    "asset_id": "5c7950c3e7e2a42d65356cd6e0376cb2",
+    "public_id": "shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_wbjcxg",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "b8d8e70d424821e01c81ab26d7ec509aa7280897",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 44949,
+    "type": "upload",
+    "etag": "b68f20c2c589e58bfa24ec4a52f045a9",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_wbjcxg.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_wbjcxg.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-g_1Dkk0ufP8-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6244,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_wbjcxg.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-g_1Dkk0ufP8-unsplash_wbjcxg.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-jXzyR6tgd18-unsplash.jpg",
+   "image": {
+    "asset_id": "90c4b06711d2951d4ae7bf8736474c21",
+    "public_id": "shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_kkbue7",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "a2c6f98a3fd614eee4ef7b7800ec736c4c730d4c",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 37943,
+    "type": "upload",
+    "etag": "fa45a85686fcf04c0691d98e1c09f292",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_kkbue7.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_kkbue7.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-jXzyR6tgd18-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 4677,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_kkbue7.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-jXzyR6tgd18-unsplash_kkbue7.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "josh-marshall-FheUCRSbizY-unsplash.jpg",
+   "image": {
+    "asset_id": "0e996b6c7ae3d9527cb7800be3bdb43d",
+    "public_id": "shp/watches/josh-marshall-FheUCRSbizY-unsplash_poh0ps",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "ef14163a148df6662b057b1f497e0232fbf14a69",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 42357,
+    "type": "upload",
+    "etag": "0df06fda61a89d04b93d089057b97573",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/josh-marshall-FheUCRSbizY-unsplash_poh0ps.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/josh-marshall-FheUCRSbizY-unsplash_poh0ps.jpg",
+    "access_mode": "public",
+    "original_filename": "josh-marshall-FheUCRSbizY-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 3064,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/josh-marshall-FheUCRSbizY-unsplash_poh0ps.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/josh-marshall-FheUCRSbizY-unsplash_poh0ps.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "huyen-nguy-IjzhMi4Cw3w-unsplash.jpg",
+   "image": {
+    "asset_id": "d8440c768047055cf13c34d1506e057a",
+    "public_id": "shp/shoes/huyen-nguy-IjzhMi4Cw3w-unsplash_qzfaej",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "c27848407dfb17bce530318469a9a6ff5af5d81f",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 39238,
+    "type": "upload",
+    "etag": "203b895698221999e9aff06229e4a9ae",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/huyen-nguy-IjzhMi4Cw3w-unsplash_qzfaej.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/huyen-nguy-IjzhMi4Cw3w-unsplash_qzfaej.jpg",
+    "access_mode": "public",
+    "original_filename": "huyen-nguy-IjzhMi4Cw3w-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 4832,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/huyen-nguy-IjzhMi4Cw3w-unsplash_qzfaej.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/huyen-nguy-IjzhMi4Cw3w-unsplash_qzfaej.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-Eav5V0COmQ4-unsplash.jpg",
+   "image": {
+    "asset_id": "e36321fa383b66b31fba2f21b79b1ca7",
+    "public_id": "shp/blazers/benjamin-rascoe-Eav5V0COmQ4-unsplash_g8o8zp",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "c858b4cc8afa8404a46c84b235aaea5526d23b89",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 50243,
+    "type": "upload",
+    "etag": "833f2eb038d27f59cbda2caf84098c05",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-Eav5V0COmQ4-unsplash_g8o8zp.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-Eav5V0COmQ4-unsplash_g8o8zp.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-Eav5V0COmQ4-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5430,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-Eav5V0COmQ4-unsplash_g8o8zp.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-Eav5V0COmQ4-unsplash_g8o8zp.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "anton-maksimov-juvnsky-gAjU70winV8-unsplash.jpg",
+   "image": {
+    "asset_id": "72071b3e9d675df2bfd3a63113eb23b9",
+    "public_id": "shp/watches/anton-maksimov-juvnsky-gAjU70winV8-unsplash_h8lmeh",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "2e384b3d48cec5a2368ad5ff55167df36bf767fd",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 43262,
+    "type": "upload",
+    "etag": "50d23ab33d6d384cf4065b9691e0de59",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/anton-maksimov-juvnsky-gAjU70winV8-unsplash_h8lmeh.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/anton-maksimov-juvnsky-gAjU70winV8-unsplash_h8lmeh.jpg",
+    "access_mode": "public",
+    "original_filename": "anton-maksimov-juvnsky-gAjU70winV8-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6391,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/anton-maksimov-juvnsky-gAjU70winV8-unsplash_h8lmeh.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/anton-maksimov-juvnsky-gAjU70winV8-unsplash_h8lmeh.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "imani-bahati-LxVxPA1LOVM-unsplash.jpg",
+   "image": {
+    "asset_id": "8b2b1788d27f34564e1959950c66f99b",
+    "public_id": "shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_dqvmnh",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "2d1f92f787c0d2a837caeb9073cf7b12174e9611",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 18067,
+    "type": "upload",
+    "etag": "b83b8784ae77f8bfe055bec0db14be75",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_dqvmnh.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_dqvmnh.jpg",
+    "access_mode": "public",
+    "original_filename": "imani-bahati-LxVxPA1LOVM-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 3047,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_dqvmnh.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/imani-bahati-LxVxPA1LOVM-unsplash_dqvmnh.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "erik-mclean-dMCsfJDeWUc-unsplash.jpg",
+   "image": {
+    "asset_id": "a31bd729498df1be3793ceaef23e96e4",
+    "public_id": "shp/shoes/erik-mclean-dMCsfJDeWUc-unsplash_baqgml",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "fc33e7df5a181a0f1d15b6746c669fb09a792cef",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 72114,
+    "type": "upload",
+    "etag": "04ba2537a43afac9bdf942e78c667094",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/erik-mclean-dMCsfJDeWUc-unsplash_baqgml.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/erik-mclean-dMCsfJDeWUc-unsplash_baqgml.jpg",
+    "access_mode": "public",
+    "original_filename": "erik-mclean-dMCsfJDeWUc-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 10712,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/erik-mclean-dMCsfJDeWUc-unsplash_baqgml.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/erik-mclean-dMCsfJDeWUc-unsplash_baqgml.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "roy-p-Un85W2YXPKg-unsplash.jpg",
+   "image": {
+    "asset_id": "f6d13f221b44400a780a80c4838f520f",
+    "public_id": "shp/watches/roy-p-Un85W2YXPKg-unsplash_sydwic",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "0ebe6ec2a9f8d8b121e021d828c9821bc7fa0662",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 62877,
+    "type": "upload",
+    "etag": "a4fdcd6638eab2a81c50dccc3c83bf55",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/roy-p-Un85W2YXPKg-unsplash_sydwic.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/roy-p-Un85W2YXPKg-unsplash_sydwic.jpg",
+    "access_mode": "public",
+    "original_filename": "roy-p-Un85W2YXPKg-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 7245,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/roy-p-Un85W2YXPKg-unsplash_sydwic.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/roy-p-Un85W2YXPKg-unsplash_sydwic.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "krismawan-kadek-h1nQyjxyo88-unsplash.jpg",
+   "image": {
+    "asset_id": "802bdee56df289db631b698791c2a4d0",
+    "public_id": "shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_ch8gn7",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "02234a025eac5d8c458425a47a8eefe424c2e7de",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 59086,
+    "type": "upload",
+    "etag": "3dfcb1dcf04c07af3df9bdfb463821f7",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_ch8gn7.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_ch8gn7.jpg",
+    "access_mode": "public",
+    "original_filename": "krismawan-kadek-h1nQyjxyo88-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 7617,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_ch8gn7.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/krismawan-kadek-h1nQyjxyo88-unsplash_ch8gn7.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "hassan-ouajbir-ir9mB-4E1VI-unsplash.jpg",
+   "image": {
+    "asset_id": "969d89f36cf6e60b8e2c693c85095938",
+    "public_id": "shp/watches/hassan-ouajbir-ir9mB-4E1VI-unsplash_x5s2v5",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "95c36642ee5b38e3c8e3f5a4469c99c53a075349",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 60644,
+    "type": "upload",
+    "etag": "f66754596c65892a18ed663da9b49fe2",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/hassan-ouajbir-ir9mB-4E1VI-unsplash_x5s2v5.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/hassan-ouajbir-ir9mB-4E1VI-unsplash_x5s2v5.jpg",
+    "access_mode": "public",
+    "original_filename": "hassan-ouajbir-ir9mB-4E1VI-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6137,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/hassan-ouajbir-ir9mB-4E1VI-unsplash_x5s2v5.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/hassan-ouajbir-ir9mB-4E1VI-unsplash_x5s2v5.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "oliur-uZl3HF0oSik-unsplash.jpg",
+   "image": {
+    "asset_id": "eab94bb0d5ba984896ef76384371ebb3",
+    "public_id": "shp/watches/oliur-uZl3HF0oSik-unsplash_v0ftlf",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "5f0dba23b1035efcbfd9f901cc0e7639d4533e0b",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 50429,
+    "type": "upload",
+    "etag": "eec9e76d1f4a8037fe2fef69e4d8952b",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/oliur-uZl3HF0oSik-unsplash_v0ftlf.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/oliur-uZl3HF0oSik-unsplash_v0ftlf.jpg",
+    "access_mode": "public",
+    "original_filename": "oliur-uZl3HF0oSik-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6067,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/oliur-uZl3HF0oSik-unsplash_v0ftlf.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/oliur-uZl3HF0oSik-unsplash_v0ftlf.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "joshua-fuller-pjUVEtsTiR4-unsplash.jpg",
+   "image": {
+    "asset_id": "70562b2f59321ea399dfd900057c4b11",
+    "public_id": "shp/shoes/joshua-fuller-pjUVEtsTiR4-unsplash_on2n0d",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "9c15e4bfc711cc038be059772107fca548c7b865",
+    "width": 640,
+    "height": 638,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 55414,
+    "type": "upload",
+    "etag": "e73d59ed26edcfb196d3846dcd1fd462",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/joshua-fuller-pjUVEtsTiR4-unsplash_on2n0d.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/joshua-fuller-pjUVEtsTiR4-unsplash_on2n0d.jpg",
+    "access_mode": "public",
+    "original_filename": "joshua-fuller-pjUVEtsTiR4-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6462,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/joshua-fuller-pjUVEtsTiR4-unsplash_on2n0d.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/joshua-fuller-pjUVEtsTiR4-unsplash_on2n0d.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "louis-mornaud-2ANGTzt4VDY-unsplash.jpg",
+   "image": {
+    "asset_id": "707fc02d209d85616a7b250ad99cef6b",
+    "public_id": "shp/watches/louis-mornaud-2ANGTzt4VDY-unsplash_xl56vg",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "947a4f944683d2516ecd4b07a6bb3adde020171f",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 52697,
+    "type": "upload",
+    "etag": "2fcb5229b73254e315f02f0eefdeec79",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/louis-mornaud-2ANGTzt4VDY-unsplash_xl56vg.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/louis-mornaud-2ANGTzt4VDY-unsplash_xl56vg.jpg",
+    "access_mode": "public",
+    "original_filename": "louis-mornaud-2ANGTzt4VDY-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5689,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/louis-mornaud-2ANGTzt4VDY-unsplash_xl56vg.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/louis-mornaud-2ANGTzt4VDY-unsplash_xl56vg.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-rnV9Y5_EbJs-unsplash.jpg",
+   "image": {
+    "asset_id": "b8164ba4fafd50c0dc57f00ab6665ac0",
+    "public_id": "shp/blazers/benjamin-rascoe-rnV9Y5_EbJs-unsplash_e46hyh",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "5e8afcc1a313968aa45e0578aa112a5524635d05",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 100291,
+    "type": "upload",
+    "etag": "6024790b84aa82007061134aa524d2b0",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-rnV9Y5_EbJs-unsplash_e46hyh.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-rnV9Y5_EbJs-unsplash_e46hyh.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-rnV9Y5_EbJs-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 8705,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-rnV9Y5_EbJs-unsplash_e46hyh.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-rnV9Y5_EbJs-unsplash_e46hyh.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "branislav-belko-sBljwOBX_Lo-unsplash.jpg",
+   "image": {
+    "asset_id": "b7cf3c31552824889f5beee83a046ab0",
+    "public_id": "shp/shoes/branislav-belko-sBljwOBX_Lo-unsplash_pmtlwn",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "2877120df2e3899b9b8cd0a6a3ac08d418877706",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 87033,
+    "type": "upload",
+    "etag": "322302b70916f93c5fcbe43b6336be58",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/branislav-belko-sBljwOBX_Lo-unsplash_pmtlwn.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/branislav-belko-sBljwOBX_Lo-unsplash_pmtlwn.jpg",
+    "access_mode": "public",
+    "original_filename": "branislav-belko-sBljwOBX_Lo-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6851,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/branislav-belko-sBljwOBX_Lo-unsplash_pmtlwn.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/branislav-belko-sBljwOBX_Lo-unsplash_pmtlwn.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "kimiya-oveisi-meG7dxH2XpI-unsplash.jpg",
+   "image": {
+    "asset_id": "71fa00a59785ca649cb57059ef01f79e",
+    "public_id": "shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zkv2il",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "138ded05ab584c3db632b4c1d56ad896819660bc",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 46667,
+    "type": "upload",
+    "etag": "f8e70a547c5a95d9ab1ae91893f781a7",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zkv2il.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zkv2il.jpg",
+    "access_mode": "public",
+    "original_filename": "kimiya-oveisi-meG7dxH2XpI-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5617,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zkv2il.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/kimiya-oveisi-meG7dxH2XpI-unsplash_zkv2il.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-Ci_fZ5cL9Jo-unsplash.jpg",
+   "image": {
+    "asset_id": "de1ddce0ee28732505ae88134c02911c",
+    "public_id": "shp/blazers/benjamin-rascoe-Ci_fZ5cL9Jo-unsplash_l2ubpk",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "3cf09d409e194277002af2f995882b75c2bb7ed8",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 38639,
+    "type": "upload",
+    "etag": "0911d1e2fbc629eddc551b1dd66e1532",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-Ci_fZ5cL9Jo-unsplash_l2ubpk.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-Ci_fZ5cL9Jo-unsplash_l2ubpk.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-Ci_fZ5cL9Jo-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 7405,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-Ci_fZ5cL9Jo-unsplash_l2ubpk.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-Ci_fZ5cL9Jo-unsplash_l2ubpk.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-Z3N7m_r02TA-unsplash.jpg",
+   "image": {
+    "asset_id": "09bf650a2e02b8da05083c64ce865286",
+    "public_id": "shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_wysjv5",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "46449157bf3d78258428caab549efaa847b179db",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 29168,
+    "type": "upload",
+    "etag": "ebac330a4fa3cc366d1f915a55c73b50",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_wysjv5.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_wysjv5.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-Z3N7m_r02TA-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5409,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_wysjv5.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-Z3N7m_r02TA-unsplash_wysjv5.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "the-5th-IQYR7N67dhM-unsplash.jpg",
+   "image": {
+    "asset_id": "fb8e961870a9822ed939fdc2c5167d03",
+    "public_id": "shp/watches/the-5th-IQYR7N67dhM-unsplash_gjhynw",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "479df712e130a945f504623a205ecc7e81cfa1b1",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 57443,
+    "type": "upload",
+    "etag": "0275eb4af85e9323ac916755886f8d57",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/the-5th-IQYR7N67dhM-unsplash_gjhynw.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/the-5th-IQYR7N67dhM-unsplash_gjhynw.jpg",
+    "access_mode": "public",
+    "original_filename": "the-5th-IQYR7N67dhM-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6614,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/the-5th-IQYR7N67dhM-unsplash_gjhynw.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/the-5th-IQYR7N67dhM-unsplash_gjhynw.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "watches-v-main.jpg",
+   "image": {
+    "asset_id": "c3e0590256c66d7d19a1e55fe6e7af9a",
+    "public_id": "shp/homepage/watches-v-main_xjbzql",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "72a18a0e03688a8c6d4a5050c9cd708db5dd6a1e",
+    "width": 1000,
+    "height": 1500,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 175222,
+    "type": "upload",
+    "etag": "2ed86a7889aadb330d05a61253c7fdb3",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/homepage/watches-v-main_xjbzql.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/homepage/watches-v-main_xjbzql.jpg",
+    "access_mode": "public",
+    "original_filename": "watches-v-main",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 3951,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/homepage/watches-v-main_xjbzql.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/homepage/watches-v-main_xjbzql.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "dusan-jovic-jsTGxmqfwM4-unsplash.jpg",
+   "image": {
+    "asset_id": "7d630b1aaae6fe9ff767fd2dbf4ffafc",
+    "public_id": "shp/shoes/dusan-jovic-jsTGxmqfwM4-unsplash_es191y",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "a1b1d7dcc5ecd99ff46e8783aa8dae71c54e5182",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 95658,
+    "type": "upload",
+    "etag": "145d4f86d332190456916975c9429376",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/dusan-jovic-jsTGxmqfwM4-unsplash_es191y.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/dusan-jovic-jsTGxmqfwM4-unsplash_es191y.jpg",
+    "access_mode": "public",
+    "original_filename": "dusan-jovic-jsTGxmqfwM4-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 8661,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/dusan-jovic-jsTGxmqfwM4-unsplash_es191y.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/dusan-jovic-jsTGxmqfwM4-unsplash_es191y.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "shoes-h-main.jpg",
+   "image": {
+    "asset_id": "8f189fd9e80ba79ed5b1b1ff323b769f",
+    "public_id": "shp/homepage/shoes-h-main_ihwn7n",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "ece6e14ffdeb4c71463d7c858329651103469365",
+    "width": 1000,
+    "height": 667,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 136208,
+    "type": "upload",
+    "etag": "062575f80b7b813741d6cb9c0d14a1dc",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/homepage/shoes-h-main_ihwn7n.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/homepage/shoes-h-main_ihwn7n.jpg",
+    "access_mode": "public",
+    "original_filename": "shoes-h-main",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6324,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/homepage/shoes-h-main_ihwn7n.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/homepage/shoes-h-main_ihwn7n.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "will-suddreth-mgweTPIa2Pc-unsplash.jpg",
+   "image": {
+    "asset_id": "d273f180932fa4211f698d9ba99f2d4c",
+    "public_id": "shp/shoes/will-suddreth-mgweTPIa2Pc-unsplash_svvb7w",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "7431200e2e123cf623e76c1a2d63fbb86e368b9b",
+    "width": 640,
+    "height": 670,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 80994,
+    "type": "upload",
+    "etag": "453fa02d88028dafce4f8d498c5b3a30",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/will-suddreth-mgweTPIa2Pc-unsplash_svvb7w.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/will-suddreth-mgweTPIa2Pc-unsplash_svvb7w.jpg",
+    "access_mode": "public",
+    "original_filename": "will-suddreth-mgweTPIa2Pc-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 8580,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/will-suddreth-mgweTPIa2Pc-unsplash_svvb7w.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/will-suddreth-mgweTPIa2Pc-unsplash_svvb7w.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "balaji-kannan-rvEA6D9WDdY-unsplash.jpg",
+   "image": {
+    "asset_id": "c7f948db79a8f2c742f34330193ddaa0",
+    "public_id": "shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_knwxvu",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "87931ec648695c4293ca6f90ce5782d8a8d49534",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 21016,
+    "type": "upload",
+    "etag": "58acb622af3ce1b22599f0e2e63232da",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_knwxvu.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_knwxvu.jpg",
+    "access_mode": "public",
+    "original_filename": "balaji-kannan-rvEA6D9WDdY-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 3977,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_knwxvu.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_knwxvu.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "renzo-watches-g0XrCLvSnco-unsplash.jpg",
+   "image": {
+    "asset_id": "5f01c1b0a431a1bb0d33f12b7075637c",
+    "public_id": "shp/watches/renzo-watches-g0XrCLvSnco-unsplash_hvbsxx",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "29f3ecc96f3e71e73fce9e3b18e5af24aa331bbb",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 135277,
+    "type": "upload",
+    "etag": "c05ec50bebf18cdcf0915eb89c3b2c1a",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/renzo-watches-g0XrCLvSnco-unsplash_hvbsxx.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/renzo-watches-g0XrCLvSnco-unsplash_hvbsxx.jpg",
+    "access_mode": "public",
+    "original_filename": "renzo-watches-g0XrCLvSnco-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 11369,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/renzo-watches-g0XrCLvSnco-unsplash_hvbsxx.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/renzo-watches-g0XrCLvSnco-unsplash_hvbsxx.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-lQQpyVvW0l0-unsplash.jpg",
+   "image": {
+    "asset_id": "80ef261eb9d809a2c7c686769dd0e853",
+    "public_id": "shp/blazers/benjamin-rascoe-lQQpyVvW0l0-unsplash_aerria",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "2d59c11546e80fddc88f1c1f578d49f6cb20367f",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 59263,
+    "type": "upload",
+    "etag": "d9acd9030776cebd86545a81505127d3",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-lQQpyVvW0l0-unsplash_aerria.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-lQQpyVvW0l0-unsplash_aerria.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-lQQpyVvW0l0-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5633,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-lQQpyVvW0l0-unsplash_aerria.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-lQQpyVvW0l0-unsplash_aerria.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "sj-SVtgjU0XMxQ-unsplash.jpg",
+   "image": {
+    "asset_id": "02ebe83d99b65d5bc0319666dca08b1c",
+    "public_id": "shp/shoes/sj-SVtgjU0XMxQ-unsplash_aotkt4",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "82beeb4d366ca5aba1309d99c0e85862c31050ee",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 93138,
+    "type": "upload",
+    "etag": "0ef23b33658eeb24c556f4bad53c7ac5",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/sj-SVtgjU0XMxQ-unsplash_aotkt4.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/sj-SVtgjU0XMxQ-unsplash_aotkt4.jpg",
+    "access_mode": "public",
+    "original_filename": "sj-SVtgjU0XMxQ-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 9882,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/sj-SVtgjU0XMxQ-unsplash_aotkt4.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/sj-SVtgjU0XMxQ-unsplash_aotkt4.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "alexandra-gorn-CJ6SJO_yR5w-unsplash.jpg",
+   "image": {
+    "asset_id": "ca26e03366d63e5d19fdc4d8660dc9cf",
+    "public_id": "shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_yoenqm",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "fa312e4fdaf0c6825f4113b6bf9bc1c6395b823d",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 49070,
+    "type": "upload",
+    "etag": "ed552c56295616e6a0674aad84f7eec2",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_yoenqm.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_yoenqm.jpg",
+    "access_mode": "public",
+    "original_filename": "alexandra-gorn-CJ6SJO_yR5w-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6763,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_yoenqm.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/alexandra-gorn-CJ6SJO_yR5w-unsplash_yoenqm.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "phil-monte-fRNm4azug0I-unsplash.jpg",
+   "image": {
+    "asset_id": "4dc4e0ffa394e2488043296b5499daae",
+    "public_id": "shp/watches/phil-monte-fRNm4azug0I-unsplash_aoqjb1",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "abbbb4caa8f0838112c74bc18f5b7fc01b7926d8",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 88881,
+    "type": "upload",
+    "etag": "7c0073092abaf7d98dc283aec8d3c65e",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/phil-monte-fRNm4azug0I-unsplash_aoqjb1.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/phil-monte-fRNm4azug0I-unsplash_aoqjb1.jpg",
+    "access_mode": "public",
+    "original_filename": "phil-monte-fRNm4azug0I-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5964,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/phil-monte-fRNm4azug0I-unsplash_aoqjb1.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/phil-monte-fRNm4azug0I-unsplash_aoqjb1.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "nick-george-gzqmo6p8h8o-unsplash.jpg",
+   "image": {
+    "asset_id": "a7f6c615be8f22a3594d1e78b9278f2f",
+    "public_id": "shp/watches/nick-george-gzqmo6p8h8o-unsplash_hrluda",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "85979d34a96a077ad460669655dafefc5081437a",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 68409,
+    "type": "upload",
+    "etag": "f43a1cba96ce13b8cb67280e143f898b",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/nick-george-gzqmo6p8h8o-unsplash_hrluda.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/nick-george-gzqmo6p8h8o-unsplash_hrluda.jpg",
+    "access_mode": "public",
+    "original_filename": "nick-george-gzqmo6p8h8o-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 8279,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/nick-george-gzqmo6p8h8o-unsplash_hrluda.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/nick-george-gzqmo6p8h8o-unsplash_hrluda.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "ben-parker-l1i0j8qNlHc-unsplash.jpg",
+   "image": {
+    "asset_id": "b15bb79a924d5f84a09fa1fe99784719",
+    "public_id": "shp/shoes/ben-parker-l1i0j8qNlHc-unsplash_f5sijb",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "e8e03a104dc0c79fb9e349bfad9d084135e10a56",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 23008,
+    "type": "upload",
+    "etag": "7499db8c2d90f53bf34d21510358933e",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/ben-parker-l1i0j8qNlHc-unsplash_f5sijb.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/ben-parker-l1i0j8qNlHc-unsplash_f5sijb.jpg",
+    "access_mode": "public",
+    "original_filename": "ben-parker-l1i0j8qNlHc-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5218,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/ben-parker-l1i0j8qNlHc-unsplash_f5sijb.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/ben-parker-l1i0j8qNlHc-unsplash_f5sijb.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-NxtxmmHc2OE-unsplash.jpg",
+   "image": {
+    "asset_id": "526494bcaca9be195eeeba3465083396",
+    "public_id": "shp/blazers/benjamin-rascoe-NxtxmmHc2OE-unsplash_qzjsbr",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "a8389071c14385a94ad9d7c92ff7703403f38def",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 36569,
+    "type": "upload",
+    "etag": "2375f252b4ef1150141a28536df45c00",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-NxtxmmHc2OE-unsplash_qzjsbr.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-NxtxmmHc2OE-unsplash_qzjsbr.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-NxtxmmHc2OE-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5614,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-NxtxmmHc2OE-unsplash_qzjsbr.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-NxtxmmHc2OE-unsplash_qzjsbr.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "louis-mornaud-7ZG3Yj5AML0-unsplash.jpg",
+   "image": {
+    "asset_id": "ae75f353e1fba4d1552fdb263be4bb5c",
+    "public_id": "shp/watches/louis-mornaud-7ZG3Yj5AML0-unsplash_j97405",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "1a50f2ec60b64e33ed34b95e7585b1e0208b35e4",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 43096,
+    "type": "upload",
+    "etag": "9f12233795385cb0f153149322827152",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/louis-mornaud-7ZG3Yj5AML0-unsplash_j97405.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/louis-mornaud-7ZG3Yj5AML0-unsplash_j97405.jpg",
+    "access_mode": "public",
+    "original_filename": "louis-mornaud-7ZG3Yj5AML0-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5760,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/louis-mornaud-7ZG3Yj5AML0-unsplash_j97405.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/louis-mornaud-7ZG3Yj5AML0-unsplash_j97405.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "krismawan-kadek-HK8DgJrYUnw-unsplash.jpg",
+   "image": {
+    "asset_id": "46bf3ddc6b62122710056bdee4280477",
+    "public_id": "shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_mppch1",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "f82a51bd8cbe36279510f444e0840866ce641113",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 53444,
+    "type": "upload",
+    "etag": "509531db8129c6e9077c56e7755cf104",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_mppch1.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_mppch1.jpg",
+    "access_mode": "public",
+    "original_filename": "krismawan-kadek-HK8DgJrYUnw-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 7002,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_mppch1.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/krismawan-kadek-HK8DgJrYUnw-unsplash_mppch1.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "firdaus-roslan-nfr_aSoOI18-unsplash.jpg",
+   "image": {
+    "asset_id": "69cba18376bb2ce40ee00d4ebccd69e3",
+    "public_id": "shp/watches/firdaus-roslan-nfr_aSoOI18-unsplash_zgq4vw",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "6930e598832a8824b0d6550070c956e6aa77042f",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 150450,
+    "type": "upload",
+    "etag": "baa61dbf697f7f5989e2fb211ecda5d9",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/firdaus-roslan-nfr_aSoOI18-unsplash_zgq4vw.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/firdaus-roslan-nfr_aSoOI18-unsplash_zgq4vw.jpg",
+    "access_mode": "public",
+    "original_filename": "firdaus-roslan-nfr_aSoOI18-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 10746,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/firdaus-roslan-nfr_aSoOI18-unsplash_zgq4vw.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/firdaus-roslan-nfr_aSoOI18-unsplash_zgq4vw.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "nick-george-ObPe3LOKy98-unsplash.jpg",
+   "image": {
+    "asset_id": "5f2dab6bf6f7f036b73432d64f397cb1",
+    "public_id": "shp/watches/nick-george-ObPe3LOKy98-unsplash_f8mzis",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "02f55d989b22e6eb9949a14775a652f5436f9f06",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 102183,
+    "type": "upload",
+    "etag": "96a1060654ac95185ca2fcd8fff96072",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/nick-george-ObPe3LOKy98-unsplash_f8mzis.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/nick-george-ObPe3LOKy98-unsplash_f8mzis.jpg",
+    "access_mode": "public",
+    "original_filename": "nick-george-ObPe3LOKy98-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 14121,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/nick-george-ObPe3LOKy98-unsplash_f8mzis.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/nick-george-ObPe3LOKy98-unsplash_f8mzis.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-fFeiBhk5B7k-unsplash.jpg",
+   "image": {
+    "asset_id": "074532442e88f344f817d887345c18b8",
+    "public_id": "shp/blazers/benjamin-rascoe-fFeiBhk5B7k-unsplash_xsaaav",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "f20fdac229c76bf96c68323b7cf95187c3951454",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 57829,
+    "type": "upload",
+    "etag": "4ab5476c7d9c5d0c32ac2c83b0e52762",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-fFeiBhk5B7k-unsplash_xsaaav.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-fFeiBhk5B7k-unsplash_xsaaav.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-fFeiBhk5B7k-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5844,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-fFeiBhk5B7k-unsplash_xsaaav.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-fFeiBhk5B7k-unsplash_xsaaav.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "djordje_jovicic-l1mVJnG7a84-unsplash.jpg",
+   "image": {
+    "asset_id": "b51c03ad68fa6c3b3fb9a7f37cf85a9f",
+    "public_id": "shp/watches/djordje_jovicic-l1mVJnG7a84-unsplash_tarlcp",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "2cdc72fcf0c52a88f426a35b2f8cab6f971dbb51",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 49221,
+    "type": "upload",
+    "etag": "5778a503b46f0a85549912e97f55e4b5",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/djordje_jovicic-l1mVJnG7a84-unsplash_tarlcp.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/djordje_jovicic-l1mVJnG7a84-unsplash_tarlcp.jpg",
+    "access_mode": "public",
+    "original_filename": "djordje_jovicic-l1mVJnG7a84-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 4624,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/djordje_jovicic-l1mVJnG7a84-unsplash_tarlcp.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/djordje_jovicic-l1mVJnG7a84-unsplash_tarlcp.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "matus-hatala-pFzxaKhdFME-unsplash.jpg",
+   "image": {
+    "asset_id": "f91d79e90fdc1e99a77a672f1c716a46",
+    "public_id": "shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_rlffi5",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "ca7a67fd35f98b008267e685e1b562c21196fffb",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 33533,
+    "type": "upload",
+    "etag": "32903557f842b046f33f6ba86ec2eaf7",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_rlffi5.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_rlffi5.jpg",
+    "access_mode": "public",
+    "original_filename": "matus-hatala-pFzxaKhdFME-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5866,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_rlffi5.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/matus-hatala-pFzxaKhdFME-unsplash_rlffi5.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-vXmHnW7puxE-unsplash.jpg",
+   "image": {
+    "asset_id": "88b5b2a77fc62e9b2b8a20dbef9e7de6",
+    "public_id": "shp/blazers/benjamin-rascoe-vXmHnW7puxE-unsplash_lyjvkg",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "6b316902f4ac1d9e2865a3459ecbbed1f3f2596f",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 54334,
+    "type": "upload",
+    "etag": "3fc81f1837e4d698f7cde474c716f985",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-vXmHnW7puxE-unsplash_lyjvkg.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-vXmHnW7puxE-unsplash_lyjvkg.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-vXmHnW7puxE-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5560,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-vXmHnW7puxE-unsplash_lyjvkg.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-vXmHnW7puxE-unsplash_lyjvkg.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "blazers-h-main.jpg",
+   "image": {
+    "asset_id": "a35e8f1ee880d2cbe5b0b361f1576c4a",
+    "public_id": "shp/homepage/blazers-h-main_ie1os1",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "5eb69c1ccfb173eea6a9ba97bf41fcead580f048",
+    "width": 1000,
+    "height": 563,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 107048,
+    "type": "upload",
+    "etag": "159ec28d6b1903304162e9da9fc4381c",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/homepage/blazers-h-main_ie1os1.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/homepage/blazers-h-main_ie1os1.jpg",
+    "access_mode": "public",
+    "original_filename": "blazers-h-main",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6865,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/homepage/blazers-h-main_ie1os1.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/homepage/blazers-h-main_ie1os1.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "hayley-maxwell-CNsHjjU3BTo-unsplash.jpg",
+   "image": {
+    "asset_id": "13719483e42fb06eded104189849cb05",
+    "public_id": "shp/watches/hayley-maxwell-CNsHjjU3BTo-unsplash_q3dfnz",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "e1e2ee70061a91381fbdfc0f5ede057d68fbbd9e",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 27441,
+    "type": "upload",
+    "etag": "6f57d55b5c0463a665e0b5ed86ea392d",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/hayley-maxwell-CNsHjjU3BTo-unsplash_q3dfnz.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/hayley-maxwell-CNsHjjU3BTo-unsplash_q3dfnz.jpg",
+    "access_mode": "public",
+    "original_filename": "hayley-maxwell-CNsHjjU3BTo-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 4991,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/hayley-maxwell-CNsHjjU3BTo-unsplash_q3dfnz.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/hayley-maxwell-CNsHjjU3BTo-unsplash_q3dfnz.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "brice-brown-JZ5u7j-knPg-unsplash.jpg",
+   "image": {
+    "asset_id": "0e1977193fafd1b4956ad42058536710",
+    "public_id": "shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_emmelu",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "e93413c480fb5e85f786b8e6860cd784d2aae0e4",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 121010,
+    "type": "upload",
+    "etag": "f5e0d4513cfb257dd1612fbb99cf077f",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_emmelu.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_emmelu.jpg",
+    "access_mode": "public",
+    "original_filename": "brice-brown-JZ5u7j-knPg-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 13972,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_emmelu.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/brice-brown-JZ5u7j-knPg-unsplash_emmelu.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "blazers",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "benjamin-rascoe-IIpY8NZYeAg-unsplash.jpg",
+   "image": {
+    "asset_id": "64e843c3a41ee44242ec2f1e4bd308d9",
+    "public_id": "shp/blazers/benjamin-rascoe-IIpY8NZYeAg-unsplash_mnrjdx",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "ce3b080d9007c3bba540082cb986b2ce6ec316d0",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 74596,
+    "type": "upload",
+    "etag": "524e6e662b482eea60e7568ef81324de",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-IIpY8NZYeAg-unsplash_mnrjdx.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/blazers/benjamin-rascoe-IIpY8NZYeAg-unsplash_mnrjdx.jpg",
+    "access_mode": "public",
+    "original_filename": "benjamin-rascoe-IIpY8NZYeAg-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 6782,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-IIpY8NZYeAg-unsplash_mnrjdx.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/blazers/benjamin-rascoe-IIpY8NZYeAg-unsplash_mnrjdx.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "shoes",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "aurelien-thomas-fK33vAmHYvE-unsplash.jpg",
+   "image": {
+    "asset_id": "78382bb3564d6b9b22a1a5579c85990a",
+    "public_id": "shp/shoes/aurelien-thomas-fK33vAmHYvE-unsplash_dxqqnn",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "dd5c765ba0e8c90ef66eb3af184457f5214f6811",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 51448,
+    "type": "upload",
+    "etag": "ae2f9b49d01645f8ded3fb7a4649b679",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/aurelien-thomas-fK33vAmHYvE-unsplash_dxqqnn.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/shoes/aurelien-thomas-fK33vAmHYvE-unsplash_dxqqnn.jpg",
+    "access_mode": "public",
+    "original_filename": "aurelien-thomas-fK33vAmHYvE-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 5775,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/aurelien-thomas-fK33vAmHYvE-unsplash_dxqqnn.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/shoes/aurelien-thomas-fK33vAmHYvE-unsplash_dxqqnn.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "analia-baggiano-Fvrhax5327o-unsplash.jpg",
+   "image": {
+    "asset_id": "ccd00a10d1ea40c4464ea2f1b2419945",
+    "public_id": "shp/watches/analia-baggiano-Fvrhax5327o-unsplash_vhnaqj",
+    "version": 1622140635,
+    "version_id": "d195dde4349bba6bad0ffbcd7d5c51c3",
+    "signature": "73c1b18e2dc3b9b69fc5328f0ef57965590b5d69",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:15Z",
+    "tags": [],
+    "bytes": 85253,
+    "type": "upload",
+    "etag": "79cf741af067a65bd6220f395ffb7d82",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/analia-baggiano-Fvrhax5327o-unsplash_vhnaqj.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140635/shp/watches/analia-baggiano-Fvrhax5327o-unsplash_vhnaqj.jpg",
+    "access_mode": "public",
+    "original_filename": "analia-baggiano-Fvrhax5327o-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 7062,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/analia-baggiano-Fvrhax5327o-unsplash_vhnaqj.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140635/shp/watches/analia-baggiano-Fvrhax5327o-unsplash_vhnaqj.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Bulova",
+   "description": "Bulova is one of the best Some watch brands (<- This here might sound silly hehe). This text is totally not automatically generated by the way. Should've probably thought more about what sort of description to provide, but was way too lazy for that. Nobody is going to read this anyway so only two variables are unique(-ish). I need more coffee...",
+   "category": "watches",
+   "price": 220.24,
+   "type": "Some watch brands",
+   "original_image": "andrei-morosan-5ribittPbwI-unsplash.jpg",
+   "image": {
+    "asset_id": "57dd4ec3a6504836c3ff02ef1d33e49c",
+    "public_id": "shp/watches/andrei-morosan-5ribittPbwI-unsplash_xqaunq",
+    "version": 1622140636,
+    "version_id": "7c2b97bbcb2d4877f5d573807109f053",
+    "signature": "621fe030415b8e812108234d3f5259a30cf7a5cc",
+    "width": 640,
+    "height": 640,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-05-27T18:37:16Z",
+    "tags": [],
+    "bytes": 106434,
+    "type": "upload",
+    "etag": "38989e0324bbb136b75b14143d668f71",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/dletreo9n/image/upload/v1622140636/shp/watches/andrei-morosan-5ribittPbwI-unsplash_xqaunq.jpg",
+    "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622140636/shp/watches/andrei-morosan-5ribittPbwI-unsplash_xqaunq.jpg",
+    "access_mode": "public",
+    "original_filename": "andrei-morosan-5ribittPbwI-unsplash",
+    "eager": [
+     {
+      "transformation": "h_200,w_200",
+      "width": 200,
+      "height": 200,
+      "bytes": 9178,
+      "format": "jpg",
+      "url": "http://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140636/shp/watches/andrei-morosan-5ribittPbwI-unsplash_xqaunq.jpg",
+      "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/h_200,w_200/v1622140636/shp/watches/andrei-morosan-5ribittPbwI-unsplash_xqaunq.jpg"
+     }
+    ]
+   }
+  }
+ ]
 }
