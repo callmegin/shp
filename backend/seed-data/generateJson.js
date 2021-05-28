@@ -34,11 +34,6 @@ const location = process.env.SEED_DATA_LOCATION;
 let jsonData = {
   sampleData: [],
 };
-let product = {
-  original_image: '',
-  image: {},
-};
-
 let typesDataset = [];
 let nameDataset = [];
 
@@ -99,8 +94,7 @@ const uploadData = (folder, file) => {
     const productName = h.getRandomValue(nameDataset[folder]);
     const productType = h.getRandomValue(typesDataset[folder]);
 
-    product = {
-      ...product,
+    let product = {
       name: productName,
       type: productType,
       description: h.generateDescription(productName, productType),
@@ -122,8 +116,7 @@ const uploadData = (folder, file) => {
         else {
           product = {
             ...product,
-            original_image: file,
-            category: folder,
+            original_image: '',
             image: image,
           };
           jsonData.sampleData.push(product);
