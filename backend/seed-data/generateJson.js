@@ -35,11 +35,6 @@ let jsonData = {
   sampleData: [],
 };
 let product = {
-  name: '',
-  description: '',
-  category: '',
-  price: '',
-  type: '',
   original_image: '',
   image: {},
 };
