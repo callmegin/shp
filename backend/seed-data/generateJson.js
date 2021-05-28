@@ -116,7 +116,6 @@ const uploadData = (folder, file) => {
         else {
           product = {
             ...product,
-            original_image: '',
             image: image,
           };
           jsonData.sampleData.push(product);
