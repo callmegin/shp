@@ -8,4 +8,4 @@ mongoose.connect(dbURL, {
   useCreateIndex: true,
 });
 
-mongoose.set('debug', true);
+// mongoose.set('debug', true);

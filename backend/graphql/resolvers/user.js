@@ -58,10 +58,9 @@ module.exports = {
     reviews: async (parent) => {
       try {
         const reviews = parent.reviews;
-        const review = await reviews.map((val) =>
-          Review.findOne({ _id: val }).exec()
+        return await Promise.all(
+          reviews.map(async (val) => await Review.findOne({ _id: val }).exec())
         );
-        return review;
       } catch (e) {
         return e.message;
       }

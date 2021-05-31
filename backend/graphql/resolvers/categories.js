@@ -28,7 +28,9 @@ module.exports = {
   Relationships: {
     types: async (parent) => {
       try {
-        return await parent.types.map((id) => Type.findOne({ _id: id }));
+        return await Promise.all(
+          parent.types.map(async (id) => await Type.findOne({ _id: id }))
+        );
       } catch (e) {
         return e.message;
       }

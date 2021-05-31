@@ -1,5 +1,28 @@
 const { Product, Review, Category, ProductImage } = require('../../models');
 
+const ProductFindWithoutCursor = async (category, limit) => {
+  return category
+    ? await Product.find({ category: category })
+        .skip(0)
+        .limit(limit + 1)
+        .exec()
+    : await Product.find({})
+        .skip(0)
+        .limit(limit + 1)
+        .exec();
+};
+const ProductFindWitCursor = async (category, limit, cursor) => {
+  return category
+    ? await Product.find({ category: category, _id: { $gt: cursor } })
+        .skip(0)
+        .limit(limit + 1)
+        .exec()
+    : await Product.find({ _id: { $gt: cursor } })
+        .skip(0)
+        .limit(limit + 1)
+        .exec();
+};
+
 module.exports = {
   Query: {
     getProducts: async (_, { category, type }) => {
@@ -23,17 +46,12 @@ module.exports = {
         let requiredProducts;
 
         !cursor || cursor === 0
-          ? (requiredProducts = await Product.find({ category: category })
-              .skip(0)
-              .limit(limit + 1)
-              .exec())
-          : (requiredProducts = await Product.find({
-              category: category,
-              _id: { $gt: cursor },
-            })
-              .sort({ _id: 1 })
-              .limit(limit + 1)
-              .exec());
+          ? (requiredProducts = await ProductFindWithoutCursor(category, limit))
+          : (requiredProducts = await ProductFindWitCursor(
+              category,
+              limit,
+              cursor
+            ));
 
         if (!requiredProducts)
           throw new Error(
@@ -48,6 +66,9 @@ module.exports = {
         if (hasNextPage) {
           requiredProducts = requiredProducts.slice(0, -1);
         }
+        console.log('----');
+        console.log(requiredProducts);
+        console.log('----');
         requiredProducts.map((product) => {
           edges.push({
             cursor: product.id,
@@ -103,10 +124,11 @@ module.exports = {
   Relationships: {
     reviews: async (parent) => {
       try {
-        const review = await parent.reviews.map((id) =>
-          Review.findOne({ _id: id }).exec()
+        return await Promise.all(
+          parent.reviews.map(
+            async (id) => await Review.findOne({ _id: id }).exec()
+          )
         );
-        return review;
       } catch (e) {
         return e.message;
       }
