@@ -1,16 +1,18 @@
-import Link from 'next/link';
 import { useState } from 'react';
 import { gql, useQuery } from '@apollo/client';
-import _ from 'lodash';
 
 import Skeleton from 'components/ui/Skeleton/Skeleton';
 
-import * as Styled from './styles';
 import InfiniteScroll from 'lib/utility/InfiniteScroll';
+import ProductCard from 'components/ui/ProductCard';
+import BottomDiv from 'components/ui/BottomDiv';
+import Sidebar from 'components/ui/SideBar';
+
+import * as Styled from './styles';
 
 export const GET_PRODUCTS_BY_CATEGORY = gql`
   query getProductsCursor($cursor: ID, $category: String) {
-    getProductsCursor(limit: 4, cursor: $cursor, category: $category) {
+    getProductsCursor(limit: 9, cursor: $cursor, category: $category) {
       edges {
         node {
           id
@@ -48,7 +50,7 @@ const Products = ({ slug }) => {
       setEndCursor(innerData.endCursor);
     },
   });
-
+  console.log(data);
   const loadMore = () => {
     fetchMore({
       variables: {
@@ -60,36 +62,25 @@ const Products = ({ slug }) => {
 
   return (
     <>
-      <InfiniteScroll
-        hasNextPage={hasNextPage}
-        reachedBot={loadMore}
-        loading={loading}
-      >
-        <Styled.ProductsGrid>
-          {data &&
-            data.getProductsCursor.edges.map((item) => {
-              return (
-                <Styled.GridElement key={item.node.id}>
-                  <Link
-                    as={`/product/${item.node.id}`}
-                    href="/product/[slug]"
-                    passHref
-                  >
-                    <Styled.ImageWrapper
-                      imageUrl={item.node.image.secure_url}
-                    />
-                  </Link>
-                  <div>
-                    <p>{item.node.name}</p>
-                    <p>{item.node.price}</p>
-                  </div>
-                </Styled.GridElement>
-              );
-            })}
-          {loading && hasNextPage && <Skeleton number={4} />}
-        </Styled.ProductsGrid>
-        <Styled.RefDiv>{hasNextPage ? 'more' : ''}</Styled.RefDiv>
-      </InfiniteScroll>
+      <Styled.ProductsContainer row>
+        <Sidebar />
+        <Styled.ProductsWrapper>
+          <InfiniteScroll
+            hasNextPage={hasNextPage}
+            reachedBot={loadMore}
+            loading={loading}
+          >
+            <Styled.ProductsGrid hasNextPage={hasNextPage}>
+              {data &&
+                data.getProductsCursor.edges.map((product) => (
+                  <ProductCard product={product} key={product.node.id} />
+                ))}
+              {loading && hasNextPage && <Skeleton number={9} />}
+            </Styled.ProductsGrid>
+            {hasNextPage ? <BottomDiv /> : ''}
+          </InfiniteScroll>
+        </Styled.ProductsWrapper>
+      </Styled.ProductsContainer>
     </>
   );
 };

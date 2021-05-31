@@ -16,10 +16,15 @@ export const HeaderWrapper = styled(FlexDiv)`
   height: 100%;
 `;
 
-export const LogoTitle = styled(FlexDiv)`
+export const LogoTitle = styled.a`
   ${screenSize.medium`
 padding-left: 10px;
 `}
+`;
+export const H1 = styled.h1`
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const SneakyLittleBugger = styled.div`

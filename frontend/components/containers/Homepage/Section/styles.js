@@ -1,31 +1,40 @@
 import styled from 'styled-components';
-import { FlexDiv, screenSize, enterElement } from 'shared/styles';
+import { FlexDiv, screenSize, enterElement, transition } from 'shared/styles';
 
 export const GridElement = styled.a`
+  position: relative;
   grid-column: ${({ gridColumn }) => gridColumn};
-  ${({ gridRow }) =>
-    gridRow &&
-    `
-  grid-row: ${gridRow};
-  `};
+  ${({ gridRow }) => gridRow && `grid-row: ${gridRow};`};
+  overflow: hidden;
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+`;
+export const Background = styled.div`
+  width: 100%;
+  height: 100%;
   ${({ imageUrl }) =>
     imageUrl &&
     `
-background-image: url(${imageUrl});
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
+    background-image: url(${imageUrl});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 `};
+  ${transition('transform', 250)}
   animation: ${enterElement} 700ms;
   animation-delay: ${({ delay }) => delay}ms;
-  &:hover {
-    text-decoration: none;
+  ${GridElement}:hover & {
+    transform: scale(1.05);
+    ${transition('transform', 250)}
   }
 `;
 
 export const Wrapper = styled(FlexDiv)`
   height: 100%;
   position: relative;
+  box-shadow: inset 0px 0px 50px 0px var(--darkgrey);
 `;
 export const H2 = styled.h2`
   ${screenSize.medium`

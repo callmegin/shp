@@ -12,7 +12,7 @@ export const ParentContainer = styled.div`
 `}
   padding: 1rem;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
 `;
 
 export const Placeholder = styled.div`

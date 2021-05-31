@@ -41,7 +41,7 @@ export const GridElement = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   `};
-  animation: ${enterElement} 700ms;
+  animation: ${enterElement} 200ms;
   animation-delay: ${({ delay }) => delay}ms;
 `;
 

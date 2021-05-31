@@ -1,13 +1,16 @@
-import Image from 'next/image';
-import styled from 'styled-components';
-import { FlexDiv, screenSize, enterElement } from 'shared/styles';
+import styled, { css } from 'styled-components';
+import { FlexDiv, screenSize } from 'shared/styles';
+
+export const ProductsContainer = styled(FlexDiv)`
+  width: 100%;
+`;
 
 export const ProductsGrid = styled.div`
   ${screenSize.medium`  
   // height: 1200px
 `}
   ${screenSize.small`
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   // height: 1000px;
 `}
   display: grid;
@@ -16,39 +19,13 @@ export const ProductsGrid = styled.div`
   grid-gap: 1rem;
   padding: 1rem;
   width: 100%;
+  ${({ hasNextPage }) =>
+    !hasNextPage &&
+    css`
+      border-bottom: 1px solid var(--grey);
+    `};
 `;
 
-export const GridElement = styled.div`
-  /* grid-column: ${({ gridColumn }) => gridColumn};
-  ${({ gridRow }) =>
-    gridRow &&
-    `
-    grid-row: ${gridRow};
-    `}; */
-  grid-column: span 1 / span 1;
-  grid-row: span 1 / span 1;
-  & > img {
-    width: 100%;
-  }
-  margin-bottom: 2rem;
-`;
-
-export const ImageWrapper = styled.a`
-  display: block;
+export const ProductsWrapper = styled.div`
   width: 100%;
-  height: calc((1000px - 3rem) / 2);
-  ${({ imageUrl }) =>
-    imageUrl &&
-    `
-  background-image: url(${imageUrl});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  `}
-  animation: ${enterElement} 700ms;
-`;
-
-export const RefDiv = styled.div`
-  text-align: center;
-  margin: 0.5rem;
 `;

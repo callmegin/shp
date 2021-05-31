@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     background: var(--light);
     color: var(--darkgrey);
   }
-  h1,h2,h3 {
+  h1,h2,h3,h4 {
     margin: 0;
     padding: 0;
   }
@@ -42,13 +42,14 @@ const GlobalStyles = createGlobalStyle`
     color: var(--darkgrey);
   }
   a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    cursor: pointer;
   }
   p {
     margin: 0;
   }
   p:hover {
-    cursor: default;
+    cursor: inherit;
   }
   button {
     font-family: 'Montserrat', sans-serif;

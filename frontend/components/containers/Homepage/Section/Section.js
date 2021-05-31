@@ -6,10 +6,10 @@ const Section = ({ gridColumn, gridRow, imageUrl, categoryTitle, clicked }) => {
     <Styled.GridElement
       gridColumn={gridColumn}
       gridRow={gridRow}
-      imageUrl={imageUrl}
       onClick={clicked}
     >
       <SectionTitle categoryTitle={categoryTitle} />
+      <Styled.Background imageUrl={imageUrl} />
     </Styled.GridElement>
   ) : (
     <Styled.Wrapper justifyCenter>

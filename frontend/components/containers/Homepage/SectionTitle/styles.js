@@ -1,9 +1,17 @@
 import styled from 'styled-components';
-import { FlexDiv, screenSize } from 'shared/styles';
+import { FlexDiv, screenSize, transition, enterElement } from 'shared/styles';
 
 export const TitleWrapper = styled(FlexDiv)`
+  position: absolute;
+  width: 100%;
   height: 100%;
   background-color: ${(props) => props.categoryTitle && 'rgba(0, 0, 0, 0.3)'};
+  z-index: 9;
+  &:hover {
+    /* background-color: ${(props) =>
+      props.categoryTitle && 'rgba(0, 0, 0, 0.6)'};
+    ${transition('all', 250)} */
+  }
 `;
 export const SectionTitle = styled.h2`
   ${screenSize.small`
@@ -12,6 +20,10 @@ export const SectionTitle = styled.h2`
   font-size: 2.6rem;
   text-transform: capitalize;
   color: var(--grey);
+  &:hover {
+    cursor: pointer;
+  }
+  animation: ${enterElement} 400ms;
 `;
 export const SectionTitleBlank = styled.h2`
   ${screenSize.small`
@@ -23,4 +35,5 @@ export const SectionTitleBlank = styled.h2`
   line-height: 1.2;
   word-spacing: 100rem;
   text-align: center;
+  animation: ${enterElement} 200ms;
 `;

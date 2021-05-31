@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import * as Styled from './styles';
 
 const Header = () => {
@@ -5,9 +6,11 @@ const Header = () => {
     <Styled.HeaderContainer row justifyCenter>
       <Styled.HeaderWrapper row alignCenter>
         <Styled.SneakyLittleBugger />
-        <Styled.LogoTitle>
-          <h1>SHP</h1>
-        </Styled.LogoTitle>
+        <Link href="/">
+          <Styled.LogoTitle>
+            <Styled.H1>SHP</Styled.H1>
+          </Styled.LogoTitle>
+        </Link>
         <Styled.BurgerWrapper>
           <Styled.Burger justifyAround alignCenter>
             <div></div>

@@ -1,6 +1,5 @@
 import Header from '../Header/Header';
 import GlobalStyles from './globalStyles';
-import { CloudinaryContext } from 'cloudinary-react';
 import * as Styled from './styles';
 
 const ParentPage = ({ children, pageLoading }) => {
