@@ -11,17 +11,6 @@ const {
 } = require('../models');
 
 const resolvers = require('../graphql/resolvers');
-const categoryImage = require('../models/categoryImage');
-const types = require('../graphql/resolvers/types');
-
-const promiseWait = (list, asyncFunc) => {
-  const promises = [];
-
-  return Promise.all(promises);
-};
-
-const clone = (items) =>
-  items.map((item) => (Array.isArray(item) ? clone(item) : item));
 
 module.exports = {
   getTypes: async () => {
