@@ -34,6 +34,7 @@ module.exports = gql`
     id: ID!
     type: String!
     category: Categories!
+    productsCount: Int!
     products: [Product!]
   }
 

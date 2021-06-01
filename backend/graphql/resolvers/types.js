@@ -1,10 +1,24 @@
 const { Category, Type } = require('../../models');
+const parseFields = require('graphql-parse-fields');
 
 module.exports = {
   Query: {
-    getTypes: async () => {
+    getTypes: async (_, args, context, info) => {
       try {
-        return await Type.find({}).exec();
+        const { productsCount } = parseFields(info);
+        const types = await Type.find({}).exec();
+
+        if (productsCount)
+          return types.map(
+            (type) =>
+              (type = {
+                ...type.toJSON(),
+                productsCount: type.products.length,
+              })
+          );
+        // types = {...types, productsCount: productsCount ? }
+
+        return types;
       } catch (e) {
         return e.message;
       }
