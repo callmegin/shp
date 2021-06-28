@@ -70,9 +70,20 @@ module.exports = gql`
     original_filename: String!
     category: Categories!
   }
+
+  #Sorting
+  input SortBy {
+    field: String
+    order: Order
+  }
+  enum Order {
+    asc
+    desc
+  }
+
   #Pagination
   type Edge {
-    cursor: ID
+    cursor: String
     node: Product!
   }
   type ProductConnection {
@@ -80,7 +91,7 @@ module.exports = gql`
     pageInfo: PageInfo
   }
   type PageInfo {
-    endCursor: ID!
+    endCursor: String
     hasNextPage: Boolean!
   }
 
@@ -98,8 +109,9 @@ module.exports = gql`
     #Pagination
     getProductsCursor(
       limit: Int!
-      cursor: ID
+      cursor: String
       category: String
+      sortBy: SortBy
     ): ProductConnection
   }
   type Mutation {

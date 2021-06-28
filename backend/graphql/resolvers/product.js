@@ -1,26 +1,64 @@
+const { isObjectType } = require('graphql');
 const { Product, Review, Category, ProductImage } = require('../../models');
 
-const ProductFindWithoutCursor = async (category, limit) => {
-  return category
-    ? await Product.find({ category: category })
-        .skip(0)
-        .limit(limit + 1)
-        .exec()
-    : await Product.find({})
-        .skip(0)
-        .limit(limit + 1)
-        .exec();
+const isObjEmpty = (obj) => {
+  return Object.keys(obj).length === 0;
 };
-const ProductFindWitCursor = async (category, limit, cursor) => {
-  return category
-    ? await Product.find({ category: category, _id: { $gt: cursor } })
-        .skip(0)
-        .limit(limit + 1)
-        .exec()
-    : await Product.find({ _id: { $gt: cursor } })
-        .skip(0)
-        .limit(limit + 1)
-        .exec();
+
+const order = (sortBy) => {
+  switch (sortBy.order) {
+    case 'asc':
+      return 'asc';
+    case 'desc':
+      return 'desc';
+  }
+};
+const comparisonQuery = (value, order) => {
+  switch (order) {
+    case 'asc':
+      return { $gt: value };
+    case 'desc':
+      return { $lt: value };
+    default:
+      return { $gt: value };
+  }
+};
+const getSortedProducts = async (category, limit, cursor, sortBy) => {
+  try {
+    let expressionArray = [];
+    let filterObject = {};
+    let sortObj = {};
+    category && (filterObject = { category: category });
+    if (!isObjEmpty(sortBy)) {
+      const order = sortBy.order === 'asc' ? 1 : -1;
+      sortObj = { [sortBy.field]: order };
+    } else {
+      sortObj = { _id: 1 };
+    }
+
+    if (cursor) {
+      const nextProduct = await Product.findOne({ _id: cursor }).exec();
+
+      !isObjEmpty(sortBy)
+        ? expressionArray.push({
+            [sortBy.field]: comparisonQuery(
+              nextProduct[sortBy.field],
+              sortBy.order
+            ),
+          })
+        : expressionArray.push({
+            _id: { $gt: cursor },
+          });
+      filterObject = { ...filterObject, $or: expressionArray };
+    }
+
+    return await Product.find(filterObject)
+      .sort(sortObj)
+      .limit(limit + 1)
+      .exec();
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 module.exports = {
@@ -38,20 +76,17 @@ module.exports = {
         return e.message;
       }
     },
-    getProductsCursor: async (_, { limit, cursor, category }) => {
+    getProductsCursor: async (_, { limit, cursor, category, sortBy }) => {
       try {
-        console.log('limit: ' + limit);
-        console.log('cursor: ' + cursor);
-        console.log('category: ' + category);
-        let requiredProducts;
+        console.log(`Incoming cursor: ${cursor}`);
+        console.log(`Limit: ${limit}`);
 
-        !cursor || cursor === 0
-          ? (requiredProducts = await ProductFindWithoutCursor(category, limit))
-          : (requiredProducts = await ProductFindWitCursor(
-              category,
-              limit,
-              cursor
-            ));
+        let requiredProducts = await getSortedProducts(
+          category,
+          limit,
+          cursor,
+          sortBy
+        );
 
         if (!requiredProducts)
           throw new Error(
@@ -66,18 +101,18 @@ module.exports = {
         if (hasNextPage) {
           requiredProducts = requiredProducts.slice(0, -1);
         }
-        console.log('----');
-        console.log(requiredProducts);
-        console.log('----');
         requiredProducts.map((product) => {
           edges.push({
             cursor: product.id,
             node: product,
           });
         });
+        const endProduct = requiredProducts[requiredProducts.length - 1];
 
-        const endCursor = requiredProducts[requiredProducts.length - 1]._id;
-
+        const endCursor = `${endProduct._id}`;
+        console.log(`Returning endCursor: ${endCursor}`);
+        // console.log(edges);
+        console.log('---------------------------------------------------');
         return {
           edges,
           pageInfo: {

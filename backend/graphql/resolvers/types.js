@@ -1,34 +1,29 @@
 const { Category, Type } = require('../../models');
 const parseFields = require('graphql-parse-fields');
+const { addProductsCount } = require('./helpers');
 
 module.exports = {
   Query: {
-    getTypes: async (_, args, context, info) => {
+    getTypes: async (_, __, ___, info) => {
       try {
-        const { productsCount } = parseFields(info);
-        const types = await Type.find({}).exec();
-
-        if (productsCount)
-          return types.map(
-            (type) =>
-              (type = {
-                ...type.toJSON(),
-                productsCount: type.products.length,
-              })
-          );
-        // types = {...types, productsCount: productsCount ? }
-
-        return types;
+        const res = await Type.find({}).exec();
+        return addProductsCount(res, info);
       } catch (e) {
         return e.message;
       }
     },
-    getType: async (_, { id, type }) => {
+    getType: async (_, { id, type }, __, info) => {
       try {
-        if (id && type)
+        if ((id && type) || (!id && !type))
           throw new Error('Either ID or Type should be provided, not both');
-        if (id) return await Type.findOne({ _id: id }).exec();
-        if (type) return await Type.findOne({ type: type }).exec();
+        if (id) {
+          const res = await Type.findOne({ _id: id }).exec();
+          return addProductsCount(res, info);
+        }
+        if (type) {
+          const res = await Type.findOne({ type: type }).exec();
+          return addProductsCount(res, info);
+        }
       } catch (e) {
         return e.message;
       }

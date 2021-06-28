@@ -1,5 +1,6 @@
 const { Category, Type } = require('../../models');
 const categoryImage = require('../../models/categoryImage');
+const { addProductsCount } = require('./helpers');
 
 module.exports = {
   Query: {
@@ -17,6 +18,7 @@ module.exports = {
         if (id) return await Category.findOne({ _id: id }).exec();
         if (category)
           return await Category.findOne({ category: category }).exec();
+        return await Category.find({}).exec();
       } catch (e) {
         return e.message;
       }
@@ -26,11 +28,12 @@ module.exports = {
   //       addCategory: async (_, args) => {},
   // },
   Relationships: {
-    types: async (parent) => {
+    types: async (parent, _, __, info) => {
       try {
-        return await Promise.all(
+        const res = await Promise.all(
           parent.types.map(async (id) => await Type.findOne({ _id: id }))
         );
+        return addProductsCount(res, info);
       } catch (e) {
         return e.message;
       }
