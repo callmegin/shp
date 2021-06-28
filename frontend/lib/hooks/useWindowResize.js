@@ -1,5 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
-import { debounce } from '../utility/debounce';
+import _ from 'lodash';
+
+export const isBrowser = typeof window !== 'undefined';
 
 const useResizeEvent = (callback) => {
   useEffect(() => {
@@ -11,11 +13,14 @@ const useResizeEvent = (callback) => {
 };
 
 export const useWindowResize = () => {
-  const [height, setHeight] = useState('100vh');
+  const [height, setHeight] = useState(isBrowser && window.innerWidth);
+  const [width, setWidth] = useState(isBrowser && window.innerWidth);
   const handleResize = useCallback(() => {
     setHeight(window.innerHeight);
+    setWidth(window.innerWidth);
   });
-  console.log(height);
-  useResizeEvent(debounce(handleResize, 100));
-  return height;
+
+  // useResizeEvent(_.debounce(handleResize, 100));
+  useResizeEvent(handleResize);
+  return [width, height];
 };

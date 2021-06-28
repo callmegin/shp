@@ -1,27 +1,31 @@
 import styled from 'styled-components';
-import { FlexDiv, rotateTextUp, screenSize } from 'shared/styles';
+import { FlexDiv, rotateDown, screenSize } from 'shared/styles';
 
 export const Parent = styled(FlexDiv)`
   height: 100%;
+  /* overflow: hidden; */
 `;
 
-export const ParentContainer = styled.div`
+export const ParentContainer = styled(FlexDiv)`
   ${screenSize.medium`
-  padding: 0;
-  margin: 1rem;
+
 `}
-  padding: 1rem;
+  padding:  0;
   width: 100%;
-  max-width: 1200px;
+  height: 100%;
+  /* overflow: hidden; */
 `;
 
 export const Placeholder = styled.div`
-  position: fixed;
-  width: 2rem;
-  height: 2rem;
-  bottom: 0;
-  left: 0;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: calc(50% - 3.5rem);
+  left: calc(50% - 3.5rem);
+  /* bottom: 0;
+  left: 0; */
   margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+  z-index: 10000;
   background: black;
-  animation: ${rotateTextUp} 500ms infinite;
+  animation: ${rotateDown} 500ms infinite;
 `;

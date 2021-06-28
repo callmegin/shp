@@ -3,15 +3,19 @@ import { FlexDiv, screenSize } from '../../../shared/styles';
 
 export const HeaderContainer = styled(FlexDiv)`
   flex: 0 0 auto;
-  position: relative;
+  position: sticky;
+  top: 0;
+  /* padding-bottom: 1rem; */
   height: 40px;
   width: 100%;
-  box-shadow: 0 1px 5px rgba(57, 63, 72, 0.3);
+  background: white;
+  z-index: 4080;
+  border-bottom: 1px solid var(--grey);
   /* overflow-y: hidden; */
 `;
 
 export const HeaderWrapper = styled(FlexDiv)`
-  max-width: 1920px;
+  max-width: 1200px;
   flex: 1 1 auto;
   height: 100%;
 `;

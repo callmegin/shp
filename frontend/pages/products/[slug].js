@@ -1,12 +1,35 @@
+import { useEffect, useState } from 'react';
 import { initializeApollo, addApolloState } from 'lib/apollo/apolloClient';
 import { gql, useQuery } from '@apollo/client';
+
+import { SidebarToggleProvider } from 'lib/context/sidebar-context';
 
 import { GET_CATEGORIES } from 'components/containers/Homepage/Homepage';
 
 import Products from 'components/containers/Products/Products';
+import ProductsTop from 'components/containers/Products/ProductsTop';
 
 const ProductsPage = ({ params, cloud, response }) => {
-  return <Products slug={params.slug} />;
+  const [sortBy, setSortBy] = useState({});
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const value = e.target.value;
+    if (!value) {
+      return setSortBy({});
+    }
+    const [field, order] = value.split('-');
+    setSortBy({ field: field, order: order });
+  };
+
+  return (
+    <>
+      <SidebarToggleProvider>
+        <ProductsTop handleSubmit={handleSubmit} />
+        <Products slug={params.slug} sortBy={sortBy} />
+      </SidebarToggleProvider>
+    </>
+  );
 };
 
 export async function getStaticPaths() {

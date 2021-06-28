@@ -29,7 +29,7 @@ export async function getStaticPaths({ query }) {
     params: { slug: product.id, id: [product.id] },
   }));
 
-  console.log(paths);
+  // console.log(paths);
 
   return {
     paths,
@@ -47,7 +47,7 @@ export async function getStaticProps({ params, query }) {
     query: GET_PRODUCT,
     variables: { id: params.slug },
   });
-  console.log(data);
+  // console.log(data);
   return {
     props: { params, data },
   };

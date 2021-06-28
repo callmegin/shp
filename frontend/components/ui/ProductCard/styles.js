@@ -13,7 +13,10 @@ export const GridElement = styled.a`
   & > img {
     width: 100%;
   }
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
+  ${screenSize.medium`
+    margin-bottom: 6rem;
+`}
 `;
 
 export const CardInfo = styled.div`

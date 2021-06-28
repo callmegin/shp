@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
     /* line-height: 2; */
     background: var(--light);
     color: var(--darkgrey);
+    /* overflow-y: auto; */
   }
   h1,h2,h3,h4 {
     margin: 0;
@@ -53,6 +54,13 @@ const GlobalStyles = createGlobalStyle`
   }
   button {
     font-family: 'Montserrat', sans-serif;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
   }
 `;
 

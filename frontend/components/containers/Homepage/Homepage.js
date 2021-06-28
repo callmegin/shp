@@ -51,7 +51,7 @@ const Homepage = ({ response }) => {
   }, [data]);
 
   return (
-    <Styled.RootContainer>
+    <Styled.RootContainer alignCenter>
       {data && (
         <>
           <Styled.GridRoot>

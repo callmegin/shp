@@ -1,18 +1,29 @@
-import { useState } from 'react';
-import { gql, useQuery } from '@apollo/client';
+import { useEffect, useState } from 'react';
+import { gql, useQuery, useApolloClient } from '@apollo/client';
 
+import { useSidebarToggle } from 'lib/context/sidebar-context';
 import Skeleton from 'components/ui/Skeleton/Skeleton';
 
 import InfiniteScroll from 'lib/utility/InfiniteScroll';
 import ProductCard from 'components/ui/ProductCard';
 import BottomDiv from 'components/ui/BottomDiv';
-import Sidebar from 'components/ui/SideBar';
+import Sidebar from 'components/containers/SideBar';
+import { isObjEmpty } from 'lib/utility/helpers';
 
 import * as Styled from './styles';
 
 export const GET_PRODUCTS_BY_CATEGORY = gql`
-  query getProductsCursor($cursor: ID, $category: String) {
-    getProductsCursor(limit: 9, cursor: $cursor, category: $category) {
+  query getProductsCursor(
+    $cursor: String
+    $category: String # $sortBy: ProductsOrder
+    $sortBy: SortBy
+  ) {
+    getProductsCursor(
+      limit: 6
+      cursor: $cursor
+      category: $category # sortBy: { price: asc }
+      sortBy: $sortBy
+    ) {
       edges {
         node {
           id
@@ -35,36 +46,54 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
   }
 `;
 
-const Products = ({ slug }) => {
-  const [hasNextPage, setHasNextPage] = useState(true);
-  const [endCursor, setEndCursor] = useState();
+const Products = ({ children, slug, sortBy, showSidebar }) => {
+  const {
+    state: { show },
+  } = useSidebarToggle();
+  const { loading, data, fetchMore, refetch } = useQuery(
+    GET_PRODUCTS_BY_CATEGORY,
+    {
+      notifyOnNetworkStatusChange: true,
 
-  const { loading, data, fetchMore } = useQuery(GET_PRODUCTS_BY_CATEGORY, {
-    notifyOnNetworkStatusChange: true,
-    variables: {
-      category: slug,
-    },
-    onCompleted({ getProductsCursor }) {
-      const innerData = getProductsCursor.pageInfo;
-      setHasNextPage(innerData.hasNextPage);
-      setEndCursor(innerData.endCursor);
-    },
-  });
-  console.log(data);
+      variables: {
+        category: slug,
+        sortBy: sortBy,
+      },
+    }
+  );
+
+  const hasNextPage = data
+    ? data.getProductsCursor.pageInfo.hasNextPage
+    : false;
+
   const loadMore = () => {
     fetchMore({
       variables: {
-        cursor: endCursor,
+        cursor: data.getProductsCursor.pageInfo.endCursor,
         category: slug,
+        sortBy: sortBy,
       },
     });
   };
 
+  useEffect(() => {
+    if (!isObjEmpty(sortBy)) {
+      refetch({
+        variables: {
+          cursor: '',
+          category: slug,
+          sortBy: sortBy,
+        },
+      });
+    }
+  }, [sortBy]);
+
   return (
     <>
-      <Styled.ProductsContainer row>
-        <Sidebar />
-        <Styled.ProductsWrapper>
+      <Styled.ProductsContainer row justifyCenter>
+        <Sidebar slug={slug} />
+
+        <Styled.ProductsWrapper show={show}>
           <InfiniteScroll
             hasNextPage={hasNextPage}
             reachedBot={loadMore}
@@ -75,7 +104,7 @@ const Products = ({ slug }) => {
                 data.getProductsCursor.edges.map((product) => (
                   <ProductCard product={product} key={product.node.id} />
                 ))}
-              {loading && hasNextPage && <Skeleton number={9} />}
+              {loading && hasNextPage && <Skeleton number={6} />}
             </Styled.ProductsGrid>
             {hasNextPage ? <BottomDiv /> : ''}
           </InfiniteScroll>
