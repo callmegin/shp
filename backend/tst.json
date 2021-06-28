@@ -1,0 +1,116 @@
+{
+  "data": {
+    "getProductsCursor": {
+      "edges": [
+        {
+          "node": {
+            "id": "60b0e4c74372c22440026346",
+            "name": "Daniel Wellington",
+            "price": 60.4,
+            "category": "watches",
+            "type": "Some watch brands",
+            "image": {
+              "public_id": "shp/watches/renzo-watches-g0XrCLvSnco-unsplash_nrv7x8",
+              "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622196017/shp/watches/renzo-watches-g0XrCLvSnco-unsplash_nrv7x8.jpg",
+              "__typename": "ProductImage"
+            },
+            "__typename": "Product"
+          },
+          "cursor": "60b0e4c74372c22440026346",
+          "__typename": "Edge"
+        },
+        {
+          "node": {
+            "id": "60b0e4c04372c2244002630e",
+            "name": "Levi Strauss & Co.",
+            "price": 68.68,
+            "category": "watches",
+            "type": "Designer Watch",
+            "image": {
+              "public_id": "shp/watches/djordje_jovicic-l1mVJnG7a84-unsplash_lcqjmg",
+              "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622196016/shp/watches/djordje_jovicic-l1mVJnG7a84-unsplash_lcqjmg.jpg",
+              "__typename": "ProductImage"
+            },
+            "__typename": "Product"
+          },
+          "cursor": "60b0e4c04372c2244002630e",
+          "__typename": "Edge"
+        },
+        {
+          "node": {
+            "id": "60b0e4c64372c2244002633b",
+            "name": "Star Watch Case Company",
+            "price": 110.72,
+            "category": "watches",
+            "type": "Designer Watch",
+            "image": {
+              "public_id": "shp/watches/analia-baggiano-Fvrhax5327o-unsplash_z6aoh1",
+              "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622196016/shp/watches/analia-baggiano-Fvrhax5327o-unsplash_z6aoh1.jpg",
+              "__typename": "ProductImage"
+            },
+            "__typename": "Product"
+          },
+          "cursor": "60b0e4c64372c2244002633b",
+          "__typename": "Edge"
+        },
+        {
+          "node": {
+            "id": "60b0e4c64372c22440026339",
+            "name": "Tommy Hilfiger",
+            "price": 133.13,
+            "category": "watches",
+            "type": "Some watch brands",
+            "image": {
+              "public_id": "shp/watches/anton-maksimov-juvnsky-gAjU70winV8-unsplash_shv8m7",
+              "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622196017/shp/watches/anton-maksimov-juvnsky-gAjU70winV8-unsplash_shv8m7.jpg",
+              "__typename": "ProductImage"
+            },
+            "__typename": "Product"
+          },
+          "cursor": "60b0e4c64372c22440026339",
+          "__typename": "Edge"
+        },
+        {
+          "node": {
+            "id": "60b0e4c14372c22440026310",
+            "name": "Emporio Armani",
+            "price": 172.71,
+            "category": "watches",
+            "type": "Fake Rolex",
+            "image": {
+              "public_id": "shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_x4cj30",
+              "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622196016/shp/watches/balaji-kannan-rvEA6D9WDdY-unsplash_x4cj30.jpg",
+              "__typename": "ProductImage"
+            },
+            "__typename": "Product"
+          },
+          "cursor": "60b0e4c14372c22440026310",
+          "__typename": "Edge"
+        },
+        {
+          "node": {
+            "id": "60b0e4c04372c22440026308",
+            "name": "Mido",
+            "price": 201.23,
+            "category": "watches",
+            "type": "Fake Rolex",
+            "image": {
+              "public_id": "shp/watches/hayley-maxwell-CNsHjjU3BTo-unsplash_ut2whv",
+              "secure_url": "https://res.cloudinary.com/dletreo9n/image/upload/v1622196016/shp/watches/hayley-maxwell-CNsHjjU3BTo-unsplash_ut2whv.jpg",
+              "__typename": "ProductImage"
+            },
+            "__typename": "Product"
+          },
+          "cursor": "60b0e4c04372c22440026308",
+          "__typename": "Edge"
+        }
+      ],
+      "pageInfo": {
+        "endCursor": "60b0e4c04372c22440026308",
+        "hasNextPage": true,
+        "__typename": "PageInfo"
+      },
+      "__typename": "ProductConnection"
+    }
+  }
+}
