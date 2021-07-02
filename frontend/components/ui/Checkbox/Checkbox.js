@@ -1,4 +1,4 @@
-const Input = ({ text, name, checked, changed }) => {
+const Checkbox = ({ text, name, checked, changed }) => {
   return (
     <label>
       <input name={name} type="checkbox" checked={checked} onChange={changed} />
@@ -7,6 +7,6 @@ const Input = ({ text, name, checked, changed }) => {
   );
 };
 
-export default Input;
+export default Checkbox;
 
 //TODO: rework to proper reusable comp

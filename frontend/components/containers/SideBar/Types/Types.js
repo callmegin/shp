@@ -1,4 +1,4 @@
-import Input from 'components/ui/Input';
+import Checkbox from 'components/ui/Checkbox';
 import { useState } from 'react';
 
 import * as Styled from '../styles';
@@ -17,7 +17,7 @@ const Types = ({ typesData }) => {
         {typesData.map((type) => (
           <Styled.ListItem key={type.id}>
             <Styled.ListTextWrapper row justifyBetween>
-              <Input
+              <Checkbox
                 name={type.type}
                 text={type.type}
                 checked={checked[type]}
