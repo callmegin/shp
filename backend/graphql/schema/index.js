@@ -111,6 +111,7 @@ module.exports = gql`
       limit: Int!
       cursor: String
       category: String
+      type: [String]
       sortBy: SortBy
     ): ProductConnection
   }

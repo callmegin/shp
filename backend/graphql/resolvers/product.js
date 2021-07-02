@@ -23,12 +23,15 @@ const comparisonQuery = (value, order) => {
       return { $gt: value };
   }
 };
-const getSortedProducts = async (category, limit, cursor, sortBy) => {
+const getSortedProducts = async (category, type, limit, cursor, sortBy) => {
   try {
     let expressionArray = [];
     let filterObject = {};
     let sortObj = {};
     category && (filterObject = { category: category });
+    Array.isArray(type) &&
+      type.length &&
+      (filterObject = { ...filterObject, type: type });
     if (!isObjEmpty(sortBy)) {
       const order = sortBy.order === 'asc' ? 1 : -1;
       sortObj = { [sortBy.field]: order };
@@ -76,13 +79,15 @@ module.exports = {
         return e.message;
       }
     },
-    getProductsCursor: async (_, { limit, cursor, category, sortBy }) => {
+    getProductsCursor: async (_, { limit, cursor, category, type, sortBy }) => {
       try {
         console.log(`Incoming cursor: ${cursor}`);
         console.log(`Limit: ${limit}`);
+        console.log(`Type: ${type}`);
 
         let requiredProducts = await getSortedProducts(
           category,
+          type,
           limit,
           cursor,
           sortBy
@@ -101,6 +106,7 @@ module.exports = {
         if (hasNextPage) {
           requiredProducts = requiredProducts.slice(0, -1);
         }
+        console.log(requiredProducts);
         requiredProducts.map((product) => {
           edges.push({
             cursor: product.id,
