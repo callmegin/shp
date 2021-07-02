@@ -1,19 +1,34 @@
+import Input from 'components/ui/Input';
+import { useState } from 'react';
+
 import * as Styled from '../styles';
 
 const Types = ({ typesData }) => {
+  const [checked, setChecked] = useState(false);
+
+  const handleChange = (e) => {
+    const target = e.target;
+    setChecked({ [target.name]: target.value });
+  };
+
   return (
-    <Styled.Sidebar>
-      <Styled.List>
-        {typesData?.getCategory.types.map((type) => (
+    <Styled.ListWrapper justifyCenter customFlex>
+      <Styled.TypesList>
+        {typesData.map((type) => (
           <Styled.ListItem key={type.id}>
             <Styled.ListTextWrapper row justifyBetween>
-              <span>{type.type}</span>
+              <Input
+                name={type.type}
+                text={type.type}
+                checked={checked[type]}
+                changed={handleChange}
+              />
               <span>{type.productsCount}</span>
             </Styled.ListTextWrapper>
           </Styled.ListItem>
         ))}
-      </Styled.List>
-    </Styled.Sidebar>
+      </Styled.TypesList>
+    </Styled.ListWrapper>
   );
 };
 

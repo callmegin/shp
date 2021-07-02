@@ -11,17 +11,20 @@ import Sidebar from 'components/containers/SideBar';
 import { isObjEmpty } from 'lib/utility/helpers';
 
 import * as Styled from './styles';
+import { GET_CATEGORIES } from 'components/Test';
 
 export const GET_PRODUCTS_BY_CATEGORY = gql`
   query getProductsCursor(
     $cursor: String
     $category: String # $sortBy: ProductsOrder
+    $type: [String]
     $sortBy: SortBy
   ) {
     getProductsCursor(
       limit: 6
       cursor: $cursor
       category: $category # sortBy: { price: asc }
+      type: $type
       sortBy: $sortBy
     ) {
       edges {
@@ -46,18 +49,21 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
   }
 `;
 
-const Products = ({ children, slug, sortBy, showSidebar }) => {
+const Products = ({ slug, sortBy, categoriesData }) => {
   const {
     state: { show },
   } = useSidebarToggle();
+
+  const [type, setType] = useState([]);
+
   const { loading, data, fetchMore, refetch } = useQuery(
     GET_PRODUCTS_BY_CATEGORY,
     {
       notifyOnNetworkStatusChange: true,
-
       variables: {
         category: slug,
         sortBy: sortBy,
+        type: type,
       },
     }
   );
@@ -65,16 +71,6 @@ const Products = ({ children, slug, sortBy, showSidebar }) => {
   const hasNextPage = data
     ? data.getProductsCursor.pageInfo.hasNextPage
     : false;
-
-  const loadMore = () => {
-    fetchMore({
-      variables: {
-        cursor: data.getProductsCursor.pageInfo.endCursor,
-        category: slug,
-        sortBy: sortBy,
-      },
-    });
-  };
 
   useEffect(() => {
     if (!isObjEmpty(sortBy)) {
@@ -88,10 +84,37 @@ const Products = ({ children, slug, sortBy, showSidebar }) => {
     }
   }, [sortBy]);
 
+  const loadMore = () => {
+    fetchMore({
+      variables: {
+        cursor: data.getProductsCursor.pageInfo.endCursor,
+        category: slug,
+        sortBy: sortBy,
+      },
+    });
+  };
+
+  //TODO: make dynamic below
+  const handleCheckBox = () => {
+    setType((prev) => [...prev, 'Fake Rolex']);
+  };
+  useEffect(() => {
+    if (Array.isArray(type) && type.length) {
+      refetch({
+        variables: {
+          cursor: ``,
+          category: slug,
+          sortBy: sortBy,
+          type: type,
+        },
+      });
+    }
+  }, [type]);
+
   return (
     <>
       <Styled.ProductsContainer row justifyCenter>
-        <Sidebar slug={slug} />
+        <Sidebar slug={slug} categoriesData={categoriesData} />
 
         <Styled.ProductsWrapper show={show}>
           <InfiniteScroll

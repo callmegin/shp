@@ -6,9 +6,10 @@ const Categories = ({ data, slug }) => {
     return slug === selected;
   };
 
+  //TODO: style this shit
   return (
-    <Styled.Sidebar>
-      <Styled.List>
+    <Styled.ListWrapper>
+      <Styled.CatList>
         <Link href={`/products/all`}>
           <Styled.ListItemMain isActive={isActive('')}>
             All Categories
@@ -21,8 +22,8 @@ const Categories = ({ data, slug }) => {
             </Styled.ListItem>
           </Link>
         ))}
-      </Styled.List>
-    </Styled.Sidebar>
+      </Styled.CatList>
+    </Styled.ListWrapper>
   );
 };
 

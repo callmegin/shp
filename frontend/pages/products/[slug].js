@@ -4,12 +4,24 @@ import { gql, useQuery } from '@apollo/client';
 
 import { SidebarToggleProvider } from 'lib/context/sidebar-context';
 
-import { GET_CATEGORIES } from 'components/containers/Homepage/Homepage';
-
 import Products from 'components/containers/Products/Products';
 import ProductsTop from 'components/containers/Products/ProductsTop';
 
-const ProductsPage = ({ params, cloud, response }) => {
+export const GET_CATEGORIES_WITH_TYPES = gql`
+  query getCategories {
+    getCategories {
+      id
+      category
+      types {
+        id
+        type
+        productsCount
+      }
+    }
+  }
+`;
+
+const ProductsPage = ({ params, cloud, response, categoriesData }) => {
   const [sortBy, setSortBy] = useState({});
 
   const handleSubmit = (e) => {
@@ -26,7 +38,11 @@ const ProductsPage = ({ params, cloud, response }) => {
     <>
       <SidebarToggleProvider>
         <ProductsTop handleSubmit={handleSubmit} />
-        <Products slug={params.slug} sortBy={sortBy} />
+        <Products
+          slug={params.slug}
+          sortBy={sortBy}
+          categoriesData={categoriesData}
+        />
       </SidebarToggleProvider>
     </>
   );
@@ -45,19 +61,26 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  // const apolloClient = initializeApollo();
-  // const cloud = process.env.CLOUDINARY_CLOUD_NAME;
-  // const response = await apolloClient.query({
-  //   query: GET_CATEGORIES,
+  const apolloClient = initializeApollo();
+  const { data } = await apolloClient.query({
+    query: GET_CATEGORIES_WITH_TYPES,
+  });
+  const categoriesData = data.getCategories;
+
+  // let paths = [];
+  // response.data.getCategories.map((category) => {
+  //   paths.push({ params: { slug: category.category } });
+  //   category.types.map((type) => {
+  //     paths.push({ params: { slug: `${category.category}/${type.type}` } });
+  //   });
   // });
 
-  // console.log(params);
   // return addApolloState(apolloClient, {
   //   props: { params, cloud, response },
   // });
   if (params.slug === 'all') params.slug = '';
   return {
-    props: { params },
+    props: { params, categoriesData },
   };
 }
 

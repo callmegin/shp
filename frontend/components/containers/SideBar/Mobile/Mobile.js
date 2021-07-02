@@ -14,9 +14,30 @@ const Mobile = ({ children }) => {
     dispatch({ show: false });
   }, []);
 
+  useEffect(() => {
+    if (show && !initializing) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [show]);
+
+  const handleClick = () => {
+    dispatch({ show: false });
+  };
+
+  //TODO: maybe add some sort of "scroll down arrow" in the types list if its height isn't enough to fit the content or smth ???
+
   return (
     !initializing && (
-      <Styled.MobileSidebar show={show}>{children}</Styled.MobileSidebar>
+      <Styled.MobileSidebar show={show}>
+        <Styled.SidebarContainer>
+          {children}
+          <Styled.ButtonWrapper alignCenter justifyEnd>
+            <Styled.Button onClick={handleClick}>Close</Styled.Button>
+          </Styled.ButtonWrapper>
+        </Styled.SidebarContainer>
+      </Styled.MobileSidebar>
     )
   );
 };

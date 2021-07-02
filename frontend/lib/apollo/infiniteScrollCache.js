@@ -1,7 +1,7 @@
 import { GET_PRODUCTS_BY_CATEGORY } from 'components/containers/Products/Products';
 
 const infiniteScrollCache = () => ({
-  keyArgs: ['sortBy'],
+  keyArgs: ['sortBy', 'type'],
   read(existing, { args, cache }) {
     return existing ? existing[args.category] : existing;
   },

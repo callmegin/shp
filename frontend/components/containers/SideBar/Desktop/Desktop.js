@@ -11,7 +11,11 @@ const Desktop = ({ children, showSidebar }) => {
   useEffect(() => {
     dispatch({ show: true });
   }, []);
-  return <Styled.DesktopSidebar show={show}>{children}</Styled.DesktopSidebar>;
+  return (
+    <Styled.DesktopSidebar show={show}>
+      <Styled.SidebarContainer>{children}</Styled.SidebarContainer>
+    </Styled.DesktopSidebar>
+  );
 };
 
 export default Desktop;

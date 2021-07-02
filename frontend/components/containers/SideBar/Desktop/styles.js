@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+export { SidebarContainer } from '../styles';
 import { transition, screenSize } from 'shared/styles';
 
 export const DesktopSidebar = styled.div`
