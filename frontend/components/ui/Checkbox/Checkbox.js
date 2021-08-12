@@ -8,5 +8,3 @@ const Checkbox = ({ text, name, checked, changed }) => {
 };
 
 export default Checkbox;
-
-//TODO: rework to proper reusable comp

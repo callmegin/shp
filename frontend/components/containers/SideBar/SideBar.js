@@ -10,12 +10,11 @@ import * as Styled from './styles';
 const Mobile = dynamic(() => import('./Mobile'), { ssr: false });
 const Desktop = dynamic(() => import('./Desktop'), { ssr: false });
 
-const Sidebar = ({ slug, categoriesData }) => {
+const Sidebar = ({ slug, categoriesData, loading, networkStatus }) => {
   const [width] = useWindowResize();
   const breakpoint = 740;
 
   let typesData = [];
-
   if (slug) {
     const requiredCategory = categoriesData.find(
       (category) => category.category === slug
@@ -26,11 +25,10 @@ const Sidebar = ({ slug, categoriesData }) => {
       category.types.map((type) => (typesData = [...typesData, type]))
     );
   }
-
   const sidebar = (
     <>
       <Categories data={categoriesData} slug={slug} />
-      <Types typesData={typesData} />
+      <Types typesData={typesData} slug={slug} />
     </>
   );
   return (

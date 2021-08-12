@@ -16,7 +16,10 @@ const Categories = ({ data, slug }) => {
           </Styled.ListItemMain>
         </Link>
         {data?.map((category) => (
-          <Link href={`/products/${category.category}`} key={category.id}>
+          <Link
+            href={{ pathname: `/products/${category.category}` }}
+            key={category.id}
+          >
             <Styled.ListItem isActive={isActive(category.category)}>
               {category.category}
             </Styled.ListItem>

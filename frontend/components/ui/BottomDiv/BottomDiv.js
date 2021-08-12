@@ -1,9 +1,9 @@
 import * as Styled from './styles';
 
-const BottomDiv = ({ hasNextPage }) => {
+const BottomDiv = ({ hasNextPage, clicked }) => {
   return (
     <Styled.BottomDiv>
-      <Styled.Arrow>&darr;</Styled.Arrow>
+      <Styled.Arrow onClick={clicked}>&darr;</Styled.Arrow>
       {/* <span>more</span> */}
     </Styled.BottomDiv>
   );

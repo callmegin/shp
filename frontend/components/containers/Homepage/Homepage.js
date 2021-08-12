@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 import { useRouter } from 'next/router';
+import { useRouterScroll } from '@moxy/next-router-scroll';
 import { useState, useEffect } from 'react';
 
 import Section from './Section/Section';
@@ -21,6 +22,7 @@ export const GET_CATEGORIES = gql`
 
 const Homepage = ({ response }) => {
   const router = useRouter();
+
   // const [selected, setSelected] = useState();
 
   const [data, setData] = useState();
@@ -35,8 +37,6 @@ const Homepage = ({ response }) => {
         }));
       });
   }, [response]);
-
-  const path = `/products/`;
 
   const handleClick = (category) => {
     router.push(`/products/${category}`);

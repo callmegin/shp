@@ -20,36 +20,31 @@ const ProductPage = ({ params, data }) => {
 
 const apolloClient = initializeApollo();
 
-export async function getStaticPaths({ query }) {
+export async function getStaticPaths({ params }) {
   const response = await apolloClient.query({
     query: GET_ALL_PRODUCTS,
   });
-
   const paths = response.data.getProducts.map((product) => ({
     params: { slug: product.id, id: [product.id] },
   }));
-
-  // console.log(paths);
-
   return {
     paths,
     fallback: false,
   };
 }
 
-export async function getStaticProps({ params, query }) {
-  //   const regex = /\=(.*)/;
-  //   const slugId = params.slug.match(regex)[1];
-
-  //   console.log(slugId);
-
+export async function getStaticProps({ params }) {
   const { data } = await apolloClient.query({
     query: GET_PRODUCT,
     variables: { id: params.slug },
   });
   // console.log(data);
   return {
-    props: { params, data },
+    props: {
+      params,
+      data,
+    },
+    revalidate: 1,
   };
 }
 

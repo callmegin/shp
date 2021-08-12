@@ -1,12 +1,15 @@
 import { useRef, useEffect, useCallback } from 'react';
 import _ from 'lodash';
 
-const isBrowser = typeof window !== 'undefined';
+import { isBrowser } from './helpers';
 
-const isBottom = (ref) => {
+export const isBottom = (ref, isInfinite) => {
   if (!ref.current) return false;
-
-  return ref.current.getBoundingClientRect().bottom - 100 < window.innerHeight;
+  if (isInfinite)
+    return (
+      ref.current.getBoundingClientRect().bottom - 100 < window.innerHeight
+    );
+  return ref.current.getBoundingClientRect().bottom < window.innerHeight;
 };
 
 const useOnScrollEvent = (callback) => {
@@ -16,15 +19,31 @@ const useOnScrollEvent = (callback) => {
   }, [callback]);
 };
 
-const InfiniteScroll = ({ children, hasNextPage, reachedBot, loading }) => {
+const InfiniteScroll = ({
+  children,
+  hasNextPage,
+  reachedBot,
+  loading,
+  isInfinite = true,
+  loadOnMount = false,
+}) => {
   const elementRef = useRef();
   const invokeReachedBot = () => {
-    console.log(window.innerHeight);
-    console.log(elementRef.current.getBoundingClientRect());
-    if (!loading && hasNextPage && isBottom(elementRef)) {
+    if (
+      isInfinite &&
+      !loading &&
+      hasNextPage &&
+      isBottom(elementRef, isInfinite)
+    ) {
+      reachedBot();
+    } else if (!isInfinite && isBottom(elementRef)) {
       reachedBot();
     }
   };
+
+  useEffect(() => {
+    loadOnMount && isBottom(elementRef) && reachedBot();
+  }, []);
 
   useOnScrollEvent(_.throttle(invokeReachedBot, 500));
 

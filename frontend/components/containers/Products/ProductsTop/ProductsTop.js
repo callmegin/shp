@@ -1,5 +1,5 @@
-import { useState, memo } from 'react';
-import { useSidebarToggle } from 'lib/context/sidebar-context';
+import { memo } from 'react';
+import { useSidebarToggle } from 'lib/context/sidebarContext';
 
 import * as Styled from './styles';
 import Dropdown from 'components/ui/Dropdown';
@@ -52,8 +52,9 @@ const ProductsTop = ({ handleSubmit }) => {
         />
         <Dropdown
           name="Order"
+          defaultValue={'none'}
           options={sortOrderOptions}
-          handleSubmit={handleSubmit}
+          handleSubmit1={handleSubmit}
           margin="auto"
         />
       </Styled.TopWrapper>

@@ -10,7 +10,12 @@ const ParentPage = ({ children, pageLoading }) => {
       <Styled.ParentContainer alignCenter justifyCenter>
         {children}
       </Styled.ParentContainer>
-      {pageLoading && <Styled.Placeholder />}
+      {pageLoading && (
+        <>
+          <Styled.Placeholder />
+          <Styled.PlaceholderBackground />
+        </>
+      )}
     </Styled.Parent>
   );
 };

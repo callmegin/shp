@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
     --grey: #D9D9D9;
     --darkgrey: #35393d;
     --light: #FFFFFF;
+    --lightgrey: #fafafa;
     --dark: #0D1B2A;
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
     box-sizing: border-box;
@@ -25,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     /* line-height: 2; */
     background: var(--light);
     color: var(--darkgrey);
-    /* overflow-y: auto; */
+    overflow-y: scroll;
   }
   h1,h2,h3,h4 {
     margin: 0;

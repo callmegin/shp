@@ -9,6 +9,7 @@ export const SidebarContainer = styled(FlexDiv)`
   position: sticky;
   top: 101px;
   width: 200px;
+  height: auto;
   padding: 1rem 1rem;
   `}
 `;
@@ -41,10 +42,14 @@ export const ListItem = styled.li`
   text-transform: capitalize;
   cursor: pointer;
   text-decoration: ${({ isActive }) => isActive && `underline`};
-  &:hover {
-    transform: scale(1.05);
-    ${transition('transform', 100)}
-  }
+  ${({ noHover }) =>
+    !noHover &&
+    css`
+      &:hover {
+        transform: scale(1.05);
+        ${transition('transform', 100)}
+      }
+    `}
   ${screenSize.small`
   font-size: 1.3rem;
   line-height: 2.2rem;
@@ -54,10 +59,10 @@ export const ListTextWrapper = styled(FlexDiv)`
   cursor: pointer;
   font-size: 1.5rem;
   line-height: 2rem;
-  &:hover {
+  /* &:hover {
     background: grey;
     ${transition('background', 500)}
-  }
+  } */
   ${screenSize.small`
   font-size: 1.2rem;
   line-height: 1.8rem;

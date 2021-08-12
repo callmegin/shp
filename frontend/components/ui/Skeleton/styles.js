@@ -2,9 +2,9 @@ import styled, { keyframes } from 'styled-components';
 import { FlexDiv, screenSize, enterElement } from 'shared/styles';
 
 export const gradienAnimation = keyframes`
- 0%{background-position:51% 0%}
+    0%{background-position:50% 0%}
     50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
+    100%{background-position:50% 0%}
 `;
 
 export const GridElement = styled.div`
@@ -12,5 +12,6 @@ export const GridElement = styled.div`
   width: 100%;
   height: calc((1000px - 3rem) / 2);
   background: linear-gradient(0deg, #ffffff, #ededed);
-  animation: ${gradienAnimation} 1500ms eas infinite;
+  background-size: 200% 200%;
+  animation: ${gradienAnimation} 1s ease infinite;
 `;

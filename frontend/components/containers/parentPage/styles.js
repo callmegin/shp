@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FlexDiv, rotateDown, screenSize } from 'shared/styles';
+import { FlexDiv, screenSize, loadingStatus, transition } from 'shared/styles';
 
 export const Parent = styled(FlexDiv)`
   height: 100%;
@@ -16,16 +16,23 @@ export const ParentContainer = styled(FlexDiv)`
   /* overflow: hidden; */
 `;
 
+export const PlaceholderBackground = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: var(--grey);
+  opacity: 0.4;
+  z-index: 9999;
+  ${transition('opacity', 2000)}
+`;
 export const Placeholder = styled.div`
-  position: absolute;
+  position: fixed;
   width: 5rem;
   height: 5rem;
   top: calc(50% - 3.5rem);
   left: calc(50% - 3.5rem);
-  /* bottom: 0;
-  left: 0; */
   margin: 1.5rem 1.5rem 1.5rem 1.5rem;
   z-index: 10000;
   background: black;
-  animation: ${rotateDown} 500ms infinite;
+  animation: ${loadingStatus} 500ms infinite;
 `;

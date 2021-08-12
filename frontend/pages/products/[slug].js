@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import { initializeApollo, addApolloState } from 'lib/apollo/apolloClient';
 import { gql, useQuery } from '@apollo/client';
 
-import { SidebarToggleProvider } from 'lib/context/sidebar-context';
+import { SidebarToggleProvider } from 'lib/context/sidebarContext';
 
 import Products from 'components/containers/Products/Products';
 import ProductsTop from 'components/containers/Products/ProductsTop';
+import test from 'components/Test';
 
 export const GET_CATEGORIES_WITH_TYPES = gql`
   query getCategories {
@@ -21,67 +22,53 @@ export const GET_CATEGORIES_WITH_TYPES = gql`
   }
 `;
 
-const ProductsPage = ({ params, cloud, response, categoriesData }) => {
-  const [sortBy, setSortBy] = useState({});
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const value = e.target.value;
-    if (!value) {
-      return setSortBy({});
-    }
-    const [field, order] = value.split('-');
-    setSortBy({ field: field, order: order });
-  };
-
-  return (
-    <>
-      <SidebarToggleProvider>
-        <ProductsTop handleSubmit={handleSubmit} />
-        <Products
-          slug={params.slug}
-          sortBy={sortBy}
-          categoriesData={categoriesData}
-        />
-      </SidebarToggleProvider>
-    </>
-  );
-};
-
-export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { slug: `watches` } },
-      { params: { slug: `shoes` } },
-      { params: { slug: `blazers` } },
-      { params: { slug: `all` } },
-    ],
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
+const categories = async () => {
   const apolloClient = initializeApollo();
   const { data } = await apolloClient.query({
     query: GET_CATEGORIES_WITH_TYPES,
   });
-  const categoriesData = data.getCategories;
+  return data;
+};
 
-  // let paths = [];
-  // response.data.getCategories.map((category) => {
-  //   paths.push({ params: { slug: category.category } });
-  //   category.types.map((type) => {
-  //     paths.push({ params: { slug: `${category.category}/${type.type}` } });
-  //   });
-  // });
+const getAllSlugs = async () => {
+  const { getCategories } = await categories();
+  return getCategories.map((category) => {
+    return {
+      params: {
+        slug: category.category,
+      },
+    };
+  });
+};
 
-  // return addApolloState(apolloClient, {
-  //   props: { params, cloud, response },
-  // });
+export async function getStaticPaths() {
+  const paths = await getAllSlugs();
+  // paths.push({ params: { slug: 'all' } });
+  return {
+    // paths,
+    // fallback: false,
+    paths: [],
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const { getCategories: categoriesData } = await categories();
   if (params.slug === 'all') params.slug = '';
   return {
     props: { params, categoriesData },
   };
 }
+
+const ProductsPage = ({ params, cloud, response, categoriesData }) => {
+  return (
+    <>
+      <SidebarToggleProvider>
+        <ProductsTop />
+        <Products slug={params.slug} categoriesData={categoriesData} />
+      </SidebarToggleProvider>
+    </>
+  );
+};
 
 export default ProductsPage;

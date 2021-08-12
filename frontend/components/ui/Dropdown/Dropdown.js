@@ -1,15 +1,27 @@
-import { useState } from 'react';
+import router, { useRouter } from 'next/router';
+import { addQueryParams } from 'lib/utility/resolveRouter';
 import * as Styled from './styles';
 
-const Dropdown = ({ options, handleSubmit, name, margin }) => {
+const Dropdown = ({ options, name, defaultValue, margin }) => {
+  const router = useRouter();
+  const { query } = router;
+
+  //! THIS IS THE WAY
+  const handleSubmit = (e) => {
+    const value = e.target.value;
+    addQueryParams({ sort: value }, query);
+  };
   return (
     <Styled.ListContainer margin={margin}>
-      <Styled.Select onChange={handleSubmit} defaultValue={name}>
-        <option value={name} disabled="disabled">
+      <Styled.Label>Order by:</Styled.Label>
+      <Styled.Select onChange={handleSubmit} defaultValue={defaultValue}>
+        {/* <option value={name} disabled="disabled">
           {name}
-        </option>
+        </option> */}
         {options.map((value) => (
-          <Styled.Option key={value.name}>{value.name}</Styled.Option>
+          <Styled.Option value={value.sortOrder} key={value.name}>
+            {value.name}
+          </Styled.Option>
         ))}
       </Styled.Select>
     </Styled.ListContainer>

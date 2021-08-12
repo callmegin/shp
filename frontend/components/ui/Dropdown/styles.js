@@ -17,6 +17,12 @@ export const Span = styled.span`
   cursor: pointer;
 `;
 
+export const Label = styled.label`
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--dark);
+`;
+
 export const Select = styled.select`
   /* position: absolute; */
   /* display: ${({ clicked }) => (clicked ? 'block' : 'none')}; */

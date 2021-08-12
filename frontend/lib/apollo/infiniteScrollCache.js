@@ -7,6 +7,7 @@ const infiniteScrollCache = () => ({
   },
   merge(existing, incoming, { args, cache, readField }) {
     // console.log(existing);
+
     if (existing) {
       if (Object.keys(existing).includes(args.category)) {
         const existingCopy = { ...existing };
@@ -37,9 +38,7 @@ export default infiniteScrollCache;
 
 //! TODO: move somewhere else
 const removeDuplicates = (data) => {
-  console.log(data);
   const unique = new Set();
-
   const filtered = data.filter((el) => {
     const duplicate = unique.has(el.node.__ref);
     unique.add(el.node.__ref);

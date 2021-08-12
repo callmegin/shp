@@ -1,4 +1,4 @@
-import { useSidebarToggle } from 'lib/context/sidebar-context';
+import { useSidebarToggle } from 'lib/context/sidebarContext';
 import { useEffect } from 'react';
 import * as Styled from './styles';
 

@@ -1,17 +1,18 @@
-import { useEffect, useState } from 'react';
-import { gql, useQuery, useApolloClient } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
+import { useRouter } from 'next/router';
 
-import { useSidebarToggle } from 'lib/context/sidebar-context';
+import { useSidebarToggle } from 'lib/context/sidebarContext';
 import Skeleton from 'components/ui/Skeleton/Skeleton';
 
 import InfiniteScroll from 'lib/utility/InfiniteScroll';
 import ProductCard from 'components/ui/ProductCard';
 import BottomDiv from 'components/ui/BottomDiv';
 import Sidebar from 'components/containers/SideBar';
-import { isObjEmpty } from 'lib/utility/helpers';
+
+import { typesFromQuery } from 'lib/utility/helpers';
+import { resolveSorting } from 'lib/utility/resolveRouter';
 
 import * as Styled from './styles';
-import { GET_CATEGORIES } from 'components/Test';
 
 export const GET_PRODUCTS_BY_CATEGORY = gql`
   query getProductsCursor(
@@ -21,7 +22,7 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
     $sortBy: SortBy
   ) {
     getProductsCursor(
-      limit: 6
+      limit: 9
       cursor: $cursor
       category: $category # sortBy: { price: asc }
       type: $type
@@ -34,6 +35,7 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
           price
           category
           type
+          averageRating
           image {
             public_id
             secure_url
@@ -49,21 +51,25 @@ export const GET_PRODUCTS_BY_CATEGORY = gql`
   }
 `;
 
-const Products = ({ slug, sortBy, categoriesData }) => {
+const Products = ({ slug, categoriesData }) => {
+  const router = useRouter();
+  const { query } = router;
+  const { sort, type } = query;
+  const qType = type && typesFromQuery(type);
   const {
     state: { show },
   } = useSidebarToggle();
+  const sortBy = resolveSorting(sort);
 
-  const [type, setType] = useState([]);
-
-  const { loading, data, fetchMore, refetch } = useQuery(
+  const { loading, data, fetchMore, error } = useQuery(
     GET_PRODUCTS_BY_CATEGORY,
     {
       notifyOnNetworkStatusChange: true,
+      fetchPolicy: 'cache-and-network',
       variables: {
         category: slug,
         sortBy: sortBy,
-        type: type,
+        type: qType,
       },
     }
   );
@@ -71,18 +77,6 @@ const Products = ({ slug, sortBy, categoriesData }) => {
   const hasNextPage = data
     ? data.getProductsCursor.pageInfo.hasNextPage
     : false;
-
-  useEffect(() => {
-    if (!isObjEmpty(sortBy)) {
-      refetch({
-        variables: {
-          cursor: '',
-          category: slug,
-          sortBy: sortBy,
-        },
-      });
-    }
-  }, [sortBy]);
 
   const loadMore = () => {
     fetchMore({
@@ -94,27 +88,14 @@ const Products = ({ slug, sortBy, categoriesData }) => {
     });
   };
 
-  //TODO: make dynamic below
-  const handleCheckBox = () => {
-    setType((prev) => [...prev, 'Fake Rolex']);
-  };
-  useEffect(() => {
-    if (Array.isArray(type) && type.length) {
-      refetch({
-        variables: {
-          cursor: ``,
-          category: slug,
-          sortBy: sortBy,
-          type: type,
-        },
-      });
-    }
-  }, [type]);
-
   return (
     <>
       <Styled.ProductsContainer row justifyCenter>
-        <Sidebar slug={slug} categoriesData={categoriesData} />
+        <Sidebar
+          slug={slug}
+          categoriesData={categoriesData}
+          loading={loading}
+        />
 
         <Styled.ProductsWrapper show={show}>
           <InfiniteScroll
@@ -127,9 +108,9 @@ const Products = ({ slug, sortBy, categoriesData }) => {
                 data.getProductsCursor.edges.map((product) => (
                   <ProductCard product={product} key={product.node.id} />
                 ))}
-              {loading && hasNextPage && <Skeleton number={6} />}
+              {loading && <Skeleton number={9} />}
             </Styled.ProductsGrid>
-            {hasNextPage ? <BottomDiv /> : ''}
+            {hasNextPage ? <BottomDiv clicked={loadMore} /> : ''}
           </InfiniteScroll>
         </Styled.ProductsWrapper>
       </Styled.ProductsContainer>

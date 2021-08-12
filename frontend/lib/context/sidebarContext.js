@@ -29,7 +29,9 @@ const SidebarToggleProvider = ({ children }) => {
 const useSidebarToggle = () => {
   const context = useContext(SidebarContext);
   if (context === undefined) {
-    throw new Error('useCount must be used within a CountProvider');
+    throw new Error(
+      'useSidebarToggle must be used within a SidebarToggleProvider'
+    );
   }
   return context;
 };

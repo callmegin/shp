@@ -1,8 +1,8 @@
-import { useSidebarToggle } from 'lib/context/sidebar-context';
+import { useSidebarToggle } from 'lib/context/sidebarContext';
 import { useEffect, useState } from 'react';
 import * as Styled from './styles';
 
-import Button from 'components/ui/Button';
+import { StandardButton } from 'components/ui/Button';
 
 const Mobile = ({ children }) => {
   const [initializing, setInitializing] = useState(true);
@@ -36,7 +36,7 @@ const Mobile = ({ children }) => {
         <Styled.SidebarContainer>
           {children}
           <Styled.ButtonWrapper alignCenter justifyEnd>
-            <Button clicked={handleClick} text="Close" />
+            <StandardButton clicked={handleClick}>Close</StandardButton>
           </Styled.ButtonWrapper>
         </Styled.SidebarContainer>
       </Styled.MobileSidebar>

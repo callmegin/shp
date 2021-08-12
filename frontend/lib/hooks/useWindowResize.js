@@ -13,7 +13,7 @@ const useResizeEvent = (callback) => {
 };
 
 export const useWindowResize = () => {
-  const [height, setHeight] = useState(isBrowser && window.innerWidth);
+  const [height, setHeight] = useState(isBrowser && window.innerHeight);
   const [width, setWidth] = useState(isBrowser && window.innerWidth);
   const handleResize = useCallback(() => {
     setHeight(window.innerHeight);
