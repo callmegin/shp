@@ -1,5 +1,12 @@
 const { User, Review, Product } = require('../../models');
 
+const overallRating = (reviews) => {
+  const total = reviews.reduce((sum, review) => sum + review.rating, 0);
+  const calculatedRating = Math.round((total / reviews.length) * 2) / 2;
+  if (calculatedRating === 0) calculatedRating = 0.5;
+  return calculatedRating;
+};
+
 module.exports = {
   Query: {
     user: async (parent, { id }) => {
@@ -39,6 +46,8 @@ module.exports = {
     },
     addReview: async (_, args) => {
       try {
+        if (args.rating === 0)
+          throw new Error('Rating can be between 1 and 5 only.');
         const review = await Review.create(args);
         const creator = await User.findOne({ _id: args.createdBy }).exec();
         creator.reviews.push(review._id);
@@ -46,6 +55,12 @@ module.exports = {
 
         const product = await Product.findOne({ _id: args.product }).exec();
         product.reviews.push(review._id);
+
+        const reviews = await Review.find({}).exec();
+        product.averageRating = overallRating(reviews);
+        product.reviewsCount = reviews.length;
+
+        console.log('---end---');
         await product.save();
 
         return review;

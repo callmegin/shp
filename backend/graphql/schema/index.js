@@ -1,6 +1,9 @@
 const { gql } = require('apollo-server-express');
 
 module.exports = gql`
+  #Scalars
+  scalar Date
+
   type User {
     id: ID!
     userName: String!
@@ -15,12 +18,15 @@ module.exports = gql`
     category: String!
     type: String!
     image: ProductImage!
+    averageRating: Float!
+    reviewsCount: Int!
     reviews: [Review]
   }
   type Review {
     id: ID!
     rating: Float
     comment: String
+    createdAt: Date
     createdBy: User!
     product: Product!
   }
@@ -100,7 +106,7 @@ module.exports = gql`
     getUsers: [User]
     getProducts(category: String, type: String): [Product]
     getProduct(id: ID!): Product
-    getReviews: [Review]
+    getReviews(product: String): [Review]
     getCategories: [Categories]
     getCategory(id: ID, category: String): Categories
     getTypes: [Types]
@@ -120,7 +126,7 @@ module.exports = gql`
     login(email: String!, password: String!): String
     addProduct(name: String!, price: Float!, category: String!): Product
     addReview(
-      rating: Float
+      rating: Int
       comment: String
       createdBy: ID!
       product: ID!

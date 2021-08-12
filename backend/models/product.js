@@ -22,6 +22,16 @@ const productSchema = new Schema({
     type: String,
     required: true,
   },
+  averageRating: {
+    type: Number,
+    required: false,
+    default: 0,
+  },
+  reviewsCount: {
+    type: Number,
+    required: false,
+    default: 0,
+  },
   reviews: [
     {
       type: Schema.Types.ObjectId,

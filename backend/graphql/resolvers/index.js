@@ -4,9 +4,10 @@ const reviewResolver = require('./review');
 const categoriesResolver = require('./categories.js');
 const typesResolver = require('./types');
 
-//TODO: reikia chekinti ar toks useris ar produktas yra pries kuriant reviewsa
+const dateScalar = require('./scalars/dateScalar');
 
 const resolvers = {
+  Date: dateScalar,
   Query: {
     ...userResolver.Query,
     ...productResolver.Query,

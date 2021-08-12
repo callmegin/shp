@@ -81,10 +81,6 @@ module.exports = {
     },
     getProductsCursor: async (_, { limit, cursor, category, type, sortBy }) => {
       try {
-        console.log(`Incoming cursor: ${cursor}`);
-        console.log(`Limit: ${limit}`);
-        console.log(`Type: ${type}`);
-
         let requiredProducts = await getSortedProducts(
           category,
           type,
@@ -106,7 +102,6 @@ module.exports = {
         if (hasNextPage) {
           requiredProducts = requiredProducts.slice(0, -1);
         }
-        console.log(requiredProducts);
         requiredProducts.map((product) => {
           edges.push({
             cursor: product.id,
@@ -116,9 +111,6 @@ module.exports = {
         const endProduct = requiredProducts[requiredProducts.length - 1];
 
         const endCursor = `${endProduct._id}`;
-        console.log(`Returning endCursor: ${endCursor}`);
-        // console.log(edges);
-        console.log('---------------------------------------------------');
         return {
           edges,
           pageInfo: {

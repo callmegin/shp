@@ -2,9 +2,10 @@ const { Review, User, Product } = require('../../models');
 
 module.exports = {
   Query: {
-    getReviews: async () => {
+    getReviews: async (_, { product }) => {
       try {
-        await Review.find({}).exec();
+        return await Review.find({ product: product }).exec();
+        return tst;
       } catch (e) {
         return e.message;
       }

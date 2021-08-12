@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "babel-node seed-data/index.js --seed ",
     "mkjson": "node seed-data/generateJson.js",
-    "readjson": "node seed-data/generateJson.js --read"
+    "readjson": "node seed-data/generateJson.js --read",
+    "removecomms": "node custom-db-actions/removeComments.js"
   },
   "keywords": [],
   "author": "",
