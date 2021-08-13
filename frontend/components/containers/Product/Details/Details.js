@@ -6,7 +6,13 @@ import Loading from 'components/ui/Loading';
 
 import * as Styled from './styles';
 
-const Details = ({ data, productRating, reviewsCount, loadingRatings }) => {
+const Details = ({
+  data,
+  productRating,
+  reviewsCount,
+  loadingRatings,
+  clicked,
+}) => {
   const [showMore, setShowMore] = useState(false);
   const handleShowMore = () => {
     setShowMore((prev) => !prev);
@@ -46,7 +52,7 @@ const Details = ({ data, productRating, reviewsCount, loadingRatings }) => {
           </Styled.Price>
 
           <div>
-            <StandardButton>Add to Cart</StandardButton>
+            <StandardButton clicked={clicked}>Add to Cart</StandardButton>
           </div>
         </Styled.DetailsContainer>
       </Styled.DetailsParentContainer>

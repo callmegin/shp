@@ -1,4 +1,3 @@
-import { ST } from 'next/dist/next-server/lib/utils';
 import * as Styled from './styles';
 
 const Skeleton = ({ number }) => {

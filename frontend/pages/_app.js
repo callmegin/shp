@@ -4,6 +4,14 @@ import Router from 'next/router';
 import { ApolloProvider } from '@apollo/client';
 import { useApollo } from 'lib/apollo/apolloClient';
 import { RouterScrollProvider } from '@moxy/next-router-scroll';
+
+import { Provider } from 'react-redux';
+import { createLogger } from 'redux-logger';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
+import reducer from 'lib/store/reducers';
+
 import ParentPage from 'components/containers/ParentPage/ParentPage';
 
 function MyApp({ Component, pageProps }) {
@@ -33,12 +41,21 @@ function MyApp({ Component, pageProps }) {
       });
   }, []);
 
+  const middleware = [thunk];
+  if (process.env.NODE_ENV !== 'production') {
+    middleware.push(createLogger());
+  }
+
+  const store = createStore(reducer, applyMiddleware(...middleware));
+
   return (
     <ApolloProvider client={apolloClient}>
       <RouterScrollProvider disableNextLinkScroll={false}>
-        <ParentPage pageLoading={loading}>
-          <Component {...pageProps} pageLoading={loading} />
-        </ParentPage>
+        <Provider store={store}>
+          <ParentPage pageLoading={loading}>
+            <Component {...pageProps} pageLoading={loading} />
+          </ParentPage>
+        </Provider>
       </RouterScrollProvider>
     </ApolloProvider>
   );

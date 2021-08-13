@@ -63,6 +63,26 @@ export const enterElement = keyframes`
   }
 `;
 
+export const enterFromTop = keyframes`
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+export const slideIn = keyframes`
+0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    translateZ(0);
+    opacity: 1;
+  }
+`;
+
 export const loadingPage = keyframes`
 `;
 

@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import { FlexDiv, screenSize } from '../../../shared/styles';
+import {
+  FlexDiv,
+  screenSize,
+  slideIn,
+  cubicBezier,
+} from '../../../shared/styles';
 
 export const HeaderContainer = styled(FlexDiv)`
   flex: 0 0 auto;
@@ -44,7 +49,8 @@ export const BurgerWrapper = styled(FlexDiv)`
   width: 40px;
   height: 40px;
   padding: 5px 10px 5px 0;
-  margin-left: auto;
+  margin-left: 10px;
+  /* margin-left: auto; */
 `;
 
 export const Burger = styled(FlexDiv)`
@@ -54,4 +60,44 @@ export const Burger = styled(FlexDiv)`
     height: 1px;
     background: black;
   }
+`;
+
+export const CartContainer = styled.div`
+  position: relative;
+  /* margin-left: auto; */
+  margin-right: 1.5rem;
+  ${screenSize.small`
+  margin-right: 13px;
+  `}
+`;
+
+export const ItemCountContainer = styled.div`
+  position: absolute;
+  top: 0;
+  right: -1rem;
+`;
+
+export const ItemCount = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--darkgrey);
+  color: var(--light);
+`;
+
+export const Notification = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  & > p {
+    position: relative;
+    line-height: 1.4;
+    font-size: 1.2rem;
+  }
+  animation: ${slideIn} 0.4s ${cubicBezier} both;
 `;

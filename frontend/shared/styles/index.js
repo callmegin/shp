@@ -9,4 +9,6 @@ export {
   enterElement,
   loadingStatus,
   warningLeft,
+  enterFromTop,
+  slideIn,
 } from './Animations';
